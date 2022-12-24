@@ -41,7 +41,8 @@ const renderDetails = async () => {
 
     const template = `
     <div class="main_container" style= " background-image: linear-gradient(90deg, rgb(26, 26, 26) 24.97%, rgb(26, 26, 26) 38.3%, rgba(26, 26, 26, 0.04) 97.47%, rgb(26, 26, 26) 100%),url(${img_url}/${backdrop_path});background-repeat:no-repeat;background-size: cover;">
-    <img src = "${img_url}/${poster_path}" alt="" class="poster_img" /> 
+    <img src = "${img_url}/${poster_path}" alt="" class="poster_img" width="100%" /> 
+    
     <div class="movie_detail_banner">
             <h1 class="movie_title">${original_title}</h1>
             <div class="movie_rating_voting"> 

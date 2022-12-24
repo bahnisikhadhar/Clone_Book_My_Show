@@ -8,30 +8,32 @@ a{
     text-decoration: none;
     color:#fff;
 }
-.cover_img{
-    width: 100%;
-    /* height: 500px; */
-    /* opacity: .8; */
-    object-fit: fill;
-    /* position: relative; */
-}
-.poster_img{
-    width: 19%;
-    height: 90%;
-    border-radius: 10px;
-    margin-left: 10%;
-}
 .main_container{
     display: flex;
     gap: 2rem;
     align-items: center;
     padding: 2rem;
     width: 100%;
-    background-image: linear-gradient(90deg, rgb(26, 26, 26) 24.97%, rgb(26, 26, 26) 38.3%, rgba(26, 26, 26, 0.04) 97.47%, rgb(26, 26, 26) 100%);
+    /* background-image: linear-gradient(90deg, rgb(26, 26, 26) 24.97%, rgb(26, 26, 26) 38.3%, rgba(26, 26, 26, 0.04) 97.47%, rgb(26, 26, 26) 100%); */
  
 }
+.cover_img{
+    max-width: 100%;
+    /* height: 30rem; */
+    object-fit: fill;
+}
+/* .poster_img_container{
+    width: 30%;
+} */
+.poster_img{
+    max-width: 20%;
+    /* min-height: 90%; */
+    border-radius: 10px;
+    margin-left: 10%;
+}
+
 .movie_detail_banner{
-    width: 50%;
+    width: 70%;
     color: white;
     display: flex;
     flex-direction: column;
@@ -51,8 +53,8 @@ a{
     font-size: 1.3rem;
 }
 .your_rating{
-   background-color: rgb(56, 55, 55);
-   width: 60%;
+   background-color: rgb(54, 53, 53);
+   width: 50%;
    padding: 1rem;
    border-radius: 10px;
    display: flex;

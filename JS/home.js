@@ -38,7 +38,7 @@ async function getMovies(url) {
         }
     })
     const data = await fetchedData.json();
-    showMovies(data.results.slice(0,9)); //This Function is Invoked inside getMovies Function so that we can Accept the data fetced from getMovies function as the Argument for showMovies function
+    showMovies(data.results); //This Function is Invoked inside getMovies Function so that we can Accept the data fetced from getMovies function as the Argument for showMovies function
 }
 getMovies(recommendedMoviesUrl);
 

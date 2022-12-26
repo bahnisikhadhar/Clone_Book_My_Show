@@ -18,6 +18,12 @@ const rightNavRest1=document.querySelector(".right_nav_rest1");
 
 let sentOtp;
 
+const isLoggedIn = localStorage.getItem("isLoggedIn");
+if (isLoggedIn) {
+  rightNavRest.classList.add("display_none");
+  rightNavRest1.classList.add("display_flex");
+}
+
 signButton.addEventListener("click",()=>{
     signPopUp.classList.add("display_block");
 });
@@ -74,19 +80,20 @@ function generateOtp(){
     input.addEventListener("keyup",handleOtp);
   });
 
-  function handleOtp(event){
+  function handleOtp(event) {
+    event.preventDefault();
     // console.log(event.target.value);
-    const input=event.target;
-    let value=input.value;
-    input.value="";
-   input.value= value ? value[0] : "";
+    const input = event.target;
+    let value = input.value;
+    input.value = "";
+    input.value = value ? value[0] : "";
 
-    let fieldIndex=input.dataset.index;
-    if(value.length>0 && fieldIndex<otpBox.length-1){
+    let fieldIndex = input.dataset.index;
+    if (value.length > 0 && fieldIndex < otpBox.length - 1) {
         input.nextElementSibling.focus();
     }
 
-    if(event.key === "Backspace" && fieldIndex>0){
+    if (event.key === "Backspace" && fieldIndex > 0) {
         input.previousElementSibling.focus();
     }
 
@@ -107,9 +114,51 @@ function generateOtp(){
             signPopUpVerify.classList.remove("display_block");
             rightNavRest.classList.add("display_none");
             rightNavRest1.classList.add("display_flex");
+
+        
+            localStorage.setItem("isLoggedIn", true);
         }
     }
-  }
+   
+}
+
+//   function handleOtp(event){
+//     // console.log(event.target.value);
+//     const input=event.target;
+//     let value=input.value;
+//     input.value="";
+//    input.value= value ? value[0] : "";
+
+//     let fieldIndex=input.dataset.index;
+//     if(value.length>0 && fieldIndex<otpBox.length-1){
+//         input.nextElementSibling.focus();
+//     }
+
+//     if(event.key === "Backspace" && fieldIndex>0){
+//         input.previousElementSibling.focus();
+//     }
+
+//     if(fieldIndex==otpBox.length-1){
+//         let enterOtp="";
+//         otpBox.forEach((input)=>{
+//             enterOtp += input.value;
+//         })
+//         console.log(enterOtp);
+//         console.log(sentOtp);
+
+//         if(enterOtp!==sentOtp){
+//             invalidMsg.innerText="invalid otp entered.Please try again";
+//             otpBox.forEach((input)=>{
+//                 input.value="";
+//             })
+//         } else{
+//             signPopUpVerify.classList.remove("display_block");
+//             rightNavRest.classList.add("display_none");
+//             rightNavRest1.classList.add("display_flex");
+//             localStorage.setItem("isLoggedIn", true);
+//         }
+//     }
+//   }
 //----------------------------------------------------------------------------------------------------------------
   
 leftChevronIcon.addEventListener("click",()=>{
@@ -158,6 +207,42 @@ cityPopUp.addEventListener("click",(event)=>{
         }
 })
 
+// -----------------------------------------HUMBERGER---------------------------------------------------------
+const hamburgerLogin=document.querySelector(".hamburger_login");
+const hamburger=document.querySelector(".nav_hamburger");
+const hamIcon=document.querySelector(".ham_icon");
+const hamburger1=document.querySelector(".nav_hamburger1");
+const hamburgerSignOut=document.querySelector(".hamburger_signOut");
+
+hamIcon.addEventListener("click",()=>{
+   hamburger.classList.add("display_block");
+})
+
+mainBody.addEventListener("click",()=>{
+    hamburger.classList.remove("display_block");
+    hamburger1.classList.add("display_none");
+})
+
+hamburgerLogin.addEventListener("click",()=>{
+    hamburger.classList.add("display_none");
+    signPopUp.classList.add("display_block");
+
+})
+
+rightNavRest1.addEventListener("click",()=>{
+ hamburger1.classList.add("display_block");
+})
+
+hamburgerSignOut.addEventListener("click",()=>{
+    rightNavRest1.classList.remove("display_flex");
+    rightNavRest.classList.remove("display_none");
+    hamburger1.classList.add("display_none");
+
+    // localStorage.setItem("isLoggedIn", false);
+    localStorage.removeItem("isLoggedIn");
+})
+
+
 //--------------------------------------------FOR PHONE VIEW----------------------------------------------------
 
 rightNavCityOptionPhone.addEventListener("click",()=>{
@@ -205,6 +290,7 @@ googleBtn.addEventListener("click", (e) => {
             const token = credential.accessToken;
             // The signed-in user info.
             const user = result.user;
+            localStorage.setItem("isLoggedIn", true);
         }).catch((error) => {
             // Handle Errors here.
             const errorCode = error.code;

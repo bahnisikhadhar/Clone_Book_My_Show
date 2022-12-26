@@ -30,8 +30,11 @@
   .carousel{
     margin-top: 1rem;
     background: linear-gradient(to right,skyblue,rgb(239, 218, 103));
-    /* height: 330px; */
+    height: 330px;
   }
+  /* .carousel::-webkit-scrollbar{
+    display: none;
+  } */
     .carousel-cell {
       width: 69%;
       height: 330px;

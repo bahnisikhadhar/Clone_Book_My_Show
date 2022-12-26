@@ -24,10 +24,9 @@ body {
 .nav_first_head,.nav_first_head1 {
     background-color: var(--bg-color) ;
     position: relative;
-    padding: .8rem 3.5rem;
+    padding: .8rem 0rem;
 }
 .nav_first_header,.nav_first_header1 {
-    /* padding: .8rem 3.5rem; */
     display: flex;
     justify-content: space-between;
     align-items: center;

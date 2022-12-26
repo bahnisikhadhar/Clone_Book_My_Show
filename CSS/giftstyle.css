@@ -1,0 +1,325 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: Roboto, sans-serif;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.top-container {
+    background: rgb(245, 245, 245);
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1240px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cards {
+    margin: 16px 0px;
+}
+
+.e-cards,
+.gift-cards {
+    border: 1px solid red;
+    max-width: 225px;
+    padding: 15px 40px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border: 1px solid rgb(204, 204, 204);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+    color: rgb(153, 153, 153);
+    text-align: center;
+    background-color: transparent;
+}
+
+.gift-cards a {
+    text-decoration: none;
+    color: rgb(153, 153, 153);
+}
+
+.e-cards {
+    max-width: 225px;
+    padding: 15px 40px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border: 1px solid rgb(204, 204, 204);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.big-container {
+    background: transparent;
+    font-size: 100%;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    max-width: 1240px;
+}
+
+.heading {
+    padding: 16px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    color: rgb(102, 102, 102);
+}
+
+.options {
+    background: transparent;
+    border: 0;
+    font-size: 100%;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    flex-wrap: wrap;
+}
+
+.option-element {
+    border-radius: 16px;
+    border: 1px solid rgb(235, 78, 98);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+    padding: 8px 16px;
+    margin: 8px;
+    color: black;
+    cursor: pointer;
+    background: white;
+}
+
+.first {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    background: rgb(235, 78, 98);
+}
+
+.option-element:hover {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    background: rgb(235, 78, 98);
+}
+
+.gift-vouchers {
+    display: flex;
+    flex-flow: row wrap;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding: 16px;
+    flex-wrap: wrap;
+}
+
+.voucher-items {
+    width: calc(25% - 16px);
+    margin: 8px;
+    height: 184px;
+    min-height: 184px;
+    max-height: 184px;
+    max-width: calc(25% - 16px);
+    min-width: calc(25% - 16px);
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+}
+
+.condition-container {
+    justify-content: space-around;
+    padding: 16px;
+    width: 70%;
+    margin: 16px auto 0px;
+}
+
+.online-cards {
+    padding-bottom: 0.5%;
+}
+
+.condition-items {
+    color: rgb(235, 78, 98);
+    cursor: pointer;
+    padding: 8px;
+}
+
+.online-ticket,
+.gift-card {
+    position: relative;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+    color: rgb(102, 102, 102);
+    margin-right: 20px;
+}
+
+.online-ticket::after {
+    position: absolute;
+    content: "→";
+    right: -15px;
+}
+
+.lower-upper-box {
+    color: rgb(102, 102, 102);
+    background: rgb(255, 255, 255);
+    padding: 35px 15px;
+}
+
+.lower-upper-box-wrapper {
+    max-width: 1240px;
+    width: 100%;
+    margin: 0px auto;
+}
+
+.lower-upper-box-header {
+    text-align: center;
+    padding: 20px;
+    color: rgb(51, 51, 51);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.lower-upper-box-heading1 {
+    padding: 0px 20px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+    text-align: center;
+}
+
+.lower-upper-box-heading2 {
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+}
+
+.tips {
+    padding: 15px 25px;
+    border: 1px solid rgb(153, 153, 153);
+    border-radius: 5px;
+}
+
+.tips-para {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+}
+
+.tips-list {
+    padding: 15px 35px;
+}
+
+.tips-list-item {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+    color: rgb(153, 153, 153);
+    list-style-type: disc;
+}
+
+.experience-description {
+    color: rgb(153, 153, 153);
+    background: rgb(242, 242, 242);
+    padding: 10px 15px;
+}
+
+.experience-wrapper {
+    max-width: 1240px;
+    width: 100%;
+    margin: 0px auto;
+    padding: 0px 16px;
+    display: flex;
+    flex-flow: column;
+    -webkit-box-flex: 1;
+}
+
+.experience-wrapper-heading {
+    text-align: center;
+    padding: 20px;
+    color: rgb(102, 102, 102);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+}
+
+.experience-content {
+    padding: 0px 30px 30px 20px;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+}
+
+@media screen and (max-width:890px) {
+    .image img {
+        width: 100%;
+        height: 75%;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .gift-vouchers {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .voucher-items {
+        min-width: 100%;
+        min-height: 200px;
+    }
+
+    .image {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image img {
+        height: 100%;
+        min-width: 60%;
+        margin: auto;
+    }
+}

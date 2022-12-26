@@ -1,0 +1,381 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: Roboto, sans-serif;
+}
+
+.outer-container {
+    display: flex;
+    flex-direction: column;
+    background: rgb(245, 245, 245);
+    min-height: 100vh;
+}
+
+.outer-wrapper {
+    max-width: 1240px;
+    width: 100%;
+    margin: 0px auto;
+    padding: 0px 16px;
+    display: flex;
+    flex-flow: column nowrap;
+    -moz-box-flex: 1;
+    flex-grow: 1;
+}
+
+.gift-cards {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    margin: 16px 0px;
+}
+
+.e-card {
+    max-width: 225px;
+    padding: 15px 40px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border: 1px solid rgb(204, 204, 204);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+    color: rgb(153, 153, 153);
+    text-align: center;
+    background-color: transparent;
+}
+
+.e-card a {
+    text-decoration: none;
+    color: rgb(153, 153, 153);
+}
+
+.p-card {
+    max-width: 225px;
+    padding: 15px 40px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border: 1px solid rgb(204, 204, 204);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.container {
+    background-color: rgb(255, 255, 255);
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+}
+
+.heading {
+    padding: 16px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    color: rgb(51, 51, 51);
+}
+
+.first-content {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+    color: rgb(102, 102, 102);
+    padding: 16px;
+}
+
+.store-logos {
+    padding: 16px;
+}
+
+.store-header {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    padding: 16px
+}
+
+.company-logo1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo1-item {
+    padding: 16px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.logo-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 70px;
+    min-height: 70px;
+    max-width: 150px;
+    min-width: 150px;
+    border-radius: 8px;
+}
+
+.logo-div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.amazon-snapdeal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.amazon-items {
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.amazon-div {
+    max-height: 70px;
+    min-height: 70px;
+    max-width: 150px;
+    min-width: 150px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.amazon-div img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.book-my-show-container {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: space-evenly;
+    -webkit-box-align: center;
+    align-items: center;
+    padding-bottom: 16px;
+}
+
+.bookMyShow-logo {
+    width: 100%;
+    padding: 16px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-container {
+    max-height: 234px;
+    min-height: 234px;
+    max-width: 412px;
+    min-width: 412px;
+    border-radius: 8px;
+}
+
+.logo-container img {
+    min-width: 100%;
+    min-width: 100%;
+    object-fit: contain;
+}
+
+.money-back-options {
+    text-align: center;
+    padding: 16px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.money-options {
+    background: transparent;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding: 8px 0px;
+}
+
+.money-options img {
+    width: 35px;
+    height: 35px;
+}
+
+.option-description {
+    color: rgb(102, 102, 102);
+    margin-left: 16px;
+}
+
+.terms-and-conditions {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    width: 70%;
+    margin: 16px auto 0px;
+}
+
+.terms-descriptions {
+    color: rgb(235, 78, 98);
+    cursor: pointer;
+    padding: 8px;
+}
+
+.ticket-gift {
+    padding: 15px 0;
+}
+
+.ticket {
+    position: relative;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+    color: rgb(102, 102, 102);
+}
+
+.ticket::after {
+    position: relative;
+    content: "→";
+    right: -1px;
+}
+
+.gift {
+    position: relative;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+    color: rgb(102, 102, 102);
+    margin-right: 20px;
+}
+.lower-upper-box {
+    color: rgb(102, 102, 102);
+    background: rgb(255, 255, 255);
+    padding: 35px 15px;
+}
+
+.lower-upper-box-wrapper {
+    max-width: 1240px;
+    width: 100%;
+    margin: 0px auto;
+}
+
+.lower-upper-box-header {
+    text-align: center;
+    padding: 20px;
+    color: rgb(51, 51, 51);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.lower-upper-box-heading1 {
+    padding: 0px 20px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+    text-align: center;
+}
+
+.lower-upper-box-heading2 {
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+}
+
+.tips {
+    padding: 15px 25px;
+    border: 1px solid rgb(153, 153, 153);
+    border-radius: 5px;
+}
+
+.tips-para {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+}
+
+.tips-list {
+    padding: 15px 35px;
+}
+
+.tips-list-item {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+    color: rgb(153, 153, 153);
+    list-style-type: disc;
+}
+
+.experience-description {
+    color: rgb(153, 153, 153);
+    background: rgb(242, 242, 242);
+    padding: 10px 15px;
+}
+
+.experience-wrapper {
+    max-width: 1240px;
+    width: 100%;
+    margin: 0px auto;
+    padding: 0px 16px;
+    display: flex;
+    flex-flow: column;
+    -webkit-box-flex: 1;
+}
+
+.experience-wrapper-heading {
+    text-align: center;
+    padding: 20px;
+    color: rgb(102, 102, 102);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+}
+
+.experience-content {
+    padding: 0px 30px 30px 20px;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+}
+
+@media screen and (max-width:775px) {
+    .bookMyShow-logo{
+        display: flex;
+        flex-direction: column;
+    }
+    .money-back-options {
+        width: 100%;
+        padding-left: 2%;
+    }
+}

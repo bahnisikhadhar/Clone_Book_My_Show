@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <title>Physical Cards</title>
+    <link rel="stylesheet" href="../CSS/giftstyle2.css">
+</head>
+
+<body>
+
+    <header class="nav_first_head">
+        <div class="nav_first_header container">
+            <div class="left_nav">
+                <a href="#">
+                    <img src="../Images/bookmyshow-logo-31BC3C7354-seeklogo.com (2).jpg" alt="" class="left_nav_logo">
+                </a>
+                <div class="left_nav_search">
+                    <div class="search_icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    <input type="search" placeholder="Search for Movies, Events, Plays, Sports and Activities"
+                        class="search_bar">
+                </div>
+            </div>
+            <div class="right_nav">
+                <div class="right_nav_city">
+                    <span class="city_name">Kolkata</span>
+                    <i class="fa-solid fa-caret-down"></i>
+                </div>
+                <div class="right_nav_rest">
+                    <button class="sign_btn btn">sign in</button>
+                    <div class="ham_icon"><i class="fa-solid fa-bars"></i></div>
+                </div>
+                <div class="right_nav_rest1">
+                    <div class="user_icon"><i class="fa-solid fa-user"></i></div>
+                    <p>Hi,<span class="user_name">Guest</span></p>
+                </div>
+
+            </div>
+    </header>
+    <!----------------------------------------------Signin-POP-UP----------------------------------------------->
+    <div class="sign_pop_up">
+        <a href="#" class="modalclose"><i class="fa-solid fa-xmark"></i></a>
+        <p>Get Started</p>
+        <div class="sign_box" id="google_btn">
+            <i class="fa-brands fa-google"></i>
+            <span>Continue with Google</span>
+        </div>
+        <div class="sign_box">
+            <i class="fa-solid fa-envelope"></i>
+            <span>Continue with Email</span>
+        </div>
+        <div class="sign_box">
+            <i class="fa-brands fa-apple"></i>
+            <span>Continue with Apple</span>
+        </div>
+        <p class="pop_text">OR</p>
+        <div class="phone">
+            <span>+91</span> <input type="tel" placeholder="Continue with mobile number" class="phone_num">
+        </div>
+        <div class="height"></div>
+        <p class="terms">I agree to the <a href="#">Terms & Conditions</a>& <a href="#">Privacy Policy</a></p>
+        <div class="continue">Continue</div>
+    </div>
+
+
+    <div class="sign_pop_up1">
+        <div class="leftchevro_icon"><i class="fa-solid fa-chevron-left"></i></div>
+        <h3>Verify your Mobile Number </h3>
+        <p>Enter OTP sent to +91<span class="phonenum_verify"></span></p>
+        <div class="otp_box_container">
+            <input type="text" class="otp_box otp_box1" maxlength="1">
+            <input type="text" class="otp_box" maxlength="1">
+            <input type="text" class="otp_box" maxlength="1">
+            <input type="text" class="otp_box" maxlength="1">
+            <input type="text" class="otp_box" maxlength="1">
+            <input type="text" class="otp_box" maxlength="1">
+        </div>
+        <div class="invalid_msg"></div>
+        <p class="rcv_otp">Didn't receive OTP? <span class="resnd_otp">Resend OTP</span></p>
+        <div class="continue1">Continue</div>
+    </div>
+
+    <!------------------------------------------CITY-POP-UP---------------------------------------------------->
+    <div class="city_pop_up">
+        <div class="city_pop_search">
+            <div class="search_icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <input type="search" placeholder="Search for your city" class="search_bar city_bar">
+        </div>
+        <p>Popular cities</p>
+        <ul class="city_list">
+            <li>
+                <div class="city_box">
+                    <img src="images\mumbai.avif" alt="Mumbai" class="cityimg">
+                    <div class="cityTrans">Mumbai</div>
+                </div>
+            </li>
+            <li>
+                <div class="city_box">
+                    <img src="images\ncr.avif" alt="Delhi-ncr" class="cityimg">
+                    <div class="cityTrans">Delhi-ncr</div>
+                </div>
+            </li>
+            <li>
+                <div class="city_box">
+                    <img src="images\bang.avif" alt="Bengaluru" class="cityimg">
+                    <div class="cityTrans">Bengaluru</div>
+                </div>
+            </li>
+            <li>
+                <div class="city_box">
+                    <img src="images\hyd.avif" alt="Hydrabad" class="cityimg">
+                    <div class="cityTrans">Hydrabad</div>
+                </div>
+            </li>
+            <li>
+                <div class="city_box">
+                    <img src="images\ahd.avif" alt="Ahmedabad" class="cityimg">
+                    <div class="cityTrans">Ahmedabad</div>
+                </div>
+            </li>
+            <li>
+                <div class="city_box">
+                    <img src="images\chd.avif" alt="Chandigarh" class="cityimg">
+                    <div class="cityTrans">Chandigarh</div>
+                </div>
+            </li>
+            <li>
+                <div class="city_box">
+                    <img src="images\chen.avif" alt="Chennai" class="cityimg">
+                    <div class="cityTrans">Chennai</div>
+                </div>
+            </li>
+            <li>
+                <div class="city_box">
+                    <img src="images\pune.avif" alt="Pune" class="cityimg">
+                    <div class="cityTrans">Pune</div>
+                </div>
+            </li>
+            <li>
+                <div class="city_box">
+                    <img src="images\kolk.avif" alt="Kolkata" class="cityimg">
+                    <div class="cityTrans">Kolkata</div>
+                </div>
+            </li>
+            <li>
+                <div class="city_box">
+                    <img src="images\koch.avif" alt="Kochi" class="cityimg">
+                    <div class="cityTrans">Kochi</div>
+                </div>
+            </li>
+        </ul>
+        <p class="view">View All Cities</p>
+
+        <div class="lowerpart_city">
+            <p class="other">Other Cities</p>
+            <div class="other_city">
+                <ul>
+                    <li><a href="#" class="cityTrans"> Aalo</a></li>
+                    <li><a href="#" class="cityTrans">Addanki</a></li>
+                    <li><a href="#" class="cityTrans">Agar Malwa</a></li>
+                    <li><a href="#" class="cityTrans">Ahmedabad</a></li>
+                    <li><a href="#" class="cityTrans">Akbarpur</a></li>
+                    <li><a href="#" class="cityTrans">Alakode</a></li>
+                    <li><a href="#" class="cityTrans">Alibaug</a></li>
+                    <li><a href="#" class="cityTrans">Alwar</a></li>
+                    <li><a href="#" class="cityTrans">Amravati</a></li>
+                    <li><a href="#" class="cityTrans"> Aalo</a></li>
+                    <li><a href="#" class="cityTrans">Addanki</a></li>
+                    <li><a href="#" class="cityTrans">Agar Malwa</a></li>
+                    <li><a href="#" class="cityTrans">Ahmedabad</a></li>
+                    <li><a href="#" class="cityTrans">Akbarpur</a></li>
+                    <li><a href="#" class="cityTrans">Alakode</a></li>
+                    <li><a href="#" class="cityTrans">Alibaug</a></li>
+                    <li><a href="#" class="cityTrans">Alwar</a></li>
+                    <li><a href="#" class="cityTrans">Amravati</a></li>
+
+                </ul>
+                <ul>
+                    <li><a href="#" class="cityTrans"> Aalo</a></li>
+                    <li><a href="#" class="cityTrans">Addanki</a></li>
+                    <li><a href="#" class="cityTrans">Agar Malwa</a></li>
+                    <li><a href="#" class="cityTrans">Ahmedabad</a></li>
+                    <li><a href="#" class="cityTrans">Akbarpur</a></li>
+                    <li><a href="#" class="cityTrans">Alakode</a></li>
+                    <li><a href="#" class="cityTrans">Alibaug</a></li>
+                    <li><a href="#" class="cityTrans">Alwar</a></li>
+                    <li><a href="#" class="cityTrans">Amravati</a></li>
+                    <li><a href="#" class="cityTrans"> Aalo</a></li>
+                    <li><a href="#" class="cityTrans">Addanki</a></li>
+                    <li><a href="#" class="cityTrans">Agar Malwa</a></li>
+                    <li><a href="#" class="cityTrans">Ahmedabad</a></li>
+                    <li><a href="#" class="cityTrans">Akbarpur</a></li>
+                    <li><a href="#" class="cityTrans">Alakode</a></li>
+                    <li><a href="#" class="cityTrans">Alibaug</a></li>
+                    <li><a href="#" class="cityTrans">Alwar</a></li>
+                    <li><a href="#" class="cityTrans">Amravati</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#" class="cityTrans"> Aalo</a></li>
+                    <li><a href="#" class="cityTrans">Addanki</a></li>
+                    <li><a href="#" class="cityTrans">Agar Malwa</a></li>
+                    <li><a href="#" class="cityTrans">Ahmedabad</a></li>
+                    <li><a href="#" class="cityTrans">Akbarpur</a></li>
+                    <li><a href="#" class="cityTrans">Alakode</a></li>
+                    <li><a href="#" class="cityTrans">Alibaug</a></li>
+                    <li><a href="#" class="cityTrans">Alwar</a></li>
+                    <li><a href="#" class="cityTrans">Amravati</a></li>
+                    <li><a href="#" class="cityTrans"> Aalo</a></li>
+                    <li><a href="#" class="cityTrans">Addanki</a></li>
+                    <li><a href="#" class="cityTrans">Agar Malwa</a></li>
+                    <li><a href="#" class="cityTrans">Ahmedabad</a></li>
+                    <li><a href="#" class="cityTrans">Akbarpur</a></li>
+                    <li><a href="#" class="cityTrans">Alakode</a></li>
+                    <li><a href="#" class="cityTrans">Alibaug</a></li>
+                    <li><a href="#" class="cityTrans">Alwar</a></li>
+                    <li><a href="#" class="cityTrans">Amravati</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#" class="cityTrans"> Aalo</a></li>
+                    <li><a href="#" class="cityTrans">Addanki</a></li>
+                    <li><a href="#" class="cityTrans">Agar Malwa</a></li>
+                    <li><a href="#" class="cityTrans">Ahmedabad</a></li>
+                    <li><a href="#" class="cityTrans">Akbarpur</a></li>
+                    <li><a href="#" class="cityTrans">Alakode</a></li>
+                    <li><a href="#" class="cityTrans">Alibaug</a></li>
+                    <li><a href="#" class="cityTrans">Alwar</a></li>
+                    <li><a href="#" class="cityTrans">Amravati</a></li>
+                    <li><a href="#" class="cityTrans"> Aalo</a></li>
+                    <li><a href="#" class="cityTrans">Addanki</a></li>
+                    <li><a href="#" class="cityTrans">Agar Malwa</a></li>
+                    <li><a href="#" class="cityTrans">Ahmedabad</a></li>
+                    <li><a href="#" class="cityTrans">Akbarpur</a></li>
+                    <li><a href="#" class="cityTrans">Alakode</a></li>
+                    <li><a href="#" class="cityTrans">Alibaug</a></li>
+                    <li><a href="#" class="cityTrans">Alwar</a></li>
+                    <li><a href="#" class="cityTrans">Amravati</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#" class="cityTrans"> Aalo</a></li>
+                    <li><a href="#" class="cityTrans">Addanki</a></li>
+                    <li><a href="#" class="cityTrans">Agar Malwa</a></li>
+                    <li><a href="#" class="cityTrans">Ahmedabad</a></li>
+                    <li><a href="#" class="cityTrans">Akbarpur</a></li>
+                    <li><a href="#" class="cityTrans">Alakode</a></li>
+                    <li><a href="#" class="cityTrans">Alibaug</a></li>
+                    <li><a href="#" class="cityTrans">Alwar</a></li>
+                    <li><a href="#" class="cityTrans">Amravati</a></li>
+                    <li><a href="#" class="cityTrans"> Aalo</a></li>
+                    <li><a href="#" class="cityTrans">Addanki</a></li>
+                    <li><a href="#" class="cityTrans">Agar Malwa</a></li>
+                    <li><a href="#" class="cityTrans">Ahmedabad</a></li>
+                    <li><a href="#" class="cityTrans">Akbarpur</a></li>
+                    <li><a href="#" class="cityTrans">Alakode</a></li>
+                    <li><a href="#" class="cityTrans">Alibaug</a></li>
+                    <li><a href="#" class="cityTrans">Alwar</a></li>
+                    <li><a href="#" class="cityTrans">Amravati</a></li>
+                </ul>
+            </div>
+            <p class="hide">Hide All Cities</p>
+        </div>
+    </div>
+    <!------------------------------------------------HAMBURGER MENU-------------------------------------------------->
+    <div class="nav_hamburger">
+        <div class="nav_hamburger_head">
+            <h1>Hey!</h1>
+        </div>
+
+        <div class="nav_hamburger_row1">
+            <div class="hamburger_gift_icon">
+                <img src="Images\rewards_login.avif" alt="" width="40px">
+            </div>
+            <p>Unlock Special Offers & <br> Great Benefits</p>
+            <button class="hamburger_login">Login/Register</button>
+        </div>
+
+        <div class="nav_othr_section">
+            <div class="nav_other_left">
+                <i class="fa-solid fa-bell"></i>
+                <p>Notification</p>
+            </div>
+            <div class="hambrgr_chevIcon"><i class="fa-solid fa-chevron-right"></i></div>
+        </div>
+
+        <div class="nav_othr_section">
+            <div class="nav_other_left">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <p>Your Orders</p>
+            </div>
+            <div class="hambrgr_chevIcon"><i class="fa-solid fa-lock"></i></div>
+        </div>
+
+        <div class="nav_othr_section">
+            <div class="nav_other_left">
+                <i class="fa-solid fa-desktop"></i>
+                <p>Stream Liabrary</p>
+            </div>
+            <div class="hambrgr_chevIcon"><i class="fa-solid fa-lock"></i></div>
+        </div>
+    </div>
+
+
+    <div class="nav_hamburger1">
+        <div class="nav_hamburger_head1">
+            <h1>Hey!Guest</h1>
+            <div class="user_icon"><i class="fa-solid fa-user"></i></div>
+        </div>
+
+        <div class="nav_othr_section1">
+            <div class="nav_other_left">
+                <i class="fa-solid fa-bell"></i>
+                <p>Notification</p>
+            </div>
+            <div class="hambrgr_chevIcon"><i class="fa-solid fa-chevron-right"></i></div>
+        </div>
+
+        <div class="nav_othr_section1">
+            <div class="nav_other_left">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <p>Your Orders</p>
+            </div>
+            <div class="hambrgr_chevIcon"><i class="fa-solid fa-chevron-right"></i></div>
+        </div>
+
+        <div class="nav_othr_section1">
+            <div class="nav_other_left">
+                <i class="fa-solid fa-desktop"></i>
+                <p>Stream Liabrary</p>
+            </div>
+            <div class="hambrgr_chevIcon"><i class="fa-solid fa-chevron-right"></i></div>
+        </div>
+
+        <div class="nav_hamburger_lastrow">
+            <button class="hamburger_signOut">Sign Out</button>
+        </div>
+
+    </div>
+
+    <!----------------------------------------------------SECOND HEADER----------------------------------------------->
+
+    <header class="nav_second_head">
+        <div class="nav_second_header_content container">
+            <ul class="nav_left_second_head">
+                <li><a href="#" class="nav_left_secHd_anchr">Movies</a></li>
+                <li><a href="#" class="nav_left_secHd_anchr">Stream</a></li>
+                <li><a href="#" class="nav_left_secHd_anchr">Events</a></li>
+                <li><a href="#" class="nav_left_secHd_anchr">Plays</a></li>
+                <li><a href="#" class="nav_left_secHd_anchr">Sports</a></li>
+                <li><a href="#" class="nav_left_secHd_anchr">Activities</a></li>
+                <li><a href="#" class="nav_left_secHd_anchr">Buzz</a></li>
+            </ul>
+
+            <ul class="nav_right_second_head">
+                <li><a href="#" class="nav_right_secHd_anchr">ListYourShow <sup class="nav_newSup">NEW</sup></a></li>
+                <li><a href="#" class="nav_right_secHd_anchr">Corporates</a></li>
+                <li><a href="#" class="nav_right_secHd_anchr">Offers</a></li>
+                <li><a href="./HTML/gift.html" class="nav_right_secHd_anchr">Gift Cards</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-------------------------------------------------FOR PHONE VIEW---------------------------------------------->
+
+    <header class="nav_first_head1">
+        <div class="nav_first_header1 container">
+            <div class="left_nav1">
+                <h2>It All Starts Here!</h2>
+                <div class="right_nav_city1">
+                    <span class="city_name1">Kolkata</span>
+                    <i class="fa-solid fa-caret-down"></i>
+                </div>
+            </div>
+
+            <div class="right_nav1">
+                <button class="btn app_btn">Use App</button>
+                <!-- <div class="search_icon"><i class="fa-solid fa-magnifying-glass phone_magnify"></i></div> -->
+            </div>
+        </div>
+    </header>
+
+    <div class="below_bar">
+        <img src="./images/logo.png" alt="" class="below_bar_img">
+        <h1>Live <br> <span>Events</span></h1>
+        <div class="below_bar_user"><i class="fa-solid fa-user"></i></div>
+    </div>
+
+    <div class="outer-container">
+        <div class="outer-wrapper">
+            <ul class="gift-cards">
+                <li class="e-card">
+                    <a href="gift.html">E-Gift Cards</a>
+                </li>
+                <li class="p-card">
+                    Physical Gift Cards
+                </li>
+            </ul>
+            <div class="container">
+                <h5 class="heading">
+                    INTRODUCING PHYSICAL GIFT CARDS
+                </h5>
+                <div class="first-content">
+                    Gift your loved ones a range of experiences from movies to events, plays, concerts and sports with a
+                    BookMyShow gift card. Now pick one up at a store near you!!
+                    <br>
+                    BookMyShow Gift Cards are now available at thousands of stores at all major towns across India.
+                </div>
+                <div class="store-logos">
+                    <ul class="company-logo1">
+                        <li class="logo1-item">
+                            <div class="logo-div">
+                                <img src="https://assets-in.bmscdn.com/webin/giftcards/available/row1/1.png" alt="img">
+                            </div>
+                        </li>
+                        <li class="logo1-item">
+                            <div class="logo-div">
+                                <img src="https://assets-in.bmscdn.com/webin/giftcards/available/row1/2.png" alt="img">
+                            </div>
+                        </li>
+                        <li class="logo1-item">
+                            <div class="logo-div">
+                                <img src="	https://assets-in.bmscdn.com/webin/giftcards/available/row1/my_jio_store_logo_unit.jpg"
+                                    alt="img">
+                            </div>
+                        </li>
+                        <li class="logo1-item">
+                            <div class="logo-div">
+                                <img src="https://assets-in.bmscdn.com/webin/giftcards/available/row1/5.png" alt="img">
+                            </div>
+                        </li>
+                        <li class="logo1-item">
+                            <div class="logo-div circle">
+                                <img src="https://1000logos.net/wp-content/uploads/2020/09/Oreo-Logo-1995.png"
+                                    alt="img">
+                            </div>
+                        </li>
+                    </ul>
+                    <h6 class="store-header">Or order online from</h6>
+                    <ul class="amazon-snapdeal">
+                        <li class="amazon-items">
+                            <div class="amazon-div">
+                                <img src="https://assets-in.bmscdn.com/webin/giftcards/available/row2/1.png" alt="">
+                            </div>
+                        </li>
+                        <li class="amazon-items">
+                            <div class="amazon-div">
+                                <img src="https://assets-in.bmscdn.com/webin/giftcards/available/row2/2.png" alt="">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="book-my-show-container">
+                    <div class="bookMyShow-logo">
+                        <div class="logo-container">
+                            <img src="https://assets-in.bmscdn.com/webin/giftcards/giftcard.png" alt="img">
+                        </div>
+                        <div class="money-back-options">
+                            <li class="money-options">
+                                <img src="https://cdn-icons-png.flaticon.com/512/69/69881.png" alt="">
+                                <span class="option-description">
+                                    As easy as paying cash
+                                </span>
+                            </li>
+                            <li class="money-options">
+                                <img src="data:image/png;base64,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"
+                                    alt="">
+                                <span class="option-description">
+                                    Use it anytime, anywhere through the BookMyShow
+                                    <br>
+                                    mobile app or on our website.
+                                </span>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="terms-and-conditions">
+                <div class="terms-descriptions">
+                    Terms & Conditions
+                </div>
+                <div class="terms-descriptions">
+                    Need Help?
+                </div>
+                <div class="terms-descriptions">
+                    Check Gift Card Balance
+                </div>
+            </div>
+            <ol class="ticket-gift">
+                <li class="ticket">
+                    <small>
+                        Online Tickets
+                    </small>
+                </li>
+                <li class="gift">
+                    <small>
+                        Gift Cards
+                    </small>
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="lower-upper-box">
+        <div class="lower-upper-box-wrapper">
+            <h4 class="lower-upper-box-header">
+                BOOKMYSHOW GIFT CARDS
+            </h4>
+            <div class="lower-upper-box-heading1">
+                Gift an experience to your loved ones like never before! Give them a gift of fun and entertainment with
+                BookMyShow gift cards.
+                Whatever be the occasion, a BookMyShow Gift Card is just right to delight someone.
+                From birthdays, anniversaries, festivals to special occasions, there is a wide selection of quirky and
+                cool gift cards you can choose from.
+            </div>
+            <div class="lower-upper-box-heading2">
+                Redeem your gift card at the secure payment page while booking your tickets. Click on the "Gift Voucher"
+                tab and enter your Gift Card code.
+            </div>
+        </div>
+
+        <div class="tips">
+            <p class="tips-para">
+                Some useful tips while using Gift Cards
+            </p>
+            <ul class="tips-list">
+                <li class="tips-list-item">
+                    Gift cards can be redeemed on purchase of tickets for Movies, Plays, Concerts, Sports and Events
+                    across India.
+                </li>
+                <li class="tips-list-item">
+                    Valid for twelve months from the date of delivery.
+                </li>
+                <li class="tips-list-item">
+                    Multiple gift cards can be used in a single transaction. A gift card can be used any number of times
+                    during the validity period till its balance is exhausted.
+                </li>
+                <li class="tips-list-item">
+                    A gift card can be used any number of times during the validity period till its balance is
+                    exhausted.
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="experience-description">
+        <div class="experience-wrapper">
+            <h4 class="experience-wrapper-heading">
+                Experience The Freedom With BookMyShow Gift Cards!
+            </h4>
+            <div class="experience-content">
+                Are you running out of ideas to gift your loved ones on their birthdays, anniversaries and festivals
+                like Holi, Diwali, Eid, Christmas and New Year? The occasions are unending and it is definitely
+                difficult to decide on things to gift to your loved ones. BookMyShow has come up with a perfect way to
+                relieve you and make your gifting occasions special. Delight and get delighted with the festive gift
+                cards and birthday gift options with customised messages to send to your special people. This is also
+                the perfect gift to say congratulations to someone, expressing your love, saying thank you, or just
+                saying sorry. With these latest feature of instant <strong>gift vouchers</strong> and online gift cards,
+                you have the perfect opportunity to get the proper leeway to choose your <strong>favourite
+                    snacks</strong> and <strong>movies</strong> at the time you want to use them. Blast away the old and
+                boring gifting ideas and surprise your dear ones with our cool e-gift cards. Whatever be the occasion,
+                there's a gift coupon that awaits you and your loved ones. With prices ranging from a few hundred bucks
+                to a few thousand, you now have the power to make someone’s movie watching experience bigger, better and
+                more convenient. From birthdays, anniversaries, festivals to special occasions, there is a wide
+                selection of quirky and cool gift cards and coupons, you can choose from, for your friends and family.
+                You can also opt for the Combo Gift Cards where you can gift both a movie and a dining experience
+                together, and avail some enticing offers and enjoy while you can. BookMyShow Gift Cards can be used to
+                purchase any tickets on BookMyShow - be it movies, events, sports, plays or unique experiences. Here at
+                BookMyShow, buy a gift card that suits the purpose in the best way and delight your loved ones by making
+                their life special and exciting!
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="../JS/navbar.js"></script>
+</body>
+
+</html>

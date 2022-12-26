@@ -1,8 +1,86 @@
+const id = new URLSearchParams(window.location.search).get("id");
+
+const booking_head_el = document.querySelector(".booking_head");
+const booking_filter_el = document.querySelector(".booking_filter")
+let seatsToBookEl = document.querySelector(".seatstobook")
+
+let Api_key = "api_key=57b428c0e112b579eb26e2f43ff08b0f"
+let Base_Url = "https://api.themoviedb.org/3/"
 // ========================================FOR FETCHING DATA FROM JSON ==============================================
 
 const bookingCont = document.querySelector(".theatre_location");
 const workshopContainer = document.querySelector(".workshop");
 
+
+const renderDetails = async () => {
+  const res = await fetch(`${Base_Url}movie/${id}?${Api_key}`); // Fetching Specific Movie Details using id
+  const movieData = await res.json()
+  console.log(movieData)
+  const { original_title, genres, spoken_languages, adult } = movieData;
+
+  const template = `
+  
+  <div class="booking_title container">
+    <p class="movie_title">${original_title} -${spoken_languages[0].english_name}</p>
+  </div>
+  <div class="booking_genere container">
+    <i class="fa-brands fa-umbraco"></i>
+    <span class="genere">${genres[0].name}</span>
+    <span class="genere">${genres[1].name}</span>
+  
+  </div>
+  
+  
+  
+  `
+  booking_head_el.innerHTML = template
+
+  const template2 = `
+  
+  <p class="moviefilter">${spoken_languages[0].english_name}-2D</p>
+  <select class="movie_filter">
+    <option value="">Filter Sub Region</option>
+    <option value="">Filter Sub Region</option>
+    <option value="">Filter Sub Region</option>
+    <option value="">Filter Sub Region</option>
+    <option value="">Filter Sub Region</option>
+    <option value="">Filter Sub Region</option>
+  </select>
+  <select class="movie_filter">
+    <option value="">Filter Price Range</option>
+    <option value="">Filter Sub Region</option>
+    <option value="">Filter Sub Region</option>
+    <option value="">Filter Sub Region</option>
+    <option value="">Filter Sub Region</option>
+    <option value="">Filter Sub Region</option>
+  </select>
+  <select class="movie_filter">
+    <option value="">Filter Show Timing</option>
+    <option value="">Filter Sub Region</option>
+    <option value="">Filter Sub Region</option>
+    <option value="">Filter Sub Region</option>
+    <option value="">Filter Sub Region</option>
+    <option value="">Filter Sub Region</option>
+  </select>
+</div>
+  
+  
+  
+  `
+  booking_filter_el.innerHTML = template2
+
+  //   <header class="booking_head">
+  //   <div class="booking_title container">
+  //     <p class="movie_title">Drishyam 2 - Hindi</p>
+  //   </div>
+  //   <div class="booking_genere container">
+  //     <i class="fa-brands fa-umbraco"></i>
+  //     <span class="genere">DRAMA</span>
+  //     <span class="genere">MYSTERY</span>
+  //     <span class="genere">THRILLER</span>
+  //   </div>
+  // </header>
+}
 async function getLiveEvents() {
   let url = "../JSON/theatre.json";
   const res = await fetch(url);
@@ -108,7 +186,21 @@ theatrelocation.addEventListener("click", (e) => {
   }
 });
 
+const seatToChoose_button_EL = document.querySelector('.seatToChoose_button');
 
+seatToChoose_button_EL.addEventListener('click', function() {
+  // Get the number of seats the user selected
+  // const numSeats = document.querySelector('.seats.selected').textContent;
+
+  // // Get the type of seats the user selected
+  // const seatType = document.querySelector('.seat_name.selected').textContent;
+
+ 
+  const url = `../HTML/seat.html?id=${id}`;
+
+  // Navigate to the next page
+  window.location.href = url;
+});
 // ==================================================FOR DISPLAY MODAL====================================================
 
 
@@ -137,3 +229,6 @@ theatrelocation.addEventListener("click", (e) => {
 //     workshopContainer.innerHTML += template
 // }
 // getLiveEvents()
+
+
+window.addEventListener("DOMContentLoaded", () => renderDetails())

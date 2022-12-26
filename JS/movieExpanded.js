@@ -59,7 +59,7 @@ const renderDetails = async () => {
             <div class="screens">${productions.slice(0,-1)}</div>
             <div class="languages">${languages.slice(0,-1)}</div>
             <div class="other_detail"><span>${Math.floor(runtime/60)}hr ${runtime%60}mins</span> <span>. </span> <span>${gens.slice(0,-1)}</span><span>. </span> <span>${adult?"U/A":"U"}</span> <span>. </span> <span>${release_date}</span></div>
-            <a href="./theatres.html?id=${id}"><button class="tickt_btn" style="cursor:pointer"> Book Tickets</button></a>
+            <a href="../HTML/theatre.html?id=${id}"><button class="tickt_btn" style="cursor:pointer"> Book Tickets</button></a>
         </div>
      </div>
       <div class="about_movie">

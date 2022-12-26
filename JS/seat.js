@@ -7,10 +7,48 @@ let seatrow2 = Number(gold.getAttribute("seatrow2"));
 let seatcol2 = Number(gold.getAttribute("seatcol2"));
 let seatrow3 = Number(silver.getAttribute("seatrow3"));
 let seatcol3 = Number(silver.getAttribute("seatcol3"));
+const dynamic_nav_el = document.querySelector(".seat_nav")
+const close_pointer_el = document.querySelector(".seat_close_icon")
 const amoutShowButton = document.querySelector(".seat_total_amount");
 let currentrow1, currentrow2, currentrow3;
 
+
+const id = new URLSearchParams(window.location.search).get("id");
+let Api_key = "api_key=57b428c0e112b579eb26e2f43ff08b0f"
+let Base_Url = "https://api.themoviedb.org/3/"
+
 // localStorage.clear() ;
+
+const renderDetails = async () => {
+  const res = await fetch(`${Base_Url}movie/${id}?${Api_key}`)
+  const movieData = await res.json();
+  console.log(movieData);
+  const { original_title } = movieData;
+  const template = `
+  <div class="seat_nav_content container">
+  <div class="seat_left_nav_item">
+    <div class="seat_cheveron"><a href="#back" class="fa fa-angle-left back-logo"></a></div>
+
+    <div class="api_fetched_detail">
+      <p class="seat_movie_name">${original_title} <span class="seat_adult">(U/A)</span></p>
+      <p class="seat_theater_name">Theater Name</p>
+    </div>
+  </div>
+
+  <div class="seat_right_nav_item">
+    <p class="num_of_tickets pointer"><span id="tickt_no"> 2 </span>Tickets </p>
+     <a href="../HTML/theatre.html?id=${id}"><div class="seat_close_icon" style="color:white";><span class="fa fa-close pointer"></span></div></a>
+  </div>
+</div>
+  
+  
+  
+  `
+  //
+  dynamic_nav_el.innerHTML =template;
+}
+
+
 
 for (let i = 0; i < seatrow1; i++) {
   platinum.innerHTML = platinum.innerHTML + `<div class='row' id='row1-${i}'><span class="light_grey_text">${String.fromCharCode(65 + i)} &nbsp; &nbsp; </span></div>&nbsp;`;
@@ -118,10 +156,10 @@ seats2.forEach(seat => {
   }
 
   seat.addEventListener('click', e => {
-     
-    temp++ ;
-    if(temp > count ) {
-      return ;
+
+    temp++;
+    if (temp > count) {
+      return;
     }
     else {
 
@@ -134,11 +172,11 @@ seats2.forEach(seat => {
         ticketCount2++;
         selectedSeats2.push(seat.id);
       }
-      
+
       ticketTotal2 = ticketCount2 * ticketPrice2;
-      
+
       console.log(`${ticketCount2} tickets, total cost: ${ticketTotal2}`);
-      
+
       localStorage.setItem('selectedSeats2', JSON.stringify(selectedSeats2));
       amoutShowButton.innerText = ticketTotal2;
     }
@@ -168,9 +206,9 @@ seats3.forEach(seat => {
 
   seat.addEventListener('click', e => {
 
-    temp++ ;
-    if(temp > count) {
-      return ;
+    temp++;
+    if (temp > count) {
+      return;
     }
     else {
 
@@ -183,16 +221,16 @@ seats3.forEach(seat => {
         ticketCount3++;
         selectedSeats3.push(seat.id);
       }
-      
+
       ticketTotal3 = ticketCount3 * ticketPrice3;
-      
+
       console.log(`${ticketCount3} tickets, total cost: ${ticketTotal3}`);
-      
+
       localStorage.setItem('selectedSeats3', JSON.stringify(selectedSeats3));
       amoutShowButton.innerText = ticketTotal3;
 
     }
-      
+
   });
 });
 
@@ -215,3 +253,6 @@ seats3.forEach(seat => {
   })
 });
 // new
+
+
+window.addEventListener("DOMContentLoaded", () => renderDetails())

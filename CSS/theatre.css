@@ -1,0 +1,761 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  
+  .container {
+    max-width: 1440px;
+    padding: 0 3.5em;
+    margin: 0 auto;
+  }
+  
+  /* .container{
+    max-width: 1440px;
+    padding: 0 3.5em;
+    margin: 0 auto;
+  } */
+  
+  /* header */
+  
+  /* ===========================================HEADER CSS========================================================== */
+  .booking_head {
+    background-color: #333545;
+    padding-bottom: 1em;
+  }
+  
+  .movie_title {
+    color: #f4f4f4;
+    font-size: 40px;
+    padding: 20px 0 20px 0;
+  }
+  
+  .booking_genere {
+    color: #999999;
+  }
+  
+  .booking_genere i {
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    margin-right: 3px;
+  }
+  
+  .genere {
+    border: 1px solid #999999;
+    border-radius: 15px;
+    padding: 3px 5px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-right: 3px;
+  }
+  
+  /* ================================================HEADER CSS ENDS================================================= */
+  
+  /* ===================================================DATE SECTION CSS STARTS========================================*/
+  
+  .dates {
+    display: flex;
+    align-items: center;
+    max-width: 1440px;
+  }
+  .dates i:hover {
+    color: #414040;
+  }
+  
+  .fa-less-than {
+    font-size: 25px;
+    color: #adacac;
+    /* padding-right: 1em; */
+  }
+  
+  .fa-greater-than {
+    font-size: 25px;
+    color: #adacac;
+    /* padding-left: 1em; */
+  }
+  
+  .booking_date {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .booking_day {
+    padding: 0.5em 1em;
+    color: #999999;
+    margin: 0 1px;
+    border-radius: 8px;
+  }
+  
+  .booking_day:hover {
+    border-radius: 8px;
+    background-color: rgb(237, 93, 93);
+  }
+  
+  .day {
+    font-size: 12px;
+    color: #adacac;
+  }
+  
+  .date {
+    font-size: 16px;
+    color: #333333;
+    text-align: center;
+  }
+  .month {
+    font-size: 12px;
+    color: #adacac;
+  }
+  
+  .selectDate {
+    display: flex;
+  }
+  
+  /* =============================================DATE SECTION CSS ENDS============================================ */
+  /* ====================================================FILTER====================================================== */
+  .booking_filter {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  
+  }
+  
+  .movie_filter {
+    padding: 2em 2em;
+    border: 1px solid rgba(203, 201, 201, 0.208);
+  }
+  
+  .moviefilter {
+    padding: 1.6em 2em;
+    border: 1px solid rgba(203, 201, 201, 0.208);
+  }
+  /* ============================================FILTER============================================================= */
+  
+  
+  /* =============================================EXTRA INFORMATION================================================= */
+  
+  .booking_content {
+    background-color: #f2f2f2;
+    /* height: 100vh; */
+    padding-top: 1em;
+  }
+  
+  
+  .main_wrapper{
+    background-color: #f2f2f2;
+  }
+  
+  .booking_attribute {
+    background-color: #ffff;
+    height: 30px;
+    box-shadow: 0px 0px 0.5px 0px;
+  }
+  
+  
+  
+  .available i {
+    color: rgb(103, 220, 103);
+    margin-right: 5px;
+  }
+  
+  .filling i {
+    color: red;
+    margin-right: 5px;
+  }
+  
+  .language {
+    color: rgb(100, 180, 100);
+    border: 0.5px solid rgb(100, 180, 100);
+    height: 1px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .availability {
+    font-size: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .availability span {
+    padding: 10px;
+  }
+  
+  /* =======================================================EXTRA INFORMATION=========================================== */
+  
+  /*===========================================================THEATRE LOCATION======================================= */
+  .booking_location {
+    background-color: #ffff;
+    box-shadow: 0px 0px 0.5px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 12px;
+  
+  }
+  
+  .heart{
+    padding: 1.5em;
+  }
+  
+  .heart:hover {
+    color: rgb(241, 72, 72);
+    
+  }
+  
+  
+  
+  .info {
+    padding: 1.5em 0;
+  }
+  
+  .info i{
+    color: #7D7d7D;
+  }
+  
+  .info span {
+    font-size: 10px;
+    color:#7d7d7d ;
+  }
+  
+  .theatre_name {
+    padding: 1.5em 0 2em 0 ;
+    color: #333333;
+    font-weight: bold;
+    font-size:12px;
+  }
+  
+  
+  .mTicket {
+    color: #49ba8e;
+  }
+  
+  .mTicket i {
+    padding-right: 10px;
+    color: #49ba8e;
+  }
+  
+  .foodbevrages {
+    padding: 0 20px;
+    color: #ffa426;
+  }
+  
+  .foodbevrages i {
+    padding: 0 10px;
+    color: #ffa426;
+  }
+  
+  .timing {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5em 0.5em;
+    flex-wrap: wrap;
+  }
+  
+  .movie_timing {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-top: 1em;
+    padding-left: 2em;
+  }
+  
+  .timing i {
+    color: #ffa426;
+  }
+  
+  .booking_timing {
+    color: #49ba8e;
+    border-radius: 3px;
+    padding: 1em 2em;
+    border: 1px solid #9c9f9e;
+    margin-right: 1em;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .booking_timing:hover {
+    border: 1px solid rgb(241, 72, 72);
+  }
+  
+  .booking_flexibility {
+    font-size: 10px;
+    color: #999999;
+    margin-top: 2em;
+  }
+  
+  .booking_flexibility i {
+    margin-right: 1em;
+  }
+  
+  
+  /* =================================================THEATRE LOCATION ENDS============================================= */
+  
+  
+  /* ===================================================BOOKING INFORMATION============================================ */
+  .booking_direction {
+    background-color: #ffff;
+    height: 40px;
+    box-shadow: 0px 0px 0.5px 0px;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .direction {
+    font-size: 12px;
+    color: #aaabac;
+    margin: 0 2em;
+  }
+  /* =========================================================BOOKING INFORMATION=========================================== */
+  .latestUpcoming {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 2em 1em 1em 1em;
+    margin-bottom: 2em;
+  }
+  
+  .latestUpcoming_title {
+    padding: 0.5em 0.1em;
+    font-size: 12px;
+    color: #333333;
+  }
+  
+  .latestUpcoming_content {
+    font-size: 12px;
+    color: #666666;
+  }
+  .privacy_note {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 1em;
+  }
+  
+  .privacy_note a {
+    text-decoration: none;
+    color: rgb(241, 72, 72);
+  }
+  .privacy_note-head {
+    color: #414040;
+    font-size: 12px;
+    padding: 0.5em 0.1em;
+  }
+  
+  .privacy_note-content {
+    color: #999999;
+    font-size: 12px;
+    margin-bottom: 1em;
+  }
+  
+  /* =============================================FOOTER SECTION STARTS========================================================= */
+  
+  .mainfooter {
+    background-color: rgb(49, 48, 53);
+    color: #7f7f7f;
+  }
+  
+  .mainfooter_booking-services {
+    text-align: center;
+    font-size: 12px;
+    padding: 3em 3.5em;
+  }
+  
+  .mainfooter_booking-services a {
+    color: #7f7f7f;
+    text-decoration: none;
+  }
+  
+  .mainfooter_booking-services a:hover {
+    color: #ffff;
+  }
+  
+  .mainfooter_links a {
+    color: #7f7f7f;
+    text-decoration: none;
+  }
+  
+  .mainfooter_links a:hover {
+    color: #ffff;
+  }
+  
+  .mainfooter_booking {
+    color: #ffff;
+    font-size: 16px;
+  }
+  
+  .mainfooter_information {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+    background-color: rgb(49, 48, 53);
+  }
+  
+  .mainfooter_information .booking span {
+    margin: 0 16px 0 4px;
+    color: #f4f4f4;
+    font-size: 16px;
+  }
+  
+  .mainfooter_contact {
+    background-color: #ec5e71;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 3px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+  }
+  
+  .mainfooter_contact:hover {
+    cursor: pointer;
+    border: 2px solid #ec1532;
+  }
+  
+  .mainfooter_hut {
+    padding: 8px;
+  }
+  
+  .mainfooter_icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .mainfooter_support {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(64, 64, 67);
+    padding: 12px 70px;
+  }
+  
+  .mainfooter_customer_support {
+    text-align: center;
+  }
+  
+  .mainfooter_customer_support p {
+    font-size: 11px;
+  }
+  
+  .mainfooter_customer_support:hover svg {
+    fill: #ffff;
+  }
+  .mainfooter_customer_support:hover {
+    color: #ffff;
+  }
+  
+  .mainfooter_footer_content {
+    padding: 10px 0;
+    background-color: #333338;
+  }
+  
+  .mainfooter_links {
+    padding: 1em 0;
+    width: 20%;
+  }
+  
+  .mainfooter_new {
+    background-color: rgb(190, 19, 19);
+    border: none;
+    color: rgb(253, 253, 253);
+    font-size: 10px;
+    padding: 5px;
+    cursor: pointer;
+  }
+  
+  .mainfooter_discription {
+    margin-bottom: 15px;
+    font-size: 12px;
+    color: #a5a5a5;
+  }
+  
+  .mainfooter_tags {
+    font-size: 11px;
+  }
+  
+  
+  
+  .mainfooter_logo {
+    border-top: 1px solid #5d5d5f;
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+  }
+  
+  
+  
+  .mainfooter_logo img {
+    /* width: 15%; */
+    padding: 0 20px;
+    position: relative;
+    top: -20px;
+    background-color: rgb(49, 48, 53);
+  }
+  
+  .mainfooter_social_media {
+    text-align: center;
+    font-size: 30px;
+  }
+  
+  .mainfooter_social_media i {
+    padding: 8px;
+    border-radius: 50%;
+    align-items: center;
+  }
+  
+  .mainfooter_social_media i:hover {
+    background-color: #ffff;
+    color: #0d0d0d;
+  }
+  
+  .mainfooter_copyright_discription {
+    font-size: 11px;
+    text-align: center;
+    padding: 3em 3.5em 5em 3.5em;
+    color: #666666;
+  }
+  
+  .mainfooter_footer_section {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /*==============================================FOOTER SECTION ENDS HERE================================================ */
+  
+  
+  
+  /* =================================================TERMS AND CONDITION ================================================ */
+  .termsandconditions_body {
+    width: 100%;
+    height: 80vw;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  
+  .termsandconditions {
+    width: 35%;
+    height: auto;
+    background-color: #ffff;
+    position: absolute;
+    border-radius: 8px;
+    top: 8%;
+    left: 35%;
+  }
+  
+  .termsandconditions_head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2em;
+  }
+  .termsandconditions_head p {
+    padding: 1em 0 0 9rem;
+    font-size: 16px;
+    color: #000000;
+  }
+  
+  .cross {
+    padding: 20px 0 1px 0;
+    font-size: 16px;
+    color: #000000;
+  }
+  
+  .cross:hover{
+    color: rgb(241, 72, 72);
+    
+    
+  }
+  .termsandconditions_content {
+    font-size: 12px;
+    padding: 1em 2em 2em 2em;
+    color: #888c90;
+  }
+  
+  .termsandconditions_content li{
+  padding: 3px 0;
+  }
+  
+  .cancel {
+    width: 13rem;
+    height: 3em;
+    background-color: #ffff;
+    border: none;
+    box-shadow: 0 0 4px #f84464;
+    border-radius: 4px;
+    color: #f84464;
+  }
+  
+  .cancel:hover{
+    border: 1px solid rgb(241, 72, 72);
+  }
+  
+  .accept {
+    width: 13rem;
+    height: 3em;
+    background-color: #f84464;
+    border: none;
+    border-radius: 4px;
+    color: #ffff;
+  }
+  .accept:hover{
+    /* box-shadow: 1px 0 0 solid rgb(157, 147, 147); */
+    
+    background-color:rgb(227, 46, 46);
+  }
+  
+  
+  /* ==================================================TERMS AND CONDITION =========================================== */
+  
+  /* ========================================================NUMBER OF SEATS============================================= */
+  .button-bar {
+    display: flex;
+    justify-content: space-around;
+    padding: 12px 1px 1px 1px;
+  }
+  
+  .chooseseats_body {
+    width: 100%;
+    height: 80vw;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  
+  .chooseseats {
+    width: 35%;
+    /* height:35%; */
+    background-color: #ffff;
+    position: absolute;
+    border-radius: 8px;
+    top: 10%;
+    left: 35%;
+  }
+  
+  .chooseseats_head {
+    padding: 2em;
+    text-align: center;
+    font-size: 16px;
+  }
+  
+  .seatstobook {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 1em;
+  }
+  
+  .seats {
+    list-style: none;
+    padding: 1em 1.2em;
+    /* border: 1px solid; */
+    border-radius: 100%;
+    color: #333333;
+  }
+  
+  .seats:hover {
+    background-color: rgb(241, 72, 72);
+    color: #f2f2f2;
+  }
+  
+  .seat_status {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+  }
+  
+  .seatToChoose_button {
+    background-color: rgb(241, 72, 72);
+    color: white;
+    padding: 1em 9em;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .vechileforseats {
+    display: flex;
+    justify-content: center;
+    /* padding: 1em; */
+  }
+  
+  .vechileforseats img {
+     width: 16em;
+     height: 10em;
+    
+  } 
+  .seatsToChoose {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1em;
+  }
+  
+  .selectbtn {
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+  }
+  
+  .seat_name {
+    font-size: 12px;
+    color: #666666;
+  }
+  
+  .seat_price {
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  
+  
+  /* ====================================================NUMBER OF SEATS========================================================= */
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  @media only screen and (max-width: 400px) {
+    .dates {
+      margin: 0 auto;
+    }
+    .booking_date {
+      width: 100vh;
+      margin: 0 auto;
+    }
+  
+    .booking_head {
+      width: 100vh;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .booking_content {
+      width: 100vh;
+    }
+  
+    footer {
+      width: 100vh;
+    }
+    .movie_filter {
+      padding: 3px;
+    }
+    .moviefilter {
+      padding: 3px;
+    }
+  }
+  

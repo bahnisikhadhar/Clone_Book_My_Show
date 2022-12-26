@@ -238,7 +238,7 @@
     z-index: 100;
     display: none;
 }
-.seat_type1 a{
+.amount_show_anchor {
   width: 27%;
 }
 

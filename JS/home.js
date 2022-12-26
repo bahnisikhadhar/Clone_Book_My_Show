@@ -74,7 +74,7 @@ function showMovies(movies) {
         movieEl.classList.add("movies")
         movieEl.innerHTML = `
                  <div class="parent_movie">
-                 <a href="../HTML/movieExpanded.html?id=${id}"><img src="${img_url + poster_path}" alt="" /></a>
+                 <a href="./HTML/movieExpanded.html?id=${id}"><img src="${img_url + poster_path}" alt="" /></a>
                  <div class="like_vote">
                  <p><i class="fa-solid fa-thumbs-up"></i> ${Number(popularity/10).toFixed(1)}k likes</p>
                  <p><i class="fa-solid fa-star"></i> ${vote_average}/10</p>
@@ -146,7 +146,7 @@ function  showLikedIndianMovies(movies) {
          indianEl.classList.add("indian_movies")
          indianEl.innerHTML = `
                <div class="parent_movie"> 
-                 <a href="../HTML/movieExpanded.html?id=${id}"><img src="${poster_path?img_url + poster_path:img_url+"/w896mqGi91LrTp2pUsc8a9QAbyL.jpg"}" alt="" /></a>
+                 <a href="./HTML/movieExpanded.html?id=${id}"><img src="${poster_path?img_url + poster_path:img_url+"/w896mqGi91LrTp2pUsc8a9QAbyL.jpg"}" alt="" /></a>
                  <div class="like_vote">
                   <p><i class="fa-solid fa-thumbs-up"></i> ${Number(popularity/10).toFixed(1)}k likes</p>
                   <p><i class="fa-solid fa-star"></i> ${vote_average}/10</p>
@@ -214,7 +214,7 @@ function showNowPlayingMovies(movies) {
          nowPlayingEl.classList.add("premeire_movies")
          nowPlayingEl.innerHTML = `
                <div class="parent_movie"> 
-                  <a href="../HTML/movieExpanded.html?id=${id}"><img src="${img_url + poster_path}" alt="" /></a>
+                  <a href="./HTML/movieExpanded.html?id=${id}"><img src="${img_url + poster_path}" alt="" /></a>
                   <div class="like_vote">
                   <p><i class="fa-solid fa-thumbs-up"></i> ${Number(popularity/10).toFixed(1)}k likes</p>
                   <p><i class="fa-solid fa-star"></i> ${vote_average}/10</p>
@@ -287,7 +287,7 @@ function showPopularMovies(movies) {
          popularMoviesEl.classList.add("popular_movies")
          popularMoviesEl.innerHTML = `
                <div class="parent_movie"> 
-                  <a href="../HTML/movieExpanded.html?id=${id}"><img src="${img_url + poster_path}" alt="" /></a>
+                  <a href="./HTML/movieExpanded.html?id=${id}"><img src="${img_url + poster_path}" alt="" /></a>
                   <div class="like_vote">
                   <p><i class="fa-solid fa-thumbs-up"></i> ${Number(popularity/10).toFixed(1)}k likes</p>
                   <p><i class="fa-solid fa-star"></i> ${vote_average}/10</p>
@@ -357,7 +357,7 @@ function showTopRatedMovies(movies) {
          topRatedMoviesEl.classList.add("topRated_movies")
          topRatedMoviesEl.innerHTML = `
                 <div class="parent_movie"> 
-                  <a href="../HTML/movieExpanded.html?id=${id}"><img src="${img_url + poster_path}" alt="" /></a>
+                  <a href="./HTML/movieExpanded.html?id=${id}"><img src="${img_url + poster_path}" alt="" /></a>
                   <div class="like_vote">
                   <p><i class="fa-solid fa-thumbs-up"></i> ${Number(popularity/10).toFixed(1)}k likes</p>
                   <p><i class="fa-solid fa-star"></i> ${vote_average}/10</p>
@@ -427,7 +427,7 @@ function showLatestMovies(movies) {
          latestMoviesEl.classList.add("latest_movies")
          latestMoviesEl.innerHTML = `
               <div class="parent_movie"> 
-                  <a href="../HTML/movieExpanded.html?id=${id}"><img src="${img_url + poster_path}" alt="" /></a>
+                  <a href="./HTML/movieExpanded.html?id=${id}"><img src="${img_url + poster_path}" alt="" /></a>
                   <div class="like_vote">
                   <p><i class="fa-solid fa-thumbs-up"></i> ${Number(popularity/10).toFixed(1)}k likes</p>
                   <p><i class="fa-solid fa-star"></i> ${vote_average}/10</p>
@@ -472,7 +472,7 @@ function showTrendingMovies(movies){
         const trendingMoviesEl = document.createElement("div")
         trendingMoviesEl.classList.add("trending_movies")
         trendingMoviesEl.innerHTML = `
-          <a href="../HTML/movieExpanded.html?id=${id}">
+          <a href="./HTML/movieExpanded.html?id=${id}">
               <p>${title}</p>
           </a>
         

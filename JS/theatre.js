@@ -189,11 +189,7 @@ theatrelocation.addEventListener("click", (e) => {
 const seatToChoose_button_EL = document.querySelector('.seatToChoose_button');
 
 seatToChoose_button_EL.addEventListener('click', function() {
-  // Get the number of seats the user selected
-  // const numSeats = document.querySelector('.seats.selected').textContent;
 
-  // // Get the type of seats the user selected
-  // const seatType = document.querySelector('.seat_name.selected').textContent;
 
  
   const url = `../HTML/seat.html?id=${id}`;

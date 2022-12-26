@@ -7,15 +7,21 @@ let seatrow2 = Number(gold.getAttribute("seatrow2"));
 let seatcol2 = Number(gold.getAttribute("seatcol2"));
 let seatrow3 = Number(silver.getAttribute("seatrow3"));
 let seatcol3 = Number(silver.getAttribute("seatcol3"));
+const seat_total_amountEl = document.getElementById("seats_total_amount")
 const dynamic_nav_el = document.querySelector(".seat_nav")
 const close_pointer_el = document.querySelector(".seat_close_icon")
 const amoutShowButton = document.querySelector(".seat_total_amount");
+const amount_show_anchorEl = document.querySelector(".amount_show_anchor")
+const payment_btn = document.querySelector(".seat_type1")
+const backLogoEl = document.querySelector(".seat_cheveron")
 let currentrow1, currentrow2, currentrow3;
 
 
 const id = new URLSearchParams(window.location.search).get("id");
 let Api_key = "api_key=57b428c0e112b579eb26e2f43ff08b0f"
 let Base_Url = "https://api.themoviedb.org/3/"
+
+
 
 // localStorage.clear() ;
 
@@ -27,7 +33,7 @@ const renderDetails = async () => {
   const template = `
   <div class="seat_nav_content container">
   <div class="seat_left_nav_item">
-    <div class="seat_cheveron"><a href="#back" class="fa fa-angle-left back-logo"></a></div>
+    <div class="seat_cheveron"><a href="../HTML/theatre.html?id=${id}" class="fa fa-angle-left back-logo"></a></div>
 
     <div class="api_fetched_detail">
       <p class="seat_movie_name">${original_title} <span class="seat_adult">(U/A)</span></p>
@@ -45,7 +51,8 @@ const renderDetails = async () => {
   
   `
   //
-  dynamic_nav_el.innerHTML =template;
+  dynamic_nav_el.innerHTML = template;
+
 }
 
 
@@ -254,8 +261,20 @@ seats3.forEach(seat => {
 });
 
 
-amoutShowButton.addEventListener("click", () => {
-  location.reload();
-})
+// payment_btn.addEventListener("click", () => {
+//   //location.reload();
+//   amount_show_anchorEl.setAttribute('href', '../HTML/payment.html?price=' + price)
+   
+// })
+
+amount_show_anchorEl.addEventListener("click", function(event) {
+  event.preventDefault();
+  const price = document.querySelector('.seat_total_amount').innerText;
+  window.location.href = '../HTML/payment.html?price='+price ;
+});
+
+
+
+
 
 window.addEventListener("DOMContentLoaded", () => renderDetails())

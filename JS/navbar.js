@@ -15,6 +15,8 @@ const otpBox=document.querySelectorAll(".otp_box");
 const invalidMsg=document.querySelector(".invalid_msg");
 const rightNavRest=document.querySelector(".right_nav_rest");
 const rightNavRest1=document.querySelector(".right_nav_rest1");
+const signPopUpContainer=document.querySelector(".sign_pop_up_container");
+const signPopUpContainer1=document.querySelector(".sign_pop_up_container1");
 
 let sentOtp;
 
@@ -25,11 +27,11 @@ if (isLoggedIn) {
 }
 
 signButton.addEventListener("click",()=>{
-    signPopUp.classList.add("display_block");
+    signPopUpContainer.classList.add("display_block");
 });
 
 modalClose.addEventListener("click",()=>{
-    signPopUp.classList.remove("display_block");
+    signPopUpContainer.classList.remove("display_block");
 })
 
 height.addEventListener("click",()=>{
@@ -53,8 +55,8 @@ phoneNumber.addEventListener("input",(event)=>{
 })
 
 continueBox.addEventListener("click",()=>{
-   signPopUp.classList.add("display_none");
-   signPopUpVerify.classList.add("display_block");
+   signPopUpContainer.classList.add("display_none");
+   signPopUpContainer1.classList.add("display_block");
     phoneNumVerify.innerText=phoneNumber.value;
     setTimeout(()=>generateOtp(),500); //to genarate otp
 })
@@ -111,7 +113,7 @@ function generateOtp(){
                 input.value="";
             })
         } else{
-            signPopUpVerify.classList.remove("display_block");
+            signPopUpContainer1.classList.remove("display_block");
             rightNavRest.classList.add("display_none");
             rightNavRest1.classList.add("display_flex");
 
@@ -122,48 +124,12 @@ function generateOtp(){
    
 }
 
-//   function handleOtp(event){
-//     // console.log(event.target.value);
-//     const input=event.target;
-//     let value=input.value;
-//     input.value="";
-//    input.value= value ? value[0] : "";
 
-//     let fieldIndex=input.dataset.index;
-//     if(value.length>0 && fieldIndex<otpBox.length-1){
-//         input.nextElementSibling.focus();
-//     }
-
-//     if(event.key === "Backspace" && fieldIndex>0){
-//         input.previousElementSibling.focus();
-//     }
-
-//     if(fieldIndex==otpBox.length-1){
-//         let enterOtp="";
-//         otpBox.forEach((input)=>{
-//             enterOtp += input.value;
-//         })
-//         console.log(enterOtp);
-//         console.log(sentOtp);
-
-//         if(enterOtp!==sentOtp){
-//             invalidMsg.innerText="invalid otp entered.Please try again";
-//             otpBox.forEach((input)=>{
-//                 input.value="";
-//             })
-//         } else{
-//             signPopUpVerify.classList.remove("display_block");
-//             rightNavRest.classList.add("display_none");
-//             rightNavRest1.classList.add("display_flex");
-//             localStorage.setItem("isLoggedIn", true);
-//         }
-//     }
-//   }
 //----------------------------------------------------------------------------------------------------------------
   
 leftChevronIcon.addEventListener("click",()=>{
-    signPopUp.classList.remove("display_none");
-   signPopUpVerify.classList.remove("display_block");
+    signPopUpContainer.classList.remove("display_none");
+   signPopUpContainer1.classList.remove("display_block");
    termsCondition.classList.remove("display_none");
    continueBox.classList.remove("display_block");
 })
@@ -225,7 +191,7 @@ mainBody.addEventListener("click",()=>{
 
 hamburgerLogin.addEventListener("click",()=>{
     hamburger.classList.add("display_none");
-    signPopUp.classList.add("display_block");
+    signPopUpContainer.classList.add("display_block");
 
 })
 

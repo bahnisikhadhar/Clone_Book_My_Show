@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: Roboto, sans-serif;
+}
+
+.container {
+    max-width: 1440px;
+    padding: 0 1rem;
+    margin: 0 auto;
+}
+
+.seat_nav {
+    background-color: #1f2533;
+    padding: 1.5rem 0rem;
+    color: #fff;
+}
+
+.seat_nav_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.seat_left_nav_item,
+.seat_right_nav_item {
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.seat_right_nav_item {
+    width: 8%;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+/*************************************API FETCHED DATA CSS**************************************************/
+
+.api_fetched_detail {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.seat_theater_name {
+    font-size: .8rem;
+}
+
+.seat_adult {
+    border: 1px solid white;
+    padding: .5rem .2rem;
+    border-radius: 50px;
+    font-size: .6rem;
+}
+
+/*************************************************************************************************************/
+
+.num_of_tickets {
+    border: 1px solid white;
+    border-radius: 3px;
+    padding: .3rem;
+    font-size: .8rem;
+}
+
+.back-logo {
+    font-size: 20pt;
+    color: #fff;
+    text-align: center;
+}
+
+.light_grey_text {
+    color: #999;
+}
+
+.movie_price {
+    color: #999;
+    margin-bottom: 1rem;
+    padding-bottom: .5rem;
+    padding-top: 1rem;
+    font-size: .8rem;
+    border-bottom: 1px solid rgb(224, 224, 224);
+}
+
+/************************************************END OF NAVBAR********************************************/
+
+
+
+
+/***************************************START OF SEATS ARRANGEMENT*****************************************/
+.seats_chairs {
+    margin-top: 1rem;
+}
+
+.seat_content {
+    width: 70%;
+    margin-left: 20%;
+    overflow-x: scroll;
+}
+
+.seat_content::-webkit-scrollbar {
+    display: none;
+}
+
+.row {
+    display: flex;
+}
+
+.seat1,
+.seat2,
+.seat3 {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(85, 230, 85);
+    background-color: white;
+    font-size: .8rem;
+    border-radius: 2px;
+    color: rgb(14, 141, 14);
+    margin: 3px;
+}
+
+.selected {
+    background-color: green;
+    color: white;
+}
+
+.occupied {
+    background-color: grey;
+    color: white;
+}
+
+
+/************************************************SCREEN******************************************* */
+.screen_container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.seat_screen {
+    width: 15%;
+    height: 3rem;
+    color: black;
+    font-size: .8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(92, 91, 91, 0.3);
+}
+
+/********************************************Seat available or not*************************************/
+.seat_type {
+    width: 100%;
+    padding: .5rem;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(92, 91, 91, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    z-index: 100;
+}
+
+.sold_seat_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sold_seat_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    width: 16px;
+    height: 16px;
+    background-color: #eee;
+}
+
+.sold_seat_content {
+    font-size: 14px;
+    line-height: 20px;
+    color: #666;
+    margin-left: 8px;
+    font-weight: 400;
+}
+
+.sold_seat_box1 {
+    background-color: #fff;
+    border: 1px solid #1ea83c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    width: 16px;
+    height: 16px;
+    margin-left: 32px;
+}
+
+.sold_seat_box2 {
+    background-color: #1ea83c;
+    ;
+    border: 1px solid #1ea83c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    width: 16px;
+    height: 16px;
+    margin-left: 32px;
+}
+
+/*******************************************TOTAL PAYMENT BUTTON***************************************/
+.seat_type1 {
+    width: 100%;
+    padding: .5rem;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(92, 91, 91, 0.3);
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    z-index: 100;
+    display: none;
+}
+
+.seat_payment_shw_btn {
+    width: 27%;
+    padding: .8rem;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: #f84464;
+}
+
+.seat_payment_shw_btn a {
+    color: white;
+    font-size: 1rem;
+}
+
+.display_flex {
+    display: flex;
+}

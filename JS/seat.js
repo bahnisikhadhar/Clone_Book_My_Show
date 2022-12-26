@@ -252,7 +252,10 @@ seats3.forEach(seat => {
     seatType1.classList.add("display_flex");
   })
 });
-// new
 
+
+amoutShowButton.addEventListener("click", () => {
+  location.reload();
+})
 
 window.addEventListener("DOMContentLoaded", () => renderDetails())

@@ -1,46 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
     integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../CSS/seatstyle.css">
-    <title>Document</title>
+  <link rel="stylesheet" href="../CSS/seatstyle.css">
+  <title>Document</title>
 </head>
-<body>
-<!-------------------------------------------NAVBAR----------------------------------------------------------->
-    <nav class="seat_nav">
-      <div class="seat_nav_content container"> 
-        <div class="seat_left_nav_item">
-          <div class="seat_cheveron"><a href="#back" class="fa fa-angle-left back-logo"></a></div>
 
-          <div class="api_fetched_detail">
+<body>
+  <!-------------------------------------------NAVBAR----------------------------------------------------------->
+  <nav class="seat_nav">
+    <!-- <div class="seat_nav_content container">
+      <div class="seat_left_nav_item">
+        <div class="seat_cheveron"><a href="#back" class="fa fa-angle-left back-logo"></a></div>
+
+        <div class="api_fetched_detail">
           <p class="seat_movie_name">Movie name <span class="seat_adult">(U/A)</span></p>
           <p class="seat_theater_name">Theater Name</p>
-          </div>
         </div>
+      </div>
 
-        <div class="seat_right_nav_item">
-          <p class="num_of_tickets pointer"><span id="tickt_no"> 2 </span>Tickets </p>
-          <div class="seat_close_icon"><span class="fa fa-close pointer"></span></div>
-        </div>
-    </div> 
-      </nav>
-<!---------------------------------------------------------------------------------------------------------->
-     <main>
-        <div class="seats_chairs">
+      <div class="seat_right_nav_item">
+        <p class="num_of_tickets pointer"><span id="tickt_no"> 2 </span>Tickets </p>
+        <div class="seat_close_icon"><span class="fa fa-close pointer"></span></div>
+      </div>
+    </div> -->
+  </nav>
+  <!---------------------------------------------------------------------------------------------------------->
+  <main>
+    <div class="seats_chairs">
       <div class="seat_content">
         <p class="movie_price">Platinum-Rs. <span id="ticket_price1"> 350.00</span></p>
         <div class="seats" id="seats_platinum" seatrow1="1" seatcol1="18"></div>
-        
+
       </div>
       <div class="seat_content">
         <p class="movie_price">Gold-Rs. <span id="ticket_price2"> 280.00</span></p>
         <div class="seats" id="seats_gold" seatrow2="5" seatcol2="28"></div>
-    </div>
+      </div>
 
       <div class="seat_content">
         <p class="movie_price">Silver-Rs. <span id="ticket_price3"> 160.00</span></p>
@@ -48,45 +50,46 @@
       </div>
 
     </div>
-<!-----------------------------------END OF SEATS------------------------------------------------------->
-  <div class="screen_container">  
-    <div class="seat_screen">All eyes this way please</div>
-  </div>
-<!----------------------------------SEAT TYPE---------------------------------------------------------->
+    <!-----------------------------------END OF SEATS------------------------------------------------------->
+    <div class="screen_container">
+      <div class="seat_screen">All eyes this way please</div>
+    </div>
+    <!----------------------------------SEAT TYPE---------------------------------------------------------->
 
-   
+
     <div class="seat_type">
 
       <div class="sold_seat_container">
-          <div class="sold_seat_box"></div>
-          <div class="sold_seat_content">
-              Sold
-          </div>
+        <div class="sold_seat_box"></div>
+        <div class="sold_seat_content">
+          Sold
+        </div>
       </div>
 
       <div class="sold_seat_container">
-          <div class="sold_seat_box1"></div>
-          <div class="sold_seat_content">
-              Availble
-          </div>
+        <div class="sold_seat_box1"></div>
+        <div class="sold_seat_content">
+          Availble
+        </div>
       </div>
 
       <div class="sold_seat_container">
-          <div class="sold_seat_box2"></div>
-          <div class="sold_seat_content">
-              Selected
-          </div>
+        <div class="sold_seat_box2"></div>
+        <div class="sold_seat_content">
+          Selected
+        </div>
       </div>
 
-  </div>
+    </div>
 
-<!--------------------------------------------TOTAL PAYMENT BUTTON------------------------------------>
+    <!--------------------------------------------TOTAL PAYMENT BUTTON------------------------------------>
     <div class="seat_type1">
       <button class="seat_payment_shw_btn"><a href=""> Pay Rs. <span class="seat_total_amount"> </span>.00 </a></button>
     </div>
-    
-    </main>
 
-    <script src="../JS/seat.js"></script>
+  </main>
+
+  <script src="../JS/seat.js"></script>
 </body>
+
 </html>

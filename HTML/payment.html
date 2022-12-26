@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/paymentstyle.css">
+    <script src="app.js" defer></script>
+    <title>Payment Page</title>
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="payment-container">
+            <div class="order-summary-wrapper">
+                <div class="booking-summary">
+                    <h2 class="booking-header">
+                        Booking Summary
+                    </h2>
+                    <ul class="details">
+                        <li class="detail-list">
+                            <div class="list-div-left">
+                                <span class="ticket-category">
+                                    <span class="seat-type">
+                                        CLASSIC - C17, C18
+                                        <span id="ticket-quantity">
+                                            &nbsp; (2 Ticket)
+                                        </span>
+                                        <br>
+                                        <span class="audi-info">
+                                            Audi 05
+                                        </span>
+                                    </span>
+                                </span>
+                            </div>
+                            <div class="list-div-right">
+                                <span id="seatPrice" class="seatCost">
+                                    Rs. 400.00
+                                </span>
+                            </div>
+                        </li>
+                        <li class="convenience-fee-list">
+                            <div class="convenience-div-left">
+                                <p>
+                                    <span class="convenience-text">
+                                        Convenience fees
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="convenience-div-right">
+                                <span class="convenience-fee">
+                                    Rs.68.44
+                                </span>
+                            </div>
+                        </li>
+                        <li class="total-cost">
+                            <div class="total-cost-left-div">
+                                Sub total
+                            </div>   
+                            <div class="total-cost-right-div">
+                                <span id="sub_total">
+                                    Rs.468.44
+                                </span>
+                            </div> 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="total_amount_payable">
+                <div class="total_amount_left">
+                    Amount Payable
+                </div>
+                <div class="total_amount_right">
+                    Rs.468.44
+                </div>
+            </div>
+            <div class="proceeding_info">
+                <div class="proceeding_info_content">               
+                    By proceeding, I express my consent to complete this transaction.
+                </div>
+            </div>
+            <div class="proceed_container">
+                <div class="proceed_content">
+                    <div class="total_cost">
+                        TOTAL: Rs. 470.44
+                    </div>
+                    <span class="btn">
+                        PROCEED
+                    </span>
+                </div>
+            </div>
+
+            <div class="cancellation_policy_container">
+                You can cancelled the tickets 20 min(s) before the show. Refunds will be done according to Cancellation Policy
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

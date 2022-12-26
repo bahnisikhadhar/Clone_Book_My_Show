@@ -238,14 +238,19 @@
     z-index: 100;
     display: none;
 }
+.seat_type1 a{
+  width: 27%;
+}
 
 .seat_payment_shw_btn {
-    width: 27%;
+    width: 100%;
     padding: .8rem;
     border-radius: 10px;
     border: none;
     outline: none;
     background-color: #f84464;
+    color: #fff;
+    cursor: pointer;
 }
 
 .seat_payment_shw_btn a {

@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  
+  .container {
+    max-width: 1440px;
+    padding: 0 3.5em;
+    margin: 0 auto;
+  }
+
+
+.mainfooter {
+    background-color: rgb(49, 48, 53);
+    color: #7f7f7f;
+  }
+  
+  .mainfooter_booking-services {
+    text-align: center;
+    font-size: 12px;
+    padding: 3em 3.5em;
+  }
+  
+  .mainfooter_booking-services a {
+    color: #7f7f7f;
+    text-decoration: none;
+  }
+  
+  .mainfooter_booking-services a:hover {
+    color: #ffff;
+  }
+  
+  .mainfooter_links a {
+    color: #7f7f7f;
+    text-decoration: none;
+  }
+  
+  .mainfooter_links a:hover {
+    color: #ffff;
+  }
+  
+  .mainfooter_booking {
+    color: #ffff;
+    font-size: 16px;
+  }
+  
+  .mainfooter_information {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+    background-color: rgb(49, 48, 53);
+  }
+  
+  .mainfooter_information .booking span {
+    margin: 0 16px 0 4px;
+    color: #f4f4f4;
+    font-size: 16px;
+  }
+  
+  .mainfooter_contact {
+    background-color: #ec5e71;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 3px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+  }
+  
+  .mainfooter_contact:hover {
+    cursor: pointer;
+    border: 2px solid #ec1532;
+  }
+  
+  .mainfooter_hut {
+    padding: 8px;
+  }
+  
+  .mainfooter_icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .mainfooter_support {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(64, 64, 67);
+    padding: 12px 70px;
+  }
+  
+  .mainfooter_customer_support {
+    text-align: center;
+  }
+  
+  .mainfooter_customer_support p {
+    font-size: 11px;
+  }
+  
+  .mainfooter_customer_support:hover svg {
+    fill: #ffff;
+  }
+  .mainfooter_customer_support:hover {
+    color: #ffff;
+  }
+  
+  .mainfooter_footer_content {
+    padding: 10px 0;
+    background-color: #333338;
+  }
+  
+  .mainfooter_links {
+    padding: 1em 0;
+    width: 20%;
+  }
+  
+  .mainfooter_new {
+    background-color: rgb(190, 19, 19);
+    border: none;
+    color: rgb(253, 253, 253);
+    font-size: 10px;
+    padding: 5px;
+    cursor: pointer;
+  }
+  
+  .mainfooter_discription {
+    margin-bottom: 15px;
+    font-size: 12px;
+    color: #a5a5a5;
+  }
+  
+  .mainfooter_tags {
+    font-size: 11px;
+  }
+  
+  
+  
+  .mainfooter_logo {
+    border-top: 1px solid #5d5d5f;
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+  }
+  
+  
+  
+  .mainfooter_logo img {
+    /* width: 15%; */
+    padding: 0 20px;
+    position: relative;
+    top: -20px;
+    background-color: rgb(49, 48, 53);
+  }
+  
+  .mainfooter_social_media {
+    text-align: center;
+    font-size: 30px;
+  }
+  
+  .mainfooter_social_media i {
+    padding: 8px;
+    border-radius: 50%;
+    align-items: center;
+  }
+  
+  .mainfooter_social_media i:hover {
+    background-color: #ffff;
+    color: #0d0d0d;
+  }
+  
+  .mainfooter_copyright_discription {
+    font-size: 11px;
+    text-align: center;
+    padding: 3em 3.5em 5em 3.5em;
+    color: #666666;
+  }
+  
+  .mainfooter_footer_section {
+    display: flex;
+    justify-content: space-between;
+  }
+  

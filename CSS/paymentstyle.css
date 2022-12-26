@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+    list-style: none;
+}
+
+.wrapper {
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../Images/bms.jpg');
+    background-position: center;
+    background-size: contain;
+    opacity: 0.9;
+}
+
+.payment-container {
+    position: fixed;
+    top: 20%;
+    margin: auto;
+    left: 38%;
+    width: 25%;
+}
+
+.order-summary-wrapper {
+    border: 1px solid #dfe3e7;
+}
+
+.booking-summary {
+    padding: 30px 25px;
+    background: #fff;
+}
+
+.booking-header {
+    font-size: 14px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+    text-align: left;
+    color: #c02c39;
+}
+
+.detail-list {
+    display: inline-block;
+    padding-top: 8px;
+    font-size: 11px;
+    text-align: left;
+    line-height: 18px;
+    width: 100%;
+    color: #666;
+}
+
+.list-div-left {
+    float: left;
+}
+
+.ticket-category {
+    font-size: 12px;
+    color: #1f2533;
+}
+
+.seat-type {
+    color: #1f2533;
+    font-size: 12px;
+}
+
+.audi-info {
+    color: #969696;
+    padding-left: 20px;
+}
+
+.list-div-right {
+    float: right;
+}
+
+.seatCost {
+    color: #1f2533;
+    font-size: 12px;
+}
+
+.convenience-fee-list {
+    display: inline-block;
+    padding-top: 8px;
+    font-size: 11px;
+    text-align: left;
+    line-height: 18px;
+    width: 100%;
+    color: #666;
+}
+
+.convenience-div-left {
+    float: left;
+}
+
+.convenience-text {
+    font-size: 12px;
+    font-weight: 400;
+    color: #1f2533;
+}
+
+.convenience-div-right {
+    float: right;
+}
+
+.convenience-fee {
+    font-size: 12px;
+    font-weight: 400;
+    color: #1f2533;
+}
+
+.total-cost {
+    border-top: 1px dotted #ccc;
+    margin-top: 15px;
+    color: #000;
+    font-size: 14px;
+    display: inline-block;
+    padding-top: 8px;
+    text-align: left;
+    line-height: 18px;
+    width: 100%;
+}
+
+.total-cost-left-div {
+    float: left;
+}
+
+.total-cost-right-div {
+    float: right;
+}
+
+#sub_total {
+    font-size: 14px;
+    color: #1f2533;
+    ;
+}
+
+.total_amount_payable {
+    background-color: #fffcdc;
+    padding: 15px 25px;
+    min-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total_amount_left {
+    float: left;
+}
+
+.total_amount_right {
+    float: right;
+}
+
+.proceeding_info {
+    width: 100%;
+    margin: 15px 0 0px 5px;
+}
+
+.proceeding_info_content {
+    font-size: 12px;
+    line-height: 16px;
+    align-items: center;
+    letter-spacing: 0.2px;
+    color: #d4d2d2;
+    margin-left: 5px;
+}
+
+.proceed_container {
+    margin-top: 10px;
+    padding: 8px 0;
+}
+
+.proceed_content {
+    display: flex;
+    width: 100%;
+    padding: 10px 16px;
+    justify-content: space-between;
+    align-items: center;
+    background: #894753;
+    color: #fff;
+    height: 100%;
+    box-shadow: 0 1px 8px rgb(0 0 0 / 16%);
+    border-radius: 8px;
+    cursor: pointer;
+    min-height: 40px;
+    max-width: 400px;
+}
+
+.total_cost {
+    font-size: 100%;
+    font-weight: 400;
+    color: #fff;
+}
+
+.cancellation_policy_container{
+    margin-top: 10px;
+    padding: 0 10px;
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+}
+
+@media screen and (max-width : 1200px ){
+    .container {
+        width : 40% ;
+        left: 30%;
+    }
+    .booking-header {
+        text-align: center;
+    }
+    .detail-list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .list-div-left {
+        min-width: 52%;
+    }
+    .proceed_container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .convenience-fee-list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .total-cost{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

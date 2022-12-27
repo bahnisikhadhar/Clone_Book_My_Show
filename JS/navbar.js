@@ -144,24 +144,29 @@ const cityPopUp=document.querySelector(".city_pop_up");
 const mainBody=document.querySelector("main");
 const cityName=document.querySelector(".city_name");
 const cityName1=document.querySelector(".city_name1");
+const cityPopUpContainer=document.querySelector(".city_pop_up_container");
 
-viewCity.addEventListener("click",()=>{
+viewCity.addEventListener("click",(e)=>{
+    e.stopPropagation();
   lowerpartCity.classList.add("display_block");
    viewCity.classList.add("display_none");
 })
 
-hideCity.addEventListener("click",()=>{
+hideCity.addEventListener("click",(e)=>{
+    e.stopPropagation();
    lowerpartCity.classList.remove("display_block");
    viewCity.classList.remove("display_none");
 })
 
 rightNavCityOption.addEventListener("click",()=>{
-   cityPopUp.classList.add("display_block");
+   cityPopUpContainer.classList.add("display_block");
 })
 
 
-mainBody.addEventListener("click",()=>{
-    cityPopUp.classList.remove("display_block");
+cityPopUpContainer.addEventListener("click",(e)=>{
+    e.stopPropagation();
+    if(!e.target.classList.contains("city_pop_up"))
+    cityPopUpContainer.classList.remove("display_block");
 })
 
 cityPopUp.addEventListener("click",(event)=>{
@@ -179,36 +184,38 @@ const hamburger=document.querySelector(".nav_hamburger");
 const hamIcon=document.querySelector(".ham_icon");
 const hamburger1=document.querySelector(".nav_hamburger1");
 const hamburgerSignOut=document.querySelector(".hamburger_signOut");
+const hamburgerContainer=document.querySelector(".nav_hamburger_container");
+// const hamburgerContainer1=document.querySelector(".nav_hamburger_container1");
 
 hamIcon.addEventListener("click",()=>{
-   hamburger.classList.add("display_block");
-})
-
-mainBody.addEventListener("click",()=>{
-    hamburger.classList.remove("display_block");
-    hamburger1.classList.add("display_none");
-})
-
-hamburgerLogin.addEventListener("click",()=>{
-    hamburger.classList.add("display_none");
-    signPopUpContainer.classList.add("display_block");
-
-})
-
-rightNavRest1.addEventListener("click",()=>{
- hamburger1.classList.add("display_block");
-})
-
-hamburgerSignOut.addEventListener("click",()=>{
-    rightNavRest1.classList.remove("display_flex");
-    rightNavRest.classList.remove("display_none");
-    hamburger1.classList.add("display_none");
-
-    // localStorage.setItem("isLoggedIn", false);
-    localStorage.removeItem("isLoggedIn");
-})
-
-
+    hamburger.classList.add("display_block");
+ })
+ 
+ mainBody.addEventListener("click",()=>{
+     hamburger.classList.remove("display_block");
+     hamburger1.classList.add("display_none");
+ })
+ 
+ hamburgerLogin.addEventListener("click",()=>{
+     hamburger.classList.add("display_none");
+     signPopUpContainer.classList.add("display_block");
+ 
+ })
+ 
+ rightNavRest1.addEventListener("click",()=>{
+  hamburger1.classList.add("display_block");
+ })
+ 
+ hamburgerSignOut.addEventListener("click",()=>{
+     rightNavRest1.classList.remove("display_flex");
+     rightNavRest.classList.remove("display_none");
+     hamburger1.classList.add("display_none");
+ 
+     // localStorage.setItem("isLoggedIn", false);
+     localStorage.removeItem("isLoggedIn");
+ })
+ 
+ 
 //--------------------------------------------FOR PHONE VIEW----------------------------------------------------
 
 rightNavCityOptionPhone.addEventListener("click",()=>{

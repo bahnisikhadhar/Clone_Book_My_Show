@@ -27,6 +27,7 @@ const recommendedMoviesUrl = Base_Url + "discover/movie?" + Api_key+"&sort_by=po
 const likedIndianMovies = Base_Url + "discover/movie?" + Api_key+"&sort_by=popularity.desc&page=2&primary_release_year=2022&with_origin_country=IN";
 const popularMoviesUrl2= Base_Url + "discover/movie?" + Api_key+"&sort_by=popularity.desc&page=1&primary_release_year=2021&with_original_language=ml|bn|ta";
 
+////-----FeedBack by Prakash Sir-------------------------everything shift to function-------------
 //--------------------------------------------------------------------------
 // function to get movies from TMDB API
 async function getMovies(url) {
@@ -42,31 +43,36 @@ async function getMovies(url) {
 }
 getMovies(recommendedMoviesUrl);
 
+
+function mapMovieLanguage(lang){
+
+   let movieLangObj = {
+      "en":"English",
+      "hi": "Hindi",
+      "te": "Telegu",
+      "ta": "Tamil",
+      "ml": "Malayalam",
+      "bn":  "Bengali"
+   }
+
+   return movieLangObj[lang];
+
+}
 //-----------------------------------------------------------------
 // This function accept data from getMovies function and help to render it on webpage
 function showMovies(movies) {
     //Below code for iterating through each movie and render as a template in webpage
     movies.forEach((movie) => {
         //Destructuring of Object done here so that we can unpack properties from object and can use as independent variables in the below block scope
+
+        //-----FeedBack by Prakash Sir--------------------make an object of key value pair for language,{en:English}-----------------------------------------
+
+        
         let { title, poster_path, vote_average, overview, popularity, original_language,id, genre_ids } = movie
-        if(original_language == "en") {
-            original_language = "English"
-         }
-         if(original_language == "hi") {
-            original_language = "Hindi"
-         }
-         if(original_language == "te"){
-            original_language = "Telegu"
-         }
-         if(original_language == "ta") {
-            original_language = "Tamil"
-         }
-         if(original_language == "ml") {
-            original_language = "Malayalam"
-         }
-         if(original_language == "bn") {
-            original_language = "Bengali"
-         }
+       
+
+        original_language = mapMovieLanguage(original_language);
+
         const movieEl = document.createElement("div")
         let genres = ["Action/Mystery","Comedy/Drama/Romance","Action/Thriller","Drama/Mystery"]
         let rndm = Math.floor(Math.random() *genres.length)

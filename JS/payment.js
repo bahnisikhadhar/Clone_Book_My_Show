@@ -39,6 +39,10 @@ const renderPrice = () => {
     totalCostEl.innerHTML = template3
 }
 
+totalCostEl.addEventListener("click",(e)=>{
+  e.preventDefault();
+  window.location.href = '../HTML/paymentconfirm.html' ;
+})
 
 
 

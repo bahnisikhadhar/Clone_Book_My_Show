@@ -541,6 +541,7 @@
     top: 0;
     left: 0;
     z-index: 1;
+    
   }
   
   .termsandconditions {
@@ -594,6 +595,7 @@
     box-shadow: 0 0 4px #f84464;
     border-radius: 4px;
     color: #f84464;
+    cursor: pointer;
   }
   
   .cancel:hover{
@@ -607,6 +609,7 @@
     border: none;
     border-radius: 4px;
     color: #ffff;
+    cursor: pointer;
   }
   .accept:hover{
     /* box-shadow: 1px 0 0 solid rgb(157, 147, 147); */
@@ -633,6 +636,7 @@
     top: 0;
     left: 0;
     z-index: 1;
+    
   }
   
   .chooseseats {
@@ -643,6 +647,7 @@
     border-radius: 8px;
     top: 10%;
     left: 35%;
+    cursor: pointer;
   }
   
   .chooseseats_head {
@@ -703,8 +708,11 @@
     display: flex;
     flex-direction: column;
     padding: 0 1em;
+    
   }
-  
+  .seatToChoose_button{
+    cursor: pointer;
+  }
   .selectbtn {
     display: flex;
     justify-content: center;

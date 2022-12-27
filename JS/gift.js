@@ -2,123 +2,80 @@
 
 const selectOption = document.querySelector('.options');
 const giftVouchers = document.querySelectorAll('.voucher-items');
-const container = document.querySelector('.gift-vouchers')
+const container = document.querySelector('.gift-vouchers');
+let result = [];
 
-const fun = async () => {
+const fetchData = async () => {
     const result = await fetch('https://prakash-dey.github.io/api/gift.json');
     const tweets = await result.json();
     let store = tweets.images;  
     return store;
 }
 
-let forAll = fun().then((result) => {
-    showAllGift(result); 
+
+document.addEventListener("DOMContentLoaded",async ()=>{
+ result = await fetchData();
+ result.map((gift)=>{
+    showGift(gift);
+ })
 })
 
-let arrayOfResult = fun().then((result) => {
+
 
     selectOption.addEventListener('click', (e) => {
         let text = e.target.innerText;
 
         if (text === 'All') {
             container.innerHTML = '';
-            showAllGift(result);
+            result.map((gift)=>{
+                showGift(gift);
+             })
         }
 
-        if (text === 'Generic') {
+        else if (text === 'Generic') {
             container.innerHTML = '';
-            showGenericGift(result) ;
+           let genericGifts = result.filter((gift)=> gift.type== "Generic");
+           genericGifts.map((gift)=>{
+            showGift(gift);
+         })
         }
 
-        if (text === 'Occasion') {
+        else if (text === 'Occasion') {
             container.innerHTML = '';
-            showOccasionGift(result)
+            let occasionGifts = result.filter((gift)=> gift.type== "Occasion");
+            occasionGifts.map((gift)=>{
+            showGift(gift);
+         })
         }
 
-        if (text === 'Festival') {
+        else if (text === 'Festival') {
             container.innerHTML = '';
-            showFestivalGift(result)
+            let festivalGifts = result.filter((gift)=> gift.type== "Festival");
+            festivalGifts.map((gift)=>{
+            showGift(gift);
+            })
         }
 
-        if (text === 'Combos') {
+        else if (text === 'Combos') {
             container.innerHTML = '';
-            showCombosGift(result) ;
+            let combosGifts = result.filter((gift)=> gift.type== "Combos");
+            combosGifts.map((gift)=>{
+            showGift(gift);
+            })
         }
 
     })
-})
 
-function showAllGift(temp) {
-    for (let i = 0; i < temp.length; i++) {
+
+function showGift(gift) {
         let element = document.createElement('li');
         element.setAttribute('class', 'voucher-items');
         element.innerHTML = `
         <div class="image">
-            <img src="${temp[i].src}" alt="img">
+            <img src="${gift.src}" alt="img">
         </div>
         `;
         container.append(element);
-    }
-}
-
-function showGenericGift(temp) {
-    for (let i = 0; i < temp.length; i++) {
-        if (temp[i].type === 'Generic') {
-            let element = document.createElement('li');
-            element.setAttribute('class', 'voucher-items');
-            element.innerHTML = `
-            <div class="image">
-                <img src="${temp[i].src}" alt="img">
-            </div>
-            `;
-            container.append(element);
-        }
-    }
-}
-
-function showOccasionGift(temp) {
-    for (let i = 0; i < temp.length; i++) {
-        if (temp[i].type === 'Occasion') {
-            let element = document.createElement('li');
-            element.setAttribute('class', 'voucher-items');
-            element.innerHTML = `
-            <div class="image">
-                <img src="${temp[i].src}" alt="img">
-            </div>
-            `;
-            container.append(element);
-        }
-    }
-}
-
-function showFestivalGift(temp) {
-    for (let i = 0; i < temp.length; i++) {
-        if (temp[i].type === 'Festival') {
-            let element = document.createElement('li');
-            element.setAttribute('class', 'voucher-items');
-            element.innerHTML = `
-            <div class="image">
-                <img src="${temp[i].src}" alt="img">
-            </div>
-            `;
-            container.append(element);
-        }
-    }
-}
-
-function showCombosGift(temp) {
-    for (let i = 0; i < temp.length; i++) {
-        if (temp[i].type === 'Combos') {
-            let element = document.createElement('li');
-            element.setAttribute('class', 'voucher-items');
-            element.innerHTML = `
-            <div class="image">
-                <img src="${temp[i].src}" alt="img">
-            </div>
-            `;
-            container.append(element);
-        }
-    }
 }
 
 

@@ -2,892 +2,870 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./CSS/navbar.css">
-    <link rel="stylesheet" href="./CSS/movie_design.css">
-    <link rel="stylesheet" href="./CSS/footer1.css">
-    <title>Dummy_book_my_show</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./CSS/navbar.css">
+  <link rel="stylesheet" href="./CSS/movie_design.css">
+  <link rel="stylesheet" href="./CSS/footer1.css">
+  <title>Dummy_book_my_show</title>
 </head>
 
 <body>
-    <header class="nav_first_head">
-        <div class="nav_first_header container">
-            <div class="left_nav">
-                <a href="#">
-                    <img src="images\bookmyshow-logo-31BC3C7354-seeklogo.com (2).jpg" alt="" class="left_nav_logo">
-                </a>
-                <div class="left_nav_search">
-                    <div class="search_icon"><i class="fa-solid fa-magnifying-glass"></i></div>
-                    <input type="search" placeholder="Search for Movies, Events, Plays, Sports and Activities"
-                        class="search_bar">
-                </div>
-            </div>
-            <div class="right_nav">
-                <div class="right_nav_city">
-                    <span class="city_name">Kolkata</span>
-                    <i class="fa-solid fa-caret-down"></i>
-                </div>
-                <div class="right_nav_rest">
-                    <button class="sign_btn btn">sign in</button>
-                    <div class="ham_icon"><i class="fa-solid fa-bars"></i></div>
-                </div>
-                <div class="right_nav_rest1">
-                    <div class="user_icon"><i class="fa-solid fa-user"></i></div>
-                    <p>Hi,<span class="user_name">Guest</span></p>
-                </div>
+  <header class="nav_first_head">
+    <div class="nav_first_header container">
+      <div class="left_nav">
+        <a href="#">
+          <img src="images\bookmyshow-logo-31BC3C7354-seeklogo.com (2).jpg" alt="" class="left_nav_logo">
+        </a>
+        <div class="left_nav_search">
+          <div class="search_icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+          <input type="search" placeholder="Search for Movies, Events, Plays, Sports and Activities" class="search_bar">
+        </div>
+      </div>
+      <div class="right_nav">
+        <div class="right_nav_city">
+          <span class="city_name">Kolkata</span>
+          <i class="fa-solid fa-caret-down"></i>
+        </div>
+        <div class="right_nav_rest">
+          <button class="sign_btn btn">sign in</button>
+          <div class="ham_icon"><i class="fa-solid fa-bars"></i></div>
+        </div>
+        <div class="right_nav_rest1">
+          <div class="user_icon"><i class="fa-solid fa-user"></i></div>
+          <p>Hi,<span class="user_name">Guest</span></p>
+        </div>
 
-            </div>
-    </header>
-    <!----------------------------------------------Signin-POP-UP----------------------------------------------->
-    <div class="sign_pop_up_container">
+      </div>
+  </header>
+  <!----------------------------------------------Signin-POP-UP----------------------------------------------->
+  <div class="sign_pop_up_container">
     <div class="sign_pop_up">
-        <a href="#" class="modalclose"><i class="fa-solid fa-xmark"></i></a>
-        <p>Get Started</p>
-        <div class="sign_box" id="google_btn">
-            <i class="fa-brands fa-google"></i>
-            <span>Continue with Google</span>
-        </div>
-        <div class="sign_box">
-            <i class="fa-solid fa-envelope"></i>
-            <span>Continue with Email</span>
-        </div>
-        <div class="sign_box">
-            <i class="fa-brands fa-apple"></i>
-            <span>Continue with Apple</span>
-        </div>
-        <p class="pop_text">OR</p>
-        <div class="phone">
-            <span>+91</span> <input type="tel" placeholder="Continue with mobile number" class="phone_num">
-        </div>
-        <div class="height"></div>
-        <p class="terms">I agree to the <a href="#">Terms & Conditions</a>& <a href="#">Privacy Policy</a></p>
-        <div class="continue">Continue</div>
+      <a href="#" class="modalclose"><i class="fa-solid fa-xmark"></i></a>
+      <p>Get Started</p>
+      <div class="sign_box" id="google_btn">
+        <i class="fa-brands fa-google"></i>
+        <span>Continue with Google</span>
+      </div>
+      <div class="sign_box">
+        <i class="fa-solid fa-envelope"></i>
+        <span>Continue with Email</span>
+      </div>
+      <div class="sign_box">
+        <i class="fa-brands fa-apple"></i>
+        <span>Continue with Apple</span>
+      </div>
+      <p class="pop_text">OR</p>
+      <div class="phone">
+        <span>+91</span> <input type="tel" placeholder="Continue with mobile number" class="phone_num" id="number">
+      </div>
+      <div id="recaptcha-container"></div>
+      <div class="height"></div>
+      <p class="terms">I agree to the <a href="#">Terms & Conditions</a>& <a href="#">Privacy Policy</a></p>
+      <div class="continue" onClick="phoneAuth()">Continue</div>
     </div>
   </div>
 
   <div class="sign_pop_up_container1">
     <div class="sign_pop_up1">
-        <div class="leftchevro_icon"><i class="fa-solid fa-chevron-left"></i></div>
-        <h3>Verify your Mobile Number </h3>
-        <p>Enter OTP sent to +91<span class="phonenum_verify"></span></p>
-        <div class="otp_box_container">
-            <input type="text" class="otp_box otp_box1" maxlength="1">
-            <input type="text" class="otp_box" maxlength="1">
-            <input type="text" class="otp_box" maxlength="1">
-            <input type="text" class="otp_box" maxlength="1">
-            <input type="text" class="otp_box" maxlength="1">
-            <input type="text" class="otp_box" maxlength="1">
-        </div>
-        <div class="invalid_msg"></div>
-        <p class="rcv_otp">Didn't receive OTP? <span class="resnd_otp">Resend OTP</span></p>
-        <div class="continue1">Continue</div>
+      <div class="leftchevro_icon"><i class="fa-solid fa-chevron-left"></i></div>
+      <h3>Verify your Mobile Number </h3>
+      <p>Enter OTP sent to +91<span class="phonenum_verify"></span></p>
+      <div class="otp_box_container">
+        <input type="text" class="otp_box otp_box1" maxlength="1">
+        <input type="text" class="otp_box otp_box2" maxlength="1">
+        <input type="text" class="otp_box otp_box3" maxlength="1">
+        <input type="text" class="otp_box otp_box4" maxlength="1">
+        <input type="text" class="otp_box otp_box5" maxlength="1">
+        <input type="text" class="otp_box otp_box6" maxlength="1">
+      </div>
+      <div class="invalid_msg"></div>
+      <p class="rcv_otp">Didn't receive OTP? <span class="resnd_otp">Resend OTP</span></p>
+      <div class="continue1" onClick="codeverify()">Continue</div>
     </div>
-</div>
-    <!------------------------------------------CITY-POP-UP---------------------------------------------------->
-    <div class="city_pop_up">
-        <div class="city_pop_search">
-            <div class="search_icon"><i class="fa-solid fa-magnifying-glass"></i></div>
-            <input type="search" placeholder="Search for your city" class="search_bar city_bar">
+  </div>
+  <!------------------------------------------CITY-POP-UP---------------------------------------------------->
+  <div class="city_pop_up">
+    <div class="city_pop_search">
+      <div class="search_icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+      <input type="search" placeholder="Search for your city" class="search_bar city_bar">
+    </div>
+    <p>Popular cities</p>
+    <ul class="city_list">
+      <li>
+        <div class="city_box">
+          <img src="images\mumbai.avif" alt="Mumbai" class="cityimg">
+          <div class="cityTrans">Mumbai</div>
         </div>
-        <p>Popular cities</p>
-        <ul class="city_list">
-            <li>
-                <div class="city_box">
-                    <img src="images\mumbai.avif" alt="Mumbai" class="cityimg">
-                    <div class="cityTrans">Mumbai</div>
-                </div>
-            </li>
-            <li>
-                <div class="city_box">
-                    <img src="images\ncr.avif" alt="Delhi-ncr" class="cityimg">
-                    <div class="cityTrans">Delhi-ncr</div>
-                </div>
-            </li>
-            <li>
-                <div class="city_box">
-                    <img src="images\bang.avif" alt="Bengaluru" class="cityimg">
-                    <div class="cityTrans">Bengaluru</div>
-                </div>
-            </li>
-            <li>
-                <div class="city_box">
-                    <img src="images\hyd.avif" alt="Hydrabad" class="cityimg">
-                    <div class="cityTrans">Hydrabad</div>
-                </div>
-            </li>
-            <li>
-                <div class="city_box">
-                    <img src="images\ahd.avif" alt="Ahmedabad" class="cityimg">
-                    <div class="cityTrans">Ahmedabad</div>
-                </div>
-            </li>
-            <li>
-                <div class="city_box">
-                    <img src="images\chd.avif" alt="Chandigarh" class="cityimg">
-                    <div class="cityTrans">Chandigarh</div>
-                </div>
-            </li>
-            <li>
-                <div class="city_box">
-                    <img src="images\chen.avif" alt="Chennai" class="cityimg">
-                    <div class="cityTrans">Chennai</div>
-                </div>
-            </li>
-            <li>
-                <div class="city_box">
-                    <img src="images\pune.avif" alt="Pune" class="cityimg">
-                    <div class="cityTrans">Pune</div>
-                </div>
-            </li>
-            <li>
-                <div class="city_box">
-                    <img src="images\kolk.avif" alt="Kolkata" class="cityimg">
-                    <div class="cityTrans">Kolkata</div>
-                </div>
-            </li>
-            <li>
-                <div class="city_box">
-                    <img src="images\koch.avif" alt="Kochi" class="cityimg">
-                    <div class="cityTrans">Kochi</div>
-                </div>
-            </li>
+      </li>
+      <li>
+        <div class="city_box">
+          <img src="images\ncr.avif" alt="Delhi-ncr" class="cityimg">
+          <div class="cityTrans">Delhi-ncr</div>
+        </div>
+      </li>
+      <li>
+        <div class="city_box">
+          <img src="images\bang.avif" alt="Bengaluru" class="cityimg">
+          <div class="cityTrans">Bengaluru</div>
+        </div>
+      </li>
+      <li>
+        <div class="city_box">
+          <img src="images\hyd.avif" alt="Hydrabad" class="cityimg">
+          <div class="cityTrans">Hydrabad</div>
+        </div>
+      </li>
+      <li>
+        <div class="city_box">
+          <img src="images\ahd.avif" alt="Ahmedabad" class="cityimg">
+          <div class="cityTrans">Ahmedabad</div>
+        </div>
+      </li>
+      <li>
+        <div class="city_box">
+          <img src="images\chd.avif" alt="Chandigarh" class="cityimg">
+          <div class="cityTrans">Chandigarh</div>
+        </div>
+      </li>
+      <li>
+        <div class="city_box">
+          <img src="images\chen.avif" alt="Chennai" class="cityimg">
+          <div class="cityTrans">Chennai</div>
+        </div>
+      </li>
+      <li>
+        <div class="city_box">
+          <img src="images\pune.avif" alt="Pune" class="cityimg">
+          <div class="cityTrans">Pune</div>
+        </div>
+      </li>
+      <li>
+        <div class="city_box">
+          <img src="images\kolk.avif" alt="Kolkata" class="cityimg">
+          <div class="cityTrans">Kolkata</div>
+        </div>
+      </li>
+      <li>
+        <div class="city_box">
+          <img src="images\koch.avif" alt="Kochi" class="cityimg">
+          <div class="cityTrans">Kochi</div>
+        </div>
+      </li>
+    </ul>
+    <p class="view">View All Cities</p>
+
+    <div class="lowerpart_city">
+      <p class="other">Other Cities</p>
+      <div class="other_city">
+        <ul>
+          <li><a href="#" class="cityTrans"> Aalo</a></li>
+          <li><a href="#" class="cityTrans">Addanki</a></li>
+          <li><a href="#" class="cityTrans">Agar Malwa</a></li>
+          <li><a href="#" class="cityTrans">Ahmedabad</a></li>
+          <li><a href="#" class="cityTrans">Akbarpur</a></li>
+          <li><a href="#" class="cityTrans">Alakode</a></li>
+          <li><a href="#" class="cityTrans">Alibaug</a></li>
+          <li><a href="#" class="cityTrans">Alwar</a></li>
+          <li><a href="#" class="cityTrans">Amravati</a></li>
+          <li><a href="#" class="cityTrans"> Aalo</a></li>
+          <li><a href="#" class="cityTrans">Addanki</a></li>
+          <li><a href="#" class="cityTrans">Agar Malwa</a></li>
+          <li><a href="#" class="cityTrans">Ahmedabad</a></li>
+          <li><a href="#" class="cityTrans">Akbarpur</a></li>
+          <li><a href="#" class="cityTrans">Alakode</a></li>
+          <li><a href="#" class="cityTrans">Alibaug</a></li>
+          <li><a href="#" class="cityTrans">Alwar</a></li>
+          <li><a href="#" class="cityTrans">Amravati</a></li>
+
         </ul>
-        <p class="view">View All Cities</p>
-
-        <div class="lowerpart_city">
-            <p class="other">Other Cities</p>
-            <div class="other_city">
-                <ul>
-                    <li><a href="#" class="cityTrans"> Aalo</a></li>
-                    <li><a href="#" class="cityTrans">Addanki</a></li>
-                    <li><a href="#" class="cityTrans">Agar Malwa</a></li>
-                    <li><a href="#" class="cityTrans">Ahmedabad</a></li>
-                    <li><a href="#" class="cityTrans">Akbarpur</a></li>
-                    <li><a href="#" class="cityTrans">Alakode</a></li>
-                    <li><a href="#" class="cityTrans">Alibaug</a></li>
-                    <li><a href="#" class="cityTrans">Alwar</a></li>
-                    <li><a href="#" class="cityTrans">Amravati</a></li>
-                    <li><a href="#" class="cityTrans"> Aalo</a></li>
-                    <li><a href="#" class="cityTrans">Addanki</a></li>
-                    <li><a href="#" class="cityTrans">Agar Malwa</a></li>
-                    <li><a href="#" class="cityTrans">Ahmedabad</a></li>
-                    <li><a href="#" class="cityTrans">Akbarpur</a></li>
-                    <li><a href="#" class="cityTrans">Alakode</a></li>
-                    <li><a href="#" class="cityTrans">Alibaug</a></li>
-                    <li><a href="#" class="cityTrans">Alwar</a></li>
-                    <li><a href="#" class="cityTrans">Amravati</a></li>
-
-                </ul>
-                <ul>
-                    <li><a href="#" class="cityTrans"> Aalo</a></li>
-                    <li><a href="#" class="cityTrans">Addanki</a></li>
-                    <li><a href="#" class="cityTrans">Agar Malwa</a></li>
-                    <li><a href="#" class="cityTrans">Ahmedabad</a></li>
-                    <li><a href="#" class="cityTrans">Akbarpur</a></li>
-                    <li><a href="#" class="cityTrans">Alakode</a></li>
-                    <li><a href="#" class="cityTrans">Alibaug</a></li>
-                    <li><a href="#" class="cityTrans">Alwar</a></li>
-                    <li><a href="#" class="cityTrans">Amravati</a></li>
-                    <li><a href="#" class="cityTrans"> Aalo</a></li>
-                    <li><a href="#" class="cityTrans">Addanki</a></li>
-                    <li><a href="#" class="cityTrans">Agar Malwa</a></li>
-                    <li><a href="#" class="cityTrans">Ahmedabad</a></li>
-                    <li><a href="#" class="cityTrans">Akbarpur</a></li>
-                    <li><a href="#" class="cityTrans">Alakode</a></li>
-                    <li><a href="#" class="cityTrans">Alibaug</a></li>
-                    <li><a href="#" class="cityTrans">Alwar</a></li>
-                    <li><a href="#" class="cityTrans">Amravati</a></li>
-                </ul>
-                <ul>
-                    <li><a href="#" class="cityTrans"> Aalo</a></li>
-                    <li><a href="#" class="cityTrans">Addanki</a></li>
-                    <li><a href="#" class="cityTrans">Agar Malwa</a></li>
-                    <li><a href="#" class="cityTrans">Ahmedabad</a></li>
-                    <li><a href="#" class="cityTrans">Akbarpur</a></li>
-                    <li><a href="#" class="cityTrans">Alakode</a></li>
-                    <li><a href="#" class="cityTrans">Alibaug</a></li>
-                    <li><a href="#" class="cityTrans">Alwar</a></li>
-                    <li><a href="#" class="cityTrans">Amravati</a></li>
-                    <li><a href="#" class="cityTrans"> Aalo</a></li>
-                    <li><a href="#" class="cityTrans">Addanki</a></li>
-                    <li><a href="#" class="cityTrans">Agar Malwa</a></li>
-                    <li><a href="#" class="cityTrans">Ahmedabad</a></li>
-                    <li><a href="#" class="cityTrans">Akbarpur</a></li>
-                    <li><a href="#" class="cityTrans">Alakode</a></li>
-                    <li><a href="#" class="cityTrans">Alibaug</a></li>
-                    <li><a href="#" class="cityTrans">Alwar</a></li>
-                    <li><a href="#" class="cityTrans">Amravati</a></li>
-                </ul>
-                <ul>
-                    <li><a href="#" class="cityTrans"> Aalo</a></li>
-                    <li><a href="#" class="cityTrans">Addanki</a></li>
-                    <li><a href="#" class="cityTrans">Agar Malwa</a></li>
-                    <li><a href="#" class="cityTrans">Ahmedabad</a></li>
-                    <li><a href="#" class="cityTrans">Akbarpur</a></li>
-                    <li><a href="#" class="cityTrans">Alakode</a></li>
-                    <li><a href="#" class="cityTrans">Alibaug</a></li>
-                    <li><a href="#" class="cityTrans">Alwar</a></li>
-                    <li><a href="#" class="cityTrans">Amravati</a></li>
-                    <li><a href="#" class="cityTrans"> Aalo</a></li>
-                    <li><a href="#" class="cityTrans">Addanki</a></li>
-                    <li><a href="#" class="cityTrans">Agar Malwa</a></li>
-                    <li><a href="#" class="cityTrans">Ahmedabad</a></li>
-                    <li><a href="#" class="cityTrans">Akbarpur</a></li>
-                    <li><a href="#" class="cityTrans">Alakode</a></li>
-                    <li><a href="#" class="cityTrans">Alibaug</a></li>
-                    <li><a href="#" class="cityTrans">Alwar</a></li>
-                    <li><a href="#" class="cityTrans">Amravati</a></li>
-                </ul>
-                <ul>
-                    <li><a href="#" class="cityTrans"> Aalo</a></li>
-                    <li><a href="#" class="cityTrans">Addanki</a></li>
-                    <li><a href="#" class="cityTrans">Agar Malwa</a></li>
-                    <li><a href="#" class="cityTrans">Ahmedabad</a></li>
-                    <li><a href="#" class="cityTrans">Akbarpur</a></li>
-                    <li><a href="#" class="cityTrans">Alakode</a></li>
-                    <li><a href="#" class="cityTrans">Alibaug</a></li>
-                    <li><a href="#" class="cityTrans">Alwar</a></li>
-                    <li><a href="#" class="cityTrans">Amravati</a></li>
-                    <li><a href="#" class="cityTrans"> Aalo</a></li>
-                    <li><a href="#" class="cityTrans">Addanki</a></li>
-                    <li><a href="#" class="cityTrans">Agar Malwa</a></li>
-                    <li><a href="#" class="cityTrans">Ahmedabad</a></li>
-                    <li><a href="#" class="cityTrans">Akbarpur</a></li>
-                    <li><a href="#" class="cityTrans">Alakode</a></li>
-                    <li><a href="#" class="cityTrans">Alibaug</a></li>
-                    <li><a href="#" class="cityTrans">Alwar</a></li>
-                    <li><a href="#" class="cityTrans">Amravati</a></li>
-                </ul>
-            </div>
-            <p class="hide">Hide All Cities</p>
-        </div>
-    </div>
-    <!------------------------------------------------HAMBURGER MENU-------------------------------------------------->
-    <div class="nav_hamburger">
-      <div class="nav_hamburger_head">
-        <h1>Hey!</h1>
+        <ul>
+          <li><a href="#" class="cityTrans"> Aalo</a></li>
+          <li><a href="#" class="cityTrans">Addanki</a></li>
+          <li><a href="#" class="cityTrans">Agar Malwa</a></li>
+          <li><a href="#" class="cityTrans">Ahmedabad</a></li>
+          <li><a href="#" class="cityTrans">Akbarpur</a></li>
+          <li><a href="#" class="cityTrans">Alakode</a></li>
+          <li><a href="#" class="cityTrans">Alibaug</a></li>
+          <li><a href="#" class="cityTrans">Alwar</a></li>
+          <li><a href="#" class="cityTrans">Amravati</a></li>
+          <li><a href="#" class="cityTrans"> Aalo</a></li>
+          <li><a href="#" class="cityTrans">Addanki</a></li>
+          <li><a href="#" class="cityTrans">Agar Malwa</a></li>
+          <li><a href="#" class="cityTrans">Ahmedabad</a></li>
+          <li><a href="#" class="cityTrans">Akbarpur</a></li>
+          <li><a href="#" class="cityTrans">Alakode</a></li>
+          <li><a href="#" class="cityTrans">Alibaug</a></li>
+          <li><a href="#" class="cityTrans">Alwar</a></li>
+          <li><a href="#" class="cityTrans">Amravati</a></li>
+        </ul>
+        <ul>
+          <li><a href="#" class="cityTrans"> Aalo</a></li>
+          <li><a href="#" class="cityTrans">Addanki</a></li>
+          <li><a href="#" class="cityTrans">Agar Malwa</a></li>
+          <li><a href="#" class="cityTrans">Ahmedabad</a></li>
+          <li><a href="#" class="cityTrans">Akbarpur</a></li>
+          <li><a href="#" class="cityTrans">Alakode</a></li>
+          <li><a href="#" class="cityTrans">Alibaug</a></li>
+          <li><a href="#" class="cityTrans">Alwar</a></li>
+          <li><a href="#" class="cityTrans">Amravati</a></li>
+          <li><a href="#" class="cityTrans"> Aalo</a></li>
+          <li><a href="#" class="cityTrans">Addanki</a></li>
+          <li><a href="#" class="cityTrans">Agar Malwa</a></li>
+          <li><a href="#" class="cityTrans">Ahmedabad</a></li>
+          <li><a href="#" class="cityTrans">Akbarpur</a></li>
+          <li><a href="#" class="cityTrans">Alakode</a></li>
+          <li><a href="#" class="cityTrans">Alibaug</a></li>
+          <li><a href="#" class="cityTrans">Alwar</a></li>
+          <li><a href="#" class="cityTrans">Amravati</a></li>
+        </ul>
+        <ul>
+          <li><a href="#" class="cityTrans"> Aalo</a></li>
+          <li><a href="#" class="cityTrans">Addanki</a></li>
+          <li><a href="#" class="cityTrans">Agar Malwa</a></li>
+          <li><a href="#" class="cityTrans">Ahmedabad</a></li>
+          <li><a href="#" class="cityTrans">Akbarpur</a></li>
+          <li><a href="#" class="cityTrans">Alakode</a></li>
+          <li><a href="#" class="cityTrans">Alibaug</a></li>
+          <li><a href="#" class="cityTrans">Alwar</a></li>
+          <li><a href="#" class="cityTrans">Amravati</a></li>
+          <li><a href="#" class="cityTrans"> Aalo</a></li>
+          <li><a href="#" class="cityTrans">Addanki</a></li>
+          <li><a href="#" class="cityTrans">Agar Malwa</a></li>
+          <li><a href="#" class="cityTrans">Ahmedabad</a></li>
+          <li><a href="#" class="cityTrans">Akbarpur</a></li>
+          <li><a href="#" class="cityTrans">Alakode</a></li>
+          <li><a href="#" class="cityTrans">Alibaug</a></li>
+          <li><a href="#" class="cityTrans">Alwar</a></li>
+          <li><a href="#" class="cityTrans">Amravati</a></li>
+        </ul>
+        <ul>
+          <li><a href="#" class="cityTrans"> Aalo</a></li>
+          <li><a href="#" class="cityTrans">Addanki</a></li>
+          <li><a href="#" class="cityTrans">Agar Malwa</a></li>
+          <li><a href="#" class="cityTrans">Ahmedabad</a></li>
+          <li><a href="#" class="cityTrans">Akbarpur</a></li>
+          <li><a href="#" class="cityTrans">Alakode</a></li>
+          <li><a href="#" class="cityTrans">Alibaug</a></li>
+          <li><a href="#" class="cityTrans">Alwar</a></li>
+          <li><a href="#" class="cityTrans">Amravati</a></li>
+          <li><a href="#" class="cityTrans"> Aalo</a></li>
+          <li><a href="#" class="cityTrans">Addanki</a></li>
+          <li><a href="#" class="cityTrans">Agar Malwa</a></li>
+          <li><a href="#" class="cityTrans">Ahmedabad</a></li>
+          <li><a href="#" class="cityTrans">Akbarpur</a></li>
+          <li><a href="#" class="cityTrans">Alakode</a></li>
+          <li><a href="#" class="cityTrans">Alibaug</a></li>
+          <li><a href="#" class="cityTrans">Alwar</a></li>
+          <li><a href="#" class="cityTrans">Amravati</a></li>
+        </ul>
       </div>
+      <p class="hide">Hide All Cities</p>
+    </div>
+  </div>
+  <!------------------------------------------------HAMBURGER MENU-------------------------------------------------->
+  <div class="nav_hamburger">
+    <div class="nav_hamburger_head">
+      <h1>Hey!</h1>
+    </div>
 
-      <div class="nav_hamburger_row1">
-       <div class="hamburger_gift_icon">
+    <div class="nav_hamburger_row1">
+      <div class="hamburger_gift_icon">
         <img src="Images\rewards_login.avif" alt="" width="40px">
-       </div>
-        <p>Unlock Special Offers & <br> Great Benefits</p>
-        <button class="hamburger_login">Login/Register</button>
       </div>
+      <p>Unlock Special Offers & <br> Great Benefits</p>
+      <button class="hamburger_login">Login/Register</button>
+    </div>
 
-      <div class="nav_othr_section">
-        <div class="nav_other_left">
+    <div class="nav_othr_section">
+      <div class="nav_other_left">
         <i class="fa-solid fa-bell"></i>
         <p>Notification</p>
-        </div>
-        <div class="hambrgr_chevIcon"><i class="fa-solid fa-chevron-right"></i></div>
       </div>
+      <div class="hambrgr_chevIcon"><i class="fa-solid fa-chevron-right"></i></div>
+    </div>
 
-      <div class="nav_othr_section">
-        <div class="nav_other_left">
+    <div class="nav_othr_section">
+      <div class="nav_other_left">
         <i class="fa-solid fa-bag-shopping"></i>
         <p>Your Orders</p>
       </div>
-        <div class="hambrgr_chevIcon"><i class="fa-solid fa-lock"></i></div>
-      </div>
+      <div class="hambrgr_chevIcon"><i class="fa-solid fa-lock"></i></div>
+    </div>
 
-      <div class="nav_othr_section">
-        <div class="nav_other_left">
+    <div class="nav_othr_section">
+      <div class="nav_other_left">
         <i class="fa-solid fa-desktop"></i>
         <p>Stream Liabrary</p>
       </div>
-        <div class="hambrgr_chevIcon"><i class="fa-solid fa-lock"></i></div>
-      </div>
+      <div class="hambrgr_chevIcon"><i class="fa-solid fa-lock"></i></div>
+    </div>
+  </div>
+
+
+  <div class="nav_hamburger1">
+    <div class="nav_hamburger_head1">
+      <h1>Hey!Guest</h1>
+      <div class="user_icon"><i class="fa-solid fa-user"></i></div>
     </div>
 
-
-    <div class="nav_hamburger1">
-      <div class="nav_hamburger_head1">
-        <h1>Hey!Guest</h1>
-        <div class="user_icon"><i class="fa-solid fa-user"></i></div>
-      </div>
-
-      <div class="nav_othr_section1">
-        <div class="nav_other_left">
+    <div class="nav_othr_section1">
+      <div class="nav_other_left">
         <i class="fa-solid fa-bell"></i>
         <p>Notification</p>
-        </div>
-        <div class="hambrgr_chevIcon"><i class="fa-solid fa-chevron-right"></i></div>
       </div>
+      <div class="hambrgr_chevIcon"><i class="fa-solid fa-chevron-right"></i></div>
+    </div>
 
-      <div class="nav_othr_section1">
-        <div class="nav_other_left">
+    <div class="nav_othr_section1">
+      <div class="nav_other_left">
         <i class="fa-solid fa-bag-shopping"></i>
         <p>Your Orders</p>
       </div>
-        <div class="hambrgr_chevIcon"><i class="fa-solid fa-chevron-right"></i></div>
-      </div>
+      <div class="hambrgr_chevIcon"><i class="fa-solid fa-chevron-right"></i></div>
+    </div>
 
-      <div class="nav_othr_section1">
-        <div class="nav_other_left">
+    <div class="nav_othr_section1">
+      <div class="nav_other_left">
         <i class="fa-solid fa-desktop"></i>
         <p>Stream Liabrary</p>
       </div>
-        <div class="hambrgr_chevIcon"><i class="fa-solid fa-chevron-right"></i></div>
+      <div class="hambrgr_chevIcon"><i class="fa-solid fa-chevron-right"></i></div>
+    </div>
+
+    <div class="nav_hamburger_lastrow">
+      <button class="hamburger_signOut">Sign Out</button>
+    </div>
+
+  </div>
+
+  <!----------------------------------------------------SECOND HEADER----------------------------------------------->
+
+  <header class="nav_second_head">
+    <div class="nav_second_header_content container">
+      <ul class="nav_left_second_head">
+        <li><a href="#" class="nav_left_secHd_anchr">Movies</a></li>
+        <li><a href="#" class="nav_left_secHd_anchr">Stream</a></li>
+        <li><a href="#" class="nav_left_secHd_anchr">Events</a></li>
+        <li><a href="#" class="nav_left_secHd_anchr">Plays</a></li>
+        <li><a href="#" class="nav_left_secHd_anchr">Sports</a></li>
+        <li><a href="#" class="nav_left_secHd_anchr">Activities</a></li>
+        <li><a href="#" class="nav_left_secHd_anchr">Buzz</a></li>
+      </ul>
+
+      <ul class="nav_right_second_head">
+        <li><a href="#" class="nav_right_secHd_anchr">ListYourShow <sup class="nav_newSup">NEW</sup></a></li>
+        <li><a href="#" class="nav_right_secHd_anchr">Corporates</a></li>
+        <li><a href="#" class="nav_right_secHd_anchr">Offers</a></li>
+        <li><a href="./HTML/gift.html" class="nav_right_secHd_anchr">Gift Cards</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-------------------------------------------------FOR PHONE VIEW---------------------------------------------->
+
+  <header class="nav_first_head1">
+    <div class="nav_first_header1 container">
+      <div class="left_nav1">
+        <h2>It All Starts Here!</h2>
+        <div class="right_nav_city1">
+          <span class="city_name1">Kolkata</span>
+          <i class="fa-solid fa-caret-down"></i>
+        </div>
       </div>
-      
-      <div class="nav_hamburger_lastrow">
-         <button class="hamburger_signOut">Sign Out</button>
-       </div>
-    
+
+      <div class="right_nav1">
+        <button class="btn app_btn">Use App</button>
+        <!-- <div class="search_icon"><i class="fa-solid fa-magnifying-glass phone_magnify"></i></div> -->
+      </div>
+    </div>
+  </header>
+
+  <div class="below_bar">
+    <img src="./images/logo.png" alt="" class="below_bar_img">
+    <h1>Live <br> <span>Events</span></h1>
+    <div class="below_bar_user"><i class="fa-solid fa-user"></i></div>
+  </div>
+  <!--------------------------------------------------------Main body--------------------------------------------->
+  <main>
+    <div class="carousel" data-flickity='{ "autoPlay": 1500, "pauseAutoPlayOnHover": false }'>
+      <div class="carousel-cell"><img src="images\1670502578966_web.avif" /></div>
+      <div class="carousel-cell"><img src="images\1670250889873_avif.avif" /></div>
+      <div class="carousel-cell"><img src="images\1670931411978_lyleweb.avif" /></div>
+
     </div>
 
-    <!----------------------------------------------------SECOND HEADER----------------------------------------------->
+    <!----------------------------------------code from swiper library ends-------------------------------------->
 
-    <header class="nav_second_head">
-        <div class="nav_second_header_content container">
-            <ul class="nav_left_second_head">
-                <li><a href="#" class="nav_left_secHd_anchr">Movies</a></li>
-                <li><a href="#" class="nav_left_secHd_anchr">Stream</a></li>
-                <li><a href="#" class="nav_left_secHd_anchr">Events</a></li>
-                <li><a href="#" class="nav_left_secHd_anchr">Plays</a></li>
-                <li><a href="#" class="nav_left_secHd_anchr">Sports</a></li>
-                <li><a href="#" class="nav_left_secHd_anchr">Activities</a></li>
-                <li><a href="#" class="nav_left_secHd_anchr">Buzz</a></li>
-            </ul>
 
-            <ul class="nav_right_second_head">
-                <li><a href="#" class="nav_right_secHd_anchr">ListYourShow <sup class="nav_newSup">NEW</sup></a></li>
-                <li><a href="#" class="nav_right_secHd_anchr">Corporates</a></li>
-                <li><a href="#" class="nav_right_secHd_anchr">Offers</a></li>
-                <li><a href="./HTML/gift.html" class="nav_right_secHd_anchr">Gift Cards</a></li>
-            </ul>
-        </div>
-    </header>
 
-    <!-------------------------------------------------FOR PHONE VIEW---------------------------------------------->
+    <div class="nowPlaying_movie">
+      <h1>Recommended Movies</h1>
+      <div class="nowPlayingMovies_container">
 
-    <header class="nav_first_head1">
-        <div class="nav_first_header1 container">
-            <div class="left_nav1">
-                <h2>It All Starts Here!</h2>
-                <div class="right_nav_city1">
-                    <span class="city_name1">Kolkata</span>
-                    <i class="fa-solid fa-caret-down"></i>
-                </div>
-            </div>
-
-            <div class="right_nav1">
-                <button class="btn app_btn">Use App</button>
-                <!-- <div class="search_icon"><i class="fa-solid fa-magnifying-glass phone_magnify"></i></div> -->
-            </div>
-        </div>
-    </header>
-
-    <div class="below_bar">
-        <img src="./images/logo.png" alt="" class="below_bar_img">
-        <h1>Live <br> <span>Events</span></h1>
-        <div class="below_bar_user"><i class="fa-solid fa-user"></i></div>
+      </div>
     </div>
-    <!--------------------------------------------------------Main body--------------------------------------------->
-    <main>
-        <div class="carousel" data-flickity='{ "autoPlay": 1500, "pauseAutoPlayOnHover": false }'>
-            <div class="carousel-cell"><img src="images\1670502578966_web.avif" /></div>
-            <div class="carousel-cell"><img src="images\1670250889873_avif.avif" /></div>
-            <div class="carousel-cell"><img src="images\1670931411978_lyleweb.avif" /></div>
+
+    <div class="divider_banner">
+      <img src="images\stream-leadin-web-collection-202210241242.avif" alt="divider_banner">
+    </div>
+
+    <!-- indian movies -->
+    <div class="likedIndian_movie">
+      <h1>Most Liked Indian Movies</h1>
+      <div class="likedIndianMovies_container">
+
+      </div>
+    </div>
+
+    <div class="premiere_movie_big_container">
+      <div class="premiere_big_container_img">
+        <img src="images\premiere-banner-web-collection-202208191200.avif" alt="">
+      </div>
+      <div class="recommnd_movie">
+        <h1 style="color: white;">Premiere(Hindi Movies)</h1>
+        <div class="recommended_movies_container">
 
         </div>
+      </div>
+    </div>
 
-<!----------------------------------------code from swiper library ends-------------------------------------->
+    <div class="popular_movie">
+      <h1>Popular movies</h1>
+      <div class="popularMovies_container">
 
+      </div>
+    </div>
 
+    <div class="topRated_movie">
+      <h1>Top Rated Movies(English)</h1>
+      <div class="topRatedMovies_container">
 
-            <div class="nowPlaying_movie">
-                <h1>Recommended Movies</h1>
-                <div class="nowPlayingMovies_container">
+      </div>
+    </div>
 
-                </div>
-            </div>
+    <div class="trending_movie">
+      <h1>Trending Searches Right Now</h1>
+      <div class="trendingMovies_container">
 
-            <div class="divider_banner">
-                <img src="images\stream-leadin-web-collection-202210241242.avif" alt="divider_banner">
-            </div>
+      </div>
+    </div>
 
-            <!-- indian movies -->
-            <div class="likedIndian_movie">
-                <h1>Most Liked Indian Movies</h1>
-                <div class="likedIndianMovies_container">
+    <div class="latest_movie">
+      <h1>Latest Movies (English)</h1>
+      <div class="latestMovies_container">
 
-                </div>
-            </div>
+      </div>
+    </div>
 
-            <div class="premiere_movie_big_container">
-                <div class="premiere_big_container_img">
-                    <img src="images\premiere-banner-web-collection-202208191200.avif" alt="">
-                </div>
-                <div class="recommnd_movie">
-                    <h1 style="color: white;">Premiere(Hindi Movies)</h1>
-                    <div class="recommended_movies_container">
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="popular_movie">
-                <h1>Popular movies</h1>
-                <div class="popularMovies_container">
-
-                </div>
-            </div>
-
-            <div class="topRated_movie">
-                <h1>Top Rated Movies(English)</h1>
-                <div class="topRatedMovies_container">
-
-                </div>
-            </div>
-
-            <div class="trending_movie">
-                <h1>Trending Searches Right Now</h1>
-                <div class="trendingMovies_container">
-
-                </div>
-            </div>
-
-            <div class="latest_movie">
-                <h1>Latest Movies (English)</h1>
-                <div class="latestMovies_container">
-
-                </div>
-            </div>
-
-            <!-- <div class="hindiMovies-container">
+    <!-- <div class="hindiMovies-container">
     </div> -->
-        </main>
+  </main>
 
-        <!-- ===================================footer========================================================= -->
- 
-        <footer class="footer">
-            <div class="foot_main">
-              <div class="foot_info container">
-                <section class="foot_information">
-                  <div class="foot_information">
-                    <img src="./Images/hut.svg" class="hut" />
-                    <p class="booking">
-                      <span>List your Show</span> Got a show event,activity or a great
-                      experience? Partner with us & get listed on BookMyShow
-                    </p>
-                  </div>
-                  <button class="foot_contact">Contact today!</button>
-                </section>
-              </div>
-        
-              <div class="foot_support">
-                <div class="foot_customer_support">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="#7F7F7F"
-                    viewBox="0 0 576 512"
-                    class="foot_icon"
-                  >
-                   
-                    <path
-                      d="M64 64C28.7 64 0 92.7 0 128v80c26.5 0 48 21.5 48 48s-21.5 48-48 48v80c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V304c-26.5 0-48-21.5-48-48s21.5-48 48-48V128c0-35.3-28.7-64-64-64H64zm64 96l0 192H448V160H128zm-32 0c0-17.7 14.3-32 32-32H448c17.7 0 32 14.3 32 32V352c0 17.7-14.3 32-32 32H128c-17.7 0-32-14.3-32-32V160z"
-                    />
-                  </svg>
-                  <p>24/7 CUSTOMER CARE</p>
-                </div>
-                <div class="foot_customer_support">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="#7F7F7F"
-                    viewBox="0 0 512 512"
-                    class="foot_icon"
-                  >
-                  
-                    <path
-                      d="M256 48C141.1 48 48 141.1 48 256v40c0 13.3-10.7 24-24 24s-24-10.7-24-24V256C0 114.6 114.6 0 256 0S512 114.6 512 256V400.1c0 48.6-39.4 88-88.1 88L313.6 488c-8.3 14.3-23.8 24-41.6 24H240c-26.5 0-48-21.5-48-48s21.5-48 48-48h32c17.8 0 33.3 9.7 41.6 24l110.4 .1c22.1 0 40-17.9 40-40V256c0-114.9-93.1-208-208-208zM144 208h16c17.7 0 32 14.3 32 32V352c0 17.7-14.3 32-32 32H144c-35.3 0-64-28.7-64-64V272c0-35.3 28.7-64 64-64zm224 0c35.3 0 64 28.7 64 64v48c0 35.3-28.7 64-64 64H352c-17.7 0-32-14.3-32-32V240c0-17.7 14.3-32 32-32h16z"
-                    />
-                  </svg>
-                  <p>RECENT BOOKING CONFIRMATION</p>
-                </div>
-                <div class="foot_customer_support">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="#7F7F7F"
-                    viewBox="0 0 512 512"
-                    class="foot_icon"
-                  >
-                  
-                    <path
-                      d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"
-                    />
-                  </svg>
-                  <p>SUBCRIBE TO THE NEWSLETTER</p>
-                </div>
-              </div>
-        
-              <div class="foot_content container">
-                <div class="foot_links">
-                  <div class="foot_discription">MOVIES NOW SHOWING IN RANCHI</div>
-                  <span class="foot_tags">
-                    <a href="#">Avatar: The Way of Water</a> |
-                    <a href="#">Drishyam</a>| <a href="#">Bhediya</a> |
-                    <a href="#">Salaam Vankey</a>| <a href="#">Maarich</a> |
-                    <a href="#">Vadh(Hindi)</a> | <a href="#">A Action Hero</a> |
-                    <a href="#">Vijayanand</a> |
-                    <a href="#">Black Panther:Wakanda Forever</a>
-                  </span>
-                </div>
-        
-                <div class="foot_links">
-                  <div class="foot_discription">UPCOMING MOVIES IN RANCHI</div>
-                  <span class="foot_tags"
-                    ><a href="#">U Turn2 </a> | <a href="#">Trahimam</a> |
-                    <a href="#">181</a> |
-                    <a href="#">Dhondi Champya:Ek Prem Katha</a> |
-                    <a href="#">Galree</a> | <a href="#">109(Kanada)</a> |
-                    <a href="#">Raja Ki Ayegi Baraat</a> | <a href="#">Hawa</a> |
-                    <a href="#">Struggle: A Journey Of Life </a> |
-                    <a href="#">Choran</a> | <a href="#">Camera Error</a> |
-                    <a href="#">Ajay Vardhan</a> | <a href="#">Modala Midhita</a> |
-                    <a href="#">VIP'S Last Branch</a> | <a href="#">Ninga</a> |
-                    <a href="#">Temper(Kanada)</a> | <a href="#">Gharanunda</a> |
-                    <a href="#">Prasthanam</a> | <a href="#">Prasthanam</a> |
-                    <a href="#">Akrosham</a>
-                  </span>
-                </div>
-        
-                <div class="foot_links">
-                  <div class="foot_discription">MOVIES BY GENRE</div>
-                  <span class="foot_tags">
-                    <a href="#">Drama Movies</a> | <a href="#">Thriller Movies</a>|
-                    <a href="#">Action Movies</a> | <a href="#">Adventures Movies</a>|
-                    <a href="#">Comedy Movies</a> | <a href="#">Mystry Movies</a> |
-                    <a href="#">Classic Movies</a> | <a href="#">Crime Movies</a> |
-                    <a href="#">Adaption Movies</a> |
-                    <a href="#">Biography Movies</a> | <a href="#">Adult Movies</a>|
-                    <a href="#">Devotional Movies</a> |
-                    <a href="#">Mythological Movies</a>| <a href="#">Noir Movies</a> |
-                    <a href="#">Period Movies</a> | <a href="#">Political Movies</a> |
-                    <a href="#">Supernatural Movies</a> |
-                    <a href="#">Sports Movies</a> | <a href="#">Fantasy Movies</a> |
-                    <a href="#">Hiest Movies</a> | <a href="#">Sci-Fi Movies</a> |
-                    <a href="#">Screening Movies</a> |
-                    <a href="#">Suspense Movies</a> |
-                    <a href="#">Historical Movies</a> |
-                    <a href="#">Tragedy Movies</a> |
-                    <a href="#">Animation Movies </a> | <a href="#">Anime Movies</a> |
-                    <a href="#">Horrer Movies</a> |
-                    <a href="#">Psychological Movies</a> |
-                    <a href="#">War Movies</a> | <a href="#">Romantic Movies</a> |
-                    <a href="#">Musical Movies</a> |
-                    <a href="#">Bollywood Movies</a>
-                  </span>
-                </div>
-        
-                <div class="foot_links">
-                  <div class="foot_discription">PLAYS BY GENRE IN RANCHI</div>
-                  <span class="foot_tags">
-                    <a href="#">Drama Plays</a> | <a href="#">Action Plays </a>|
-                    <a href="#">Classic Plays</a> |
-                    <a href="#">Contemporary Plays</a>|
-                    <a href="#">Adventure Plays</a> | <a href="#">Adaption Plays</a> |
-                    <a href="#">Biography Plays</a> | <a href="#">Adults Plays</a> |
-                    <a href="#">Comedy Plays</a> |
-                    <a href="#">Mythological Plays</a> | <a href="#">Drama Plays</a>|
-                    <a href="#">Noir Plays</a> |
-                    <a href="#">Online Screening Plays</a>|
-                    <a href="#">Period Plays</a> | <a href="#">Political Plays</a> |
-                    <a href="#">Tribute Plays</a> | <a href="#">Fantasy Plays</a> |
-                    <a href="#">Regional Plays</a> | <a href="#">Broadways Plays</a> |
-                    <a href="#">Suspense Plays</a> |
-                    <a href="#">Historicals Plays</a> |
-                    <a href="#">Thriller Plays</a> | <a href="#">Tragedy Plays</a> |
-                    <a href="#">Horrer Plays</a> |
-                    <a href="#">Psychological Plays</a> | <a href="#">War Plays</a> |
-                    <a href="#">Mystry Plays</a> | <a href="#">Romantic Plays</a> |
-                    <a href="#">Musical Plays</a> |
-                    <a href="#">Bollywood Plays</a>
-                  </span>
-                </div>
-        
-                <div class="foot_links">
-                  <div class="foot_discription">MOVIES BY LANGUAGE</div>
-                  <span class="foot_tags">
-                    <a href="#">Movies in English</a> |
-                    <a href="#">Movies in Hindi </a>|
-                    <a href="#">Movies in Malayalam</a> |
-                    <a href="#">Movies in Telegu</a>|
-                    <a href="#">Movies in Tamil</a> |
-                    <a href="#">Movies in Kannada</a> |
-                    <a href="#">Movies in Chattisgrhi</a> |
-                    <a href="#">Movies in French</a> |
-                    <a href="#">Movies in Khasi</a> |
-                    <a href="#"> Movies in Sindhi</a> |
-                    <a href="#"> Movies in Bhojpuri</a>|
-                    <a href="#"> Movies in Rajasthani</a> |
-                    <a href="#">Movies in Nepali</a>|
-                    <a href="#">Perio Movies English 7D</a> |
-                    <a href="#">Movies in Harayanvi</a> |
-                    <a href="#">Movies in Odia</a> |
-                    <a href="#"> Movies in Japenese</a> |
-                    <a href="#">Movies in Tulu</a> |
-                    <a href="#">Movies in Assamese</a> |
-                    <a href="#">Movies in Urdu</a> |
-                    <a href="#">Movies in Marathi</a> |
-                    <a href="#"> Movies in Gujrati</a> |
-                    <a href="#">Movies in Punjabi</a> |
-                    <a href="#">Movies in Konkani</a> |
-                    <a href="#">Movies in Bengali</a> |
-                    <a href="#"> Movies in Portuguese</a> |
-                    <a href="#"> Movies in Jharkhandi</a>
-                  </span>
-                </div>
-        
-                <div class="foot_links">
-                  <div class="foot_discription">MOVIES REVIEWS AND TRENDING ARTICLE</div>
-                  <span class="foot_tags">
-                    <a href="#">Trending Article </a> |
-                    <a href="#">Latest News On Movies ,Events,Plays and Sports </a> |
-                    <a href="#">Movies Celebrities </a> |
-                    <a href="#">Trailers </a>
-                  </span>
-                </div>
-        
-                <div class="foot_links">
-                  <div class="discription">MOVIES UPDATES AND CELEBRITIES</div>
-                  <span class="foot_tags">
-                    <a href="#">Upcoming Movies </a> |
-                    <a href="#">Movies Now Showing </a> |
-                    <a href="#">Movies Celebrities </a> |
-                    <a href="#">Trailers </a>
-                  </span>
-                </div>
-        
-                <div class="foot_links">
-                  <div class="foot_discription">THINGS TO DO IN RANCHI</div>
-                  <span class="foot_tags">
-                    <a href="#">Adventure </a> | <a href="#"> Amusement Parks</a> |
-                    <a href="#">Festivals </a> |
-                    <a href="#">Durga Puja Festivals </a> |
-                    <a href="#">Foods And Drinks</a>| <a href="#">Holi Parties</a>|
-                    <a href="#">Antique Heritage Museums</a> |
-                    <a href="#">Cristmas Celebration</a> |
-                    <a href="#">Valentines Day Celebration</a> |
-                    <a href="#"> Hilsa Festivals</a>| <a href="#">Gaming</a> |
-                    <a href="#">Hospitals</a> |
-                    <a href="#">Polia Baisaakh Festival</a> |
-                    <a href="#">Parties</a> | <a href="#">Unique Tours</a> |
-                    <a href="#">Navratri</a> |
-                    <a href="#">Quizzes And Competitions</a> |
-                    <a href="#">Shops And Malls</a> |
-                    <a href="#">Tourists Attractions</a> | <a href="#">Monuments</a> |
-                    <a href="#">Night Life</a>
-                  </span>
-                </div>
-        
-                <div class="foot_links">
-                  <div class="foot_discription">SPORTS EVENTS IN RANCHI</div>
-                  <span class="foot_tags">
-                    <a href="#">Online Games</a> | <a href="#">E Sports</a> |
-                    <a href="#">Athelitcs</a> | <a href="#">Archery</a> |
-                    <a href="#">Baseball</a> | <a href="#">Badminton</a> |
-                    <a href="#">Chess</a> | <a href="#">Cycling</a> |
-                    <a href="#">Golf</a> | <a href="#">Kick Boxing</a> |
-                    <a href="#">Boxing</a> | <a href="#">Boat Race</a> |
-                    <a href="#">Card Games</a> | <a href="#">Cricket</a> |
-                    <a href="#">Derby Horse Race</a> | <a href="#">Football</a> |
-                    <a href="#">Kabaddi</a> | <a href="#">Mixed Martial Art</a> |
-                    <a href="#">Arts</a> | <a href="#">Online Sports</a> |
-                    <a href="#">Muai Thai</a> | <a href="#">Swimming</a> |
-                    <a href="#">Pool</a> | <a href="#">Rugby</a> |
-                    <a href="#">Hockey</a> | <a href="#">Ice Skating</a> |
-                    <a href="#">Motorsports</a> | <a href="#">Walking</a> |
-                    <a href="#">Shooting</a> | <a href="#">Running</a> |
-                    <a href="#">Tennis</a> | <a href="#">Wrestling</a> |
-                    <a href="#">Sailing</a> | <a href="#">Snookers</a> |
-                    <a href="#">Basketball</a> | <a href="#">Bowling</a> |
-                    <a href="#">Polo</a> | <a href="#">Volleyball</a> |
-                    <a href="#">Table Tennis</a> | <a href="#">Weight Lifting</a> |
-                    <a href="#"></a>
-                  </span>
-                </div>
-        
-                <div class="foot_links">
-                  <div class="foot_discription">EVENTS IN RANCHI</div>
-                  <span class="foot_tags">
-                    <a href="#">Workshops</a> | <a href="#">Comedy Shows</a> |
-                    <a href="#">Kids</a> | <a href="#">Sprituality</a> |
-                    <a href="#">Music Shows</a> | <a href="#">New Year Parties</a> |
-                    <a href="#">Beer Festivals</a> | <a href="#">Meetups</a> |
-                    <a href="#">Conferences</a> | <a href="#">Exhibitions</a> |
-                    <a href="#">Celebrity Wishes</a> | <a href="#">Award Shows</a> |
-                    <a href="#">Online Streaming Events</a> |
-                    <a href="#">Screening</a> | <a href="#">Vaccination</a> |
-                    <a href="#">Talks</a> |
-                    <a href="#"></a>
-                  </span>
-                </div>
-        
-                <div class="foot_links">
-                  <div class="foot_discription">CINEMAS IN TOP CITIES</div>
-                  <span class="foot_tags">
-                    <a href="#">Cinema in Mumbai</a> |
-                    <a href="#">Cinema in Delhi NCR</a> |
-                    <a href="#">Cinema in Chennai</a> |
-                    <a href="#">Cinema in Bengaluru</a> |
-                    <a href="#">Cinema in Hyderabad</a> |
-                    <a href="#">Cinema in Pune</a> |
-                    <a href="#">Cinema in Ahemadabad</a> |
-                    <a href="#">Cinema in Kolkata</a> |
-                    <a href="#">Cinema in Kotchi</a>
-                  </span>
-                </div>
-        
-                <div class="foot_links">
-                  <div class="foot_discription">EVENTS IN TOP CITIES</div>
-                  <span class="foot_tags">
-                    <a href="#">Events in Mumbai</a> |
-                    <a href="#">Events in Delhi NCR</a> |
-                    <a href="#">Events in Chennai</a> |
-                    <a href="#">Events in Bengaluru</a> |
-                    <a href="#">Events in Hyderabad</a> |
-                    <a href="#">Events in Pune</a> |
-                    <a href="#">Events in Ahemadabad</a> |
-                    <a href="#">Events in Kolkata</a> |
-                    <a href="#">Events in Kotchi</a>
-                  </span>
-                </div>
-        
-                <div class="foot_links">
-                  <div class="foot_discription">PLAYS IN TOP CITIES</div>
-                  <span class="foot_tags">
-                    <a href="#">Plays in Mumbai</a> |
-                    <a href="#">Plays in Delhi NCR</a> |
-                    <a href="#">Plays in Chennai</a> |
-                    <a href="#">Plays in Bengaluru</a> |
-                    <a href="#">Plays in Hyderabad</a> |
-                    <a href="#">Plays in Pune</a> |
-                    <a href="#">Plays in Ahemadabad</a> |
-                    <a href="#">Plays in Kolkata</a> |
-                    <a href="#">Plays in Kotchi</a>
-                  </span>
-                </div>
-        
-                <div class="foot_links">
-                  <div class="foot_discription">ACTIVITIES IN TOP CITIES</div>
-                  <span class="foot_tags">
-                    <a href="#">Things To Do in Mumbai</a> |
-                    <a href="#">Things To Do in Delhi NCR</a> |
-                    <a href="#">Things To Do in Chennai</a> |
-                    <a href="#">Things To Do in Bengaluru</a> |
-                    <a href="#">Things To Do in Hyderabad</a> |
-                    <a href="#">Things To Do in Pune</a> |
-                    <a href="#">Things To Do in Ahemadabad</a> |
-                    <a href="#">Things To Do in Kolkata</a> |
-                    <a href="#">Things To Do in Kotchi</a>
-                  </span>
-                </div>
-        
-                <div class="foot_links">
-                  <span class="foot_tags">
-                    <div class="foot_discription">MOVIES IN TOP CITIES</div>
-        
-                    <a href="#">Movies in Delhi NCR</a> |
-                    <a href="#">Movies in Mumbai</a> |
-                    <a href="#">Movies in Chennai</a> |
-                    <a href="#">Movies in Bengaluru</a> |
-                    <a href="#">Movies in Hyderabad</a> |
-                    <a href="#">Movies in Pune</a> |
-                    <a href="#">Movies in Ahemadabad</a> |
-                    <a href="#">Movies in Kolkata</a> |
-                    <a href="#">Movies in Kotchi</a>
-                  </span>
-                </div>
-        
-                <div class="foot_links">
-                  <span class="foot_tags">
-                    <div class="foot_discription">COUNTRIES</div>
-        
-                    <a href="#">Indonesia</a> | <a href="#">Singapore</a> |
-                    <a href="#">UAE</a> | <a href="#">Sri Lanka</a> |
-                    <a href="#">West Indies</a> |
-                  </span>
-                </div>
-        
-                <div class="foot_links">
-                  <span class="foot_tags">
-                    <div class="foot_discription">HELPS</div>
-        
-                    <a href="#">About US</a> | <a href="#">Contact US</a> |
-                    <a href="#">Current Openings</a> | <a href="#">Press Release</a> |
-                    <a href="#">Sletmaps</a> | <a href="#">FAQs</a> |
-                    <a href="#">Terms And Conditions</a> |
-                    <a href="#">Privacy Policies</a>
-                  </span>
-                </div>
-        
-                <div class="foot_links">
-                  <span class="foot_tags">
-                    <div class="foot_discription">BOOKMYSHOWS EXCLUSIVES</div>
-        
-                    <a href="#">Lollapalooza India</a> | <a href="#">Superstars</a> |
-                    <a href="#">BookASmile</a> | <a href="#">Corporate Voutchers</a> |
-                    <a href="#">Gift Cards</a> | <a href="#">List My Shows</a> |
-                    <a href="#">Offers</a> | <a href="#">Streams</a> |
-                    <a href="#">Buzz</a> |
-                    <a href="#">Trailers</a>
-                  </span>
-                </div>
-              </div>
-        
-              <div class="foot_socialMedia_links">
-                <div class="foot_logo">
-                  <img src="./Images/logo.svg" />
-                </div>
-        
-                <section class="foot_social_media">
-                  <i
-                    class="fa-brands fa-facebook"
-                    href="https://in.bookmyshow.com/explore/home/ranchi"
-                  ></i>
-                  <i class="fa-brands fa-twitter"></i>
-                  <i class="fa-brands fa-instagram"></i>
-                  <i class="fa-brands fa-youtube"></i>
-                  <i class="fa-brands fa-pinterest"></i>
-                  <i class="fa-brands fa-linkedin"></i>
-                </section>
-        
-                
-              </div>
-        
-              <div class="foot_copyright_discription container">
-                <span
-                  >Copyright 20222 @ Bigtree Entertainment Pvt.ltd.All Right
-                  Reversed</span
-                >
-                <p>
-                  The content and the images used in the site sre the copyright
-                  protected and copyright vests with the respective owners. The
-                  usage of the content and the images on the website is intended to
-                  promote the works and no endorsements of the artist shall be
-                  applied. Unauthorised used is prohibited and punishible by low.
-                </p>
-              </div>
-            </div>
-          </footer>
+  <!-- ===================================footer========================================================= -->
 
-          <!-- =============================================footer================================================ -->
+  <footer class="footer">
+    <div class="foot_main">
+      <div class="foot_info container">
+        <section class="foot_information">
+          <div class="foot_information">
+            <img src="./Images/hut.svg" class="hut" />
+            <p class="booking">
+              <span>List your Show</span> Got a show event,activity or a great
+              experience? Partner with us & get listed on BookMyShow
+            </p>
+          </div>
+          <button class="foot_contact">Contact today!</button>
+        </section>
+      </div>
+
+      <div class="foot_support">
+        <div class="foot_customer_support">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="#7F7F7F" viewBox="0 0 576 512" class="foot_icon">
+
+            <path
+              d="M64 64C28.7 64 0 92.7 0 128v80c26.5 0 48 21.5 48 48s-21.5 48-48 48v80c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V304c-26.5 0-48-21.5-48-48s21.5-48 48-48V128c0-35.3-28.7-64-64-64H64zm64 96l0 192H448V160H128zm-32 0c0-17.7 14.3-32 32-32H448c17.7 0 32 14.3 32 32V352c0 17.7-14.3 32-32 32H128c-17.7 0-32-14.3-32-32V160z" />
+          </svg>
+          <p>24/7 CUSTOMER CARE</p>
+        </div>
+        <div class="foot_customer_support">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="#7F7F7F" viewBox="0 0 512 512" class="foot_icon">
+
+            <path
+              d="M256 48C141.1 48 48 141.1 48 256v40c0 13.3-10.7 24-24 24s-24-10.7-24-24V256C0 114.6 114.6 0 256 0S512 114.6 512 256V400.1c0 48.6-39.4 88-88.1 88L313.6 488c-8.3 14.3-23.8 24-41.6 24H240c-26.5 0-48-21.5-48-48s21.5-48 48-48h32c17.8 0 33.3 9.7 41.6 24l110.4 .1c22.1 0 40-17.9 40-40V256c0-114.9-93.1-208-208-208zM144 208h16c17.7 0 32 14.3 32 32V352c0 17.7-14.3 32-32 32H144c-35.3 0-64-28.7-64-64V272c0-35.3 28.7-64 64-64zm224 0c35.3 0 64 28.7 64 64v48c0 35.3-28.7 64-64 64H352c-17.7 0-32-14.3-32-32V240c0-17.7 14.3-32 32-32h16z" />
+          </svg>
+          <p>RECENT BOOKING CONFIRMATION</p>
+        </div>
+        <div class="foot_customer_support">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="#7F7F7F" viewBox="0 0 512 512" class="foot_icon">
+
+            <path
+              d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
+          </svg>
+          <p>SUBCRIBE TO THE NEWSLETTER</p>
+        </div>
+      </div>
+
+      <div class="foot_content container">
+        <div class="foot_links">
+          <div class="foot_discription">MOVIES NOW SHOWING IN RANCHI</div>
+          <span class="foot_tags">
+            <a href="#">Avatar: The Way of Water</a> |
+            <a href="#">Drishyam</a>| <a href="#">Bhediya</a> |
+            <a href="#">Salaam Vankey</a>| <a href="#">Maarich</a> |
+            <a href="#">Vadh(Hindi)</a> | <a href="#">A Action Hero</a> |
+            <a href="#">Vijayanand</a> |
+            <a href="#">Black Panther:Wakanda Forever</a>
+          </span>
+        </div>
+
+        <div class="foot_links">
+          <div class="foot_discription">UPCOMING MOVIES IN RANCHI</div>
+          <span class="foot_tags"><a href="#">U Turn2 </a> | <a href="#">Trahimam</a> |
+            <a href="#">181</a> |
+            <a href="#">Dhondi Champya:Ek Prem Katha</a> |
+            <a href="#">Galree</a> | <a href="#">109(Kanada)</a> |
+            <a href="#">Raja Ki Ayegi Baraat</a> | <a href="#">Hawa</a> |
+            <a href="#">Struggle: A Journey Of Life </a> |
+            <a href="#">Choran</a> | <a href="#">Camera Error</a> |
+            <a href="#">Ajay Vardhan</a> | <a href="#">Modala Midhita</a> |
+            <a href="#">VIP'S Last Branch</a> | <a href="#">Ninga</a> |
+            <a href="#">Temper(Kanada)</a> | <a href="#">Gharanunda</a> |
+            <a href="#">Prasthanam</a> | <a href="#">Prasthanam</a> |
+            <a href="#">Akrosham</a>
+          </span>
+        </div>
+
+        <div class="foot_links">
+          <div class="foot_discription">MOVIES BY GENRE</div>
+          <span class="foot_tags">
+            <a href="#">Drama Movies</a> | <a href="#">Thriller Movies</a>|
+            <a href="#">Action Movies</a> | <a href="#">Adventures Movies</a>|
+            <a href="#">Comedy Movies</a> | <a href="#">Mystry Movies</a> |
+            <a href="#">Classic Movies</a> | <a href="#">Crime Movies</a> |
+            <a href="#">Adaption Movies</a> |
+            <a href="#">Biography Movies</a> | <a href="#">Adult Movies</a>|
+            <a href="#">Devotional Movies</a> |
+            <a href="#">Mythological Movies</a>| <a href="#">Noir Movies</a> |
+            <a href="#">Period Movies</a> | <a href="#">Political Movies</a> |
+            <a href="#">Supernatural Movies</a> |
+            <a href="#">Sports Movies</a> | <a href="#">Fantasy Movies</a> |
+            <a href="#">Hiest Movies</a> | <a href="#">Sci-Fi Movies</a> |
+            <a href="#">Screening Movies</a> |
+            <a href="#">Suspense Movies</a> |
+            <a href="#">Historical Movies</a> |
+            <a href="#">Tragedy Movies</a> |
+            <a href="#">Animation Movies </a> | <a href="#">Anime Movies</a> |
+            <a href="#">Horrer Movies</a> |
+            <a href="#">Psychological Movies</a> |
+            <a href="#">War Movies</a> | <a href="#">Romantic Movies</a> |
+            <a href="#">Musical Movies</a> |
+            <a href="#">Bollywood Movies</a>
+          </span>
+        </div>
+
+        <div class="foot_links">
+          <div class="foot_discription">PLAYS BY GENRE IN RANCHI</div>
+          <span class="foot_tags">
+            <a href="#">Drama Plays</a> | <a href="#">Action Plays </a>|
+            <a href="#">Classic Plays</a> |
+            <a href="#">Contemporary Plays</a>|
+            <a href="#">Adventure Plays</a> | <a href="#">Adaption Plays</a> |
+            <a href="#">Biography Plays</a> | <a href="#">Adults Plays</a> |
+            <a href="#">Comedy Plays</a> |
+            <a href="#">Mythological Plays</a> | <a href="#">Drama Plays</a>|
+            <a href="#">Noir Plays</a> |
+            <a href="#">Online Screening Plays</a>|
+            <a href="#">Period Plays</a> | <a href="#">Political Plays</a> |
+            <a href="#">Tribute Plays</a> | <a href="#">Fantasy Plays</a> |
+            <a href="#">Regional Plays</a> | <a href="#">Broadways Plays</a> |
+            <a href="#">Suspense Plays</a> |
+            <a href="#">Historicals Plays</a> |
+            <a href="#">Thriller Plays</a> | <a href="#">Tragedy Plays</a> |
+            <a href="#">Horrer Plays</a> |
+            <a href="#">Psychological Plays</a> | <a href="#">War Plays</a> |
+            <a href="#">Mystry Plays</a> | <a href="#">Romantic Plays</a> |
+            <a href="#">Musical Plays</a> |
+            <a href="#">Bollywood Plays</a>
+          </span>
+        </div>
+
+        <div class="foot_links">
+          <div class="foot_discription">MOVIES BY LANGUAGE</div>
+          <span class="foot_tags">
+            <a href="#">Movies in English</a> |
+            <a href="#">Movies in Hindi </a>|
+            <a href="#">Movies in Malayalam</a> |
+            <a href="#">Movies in Telegu</a>|
+            <a href="#">Movies in Tamil</a> |
+            <a href="#">Movies in Kannada</a> |
+            <a href="#">Movies in Chattisgrhi</a> |
+            <a href="#">Movies in French</a> |
+            <a href="#">Movies in Khasi</a> |
+            <a href="#"> Movies in Sindhi</a> |
+            <a href="#"> Movies in Bhojpuri</a>|
+            <a href="#"> Movies in Rajasthani</a> |
+            <a href="#">Movies in Nepali</a>|
+            <a href="#">Perio Movies English 7D</a> |
+            <a href="#">Movies in Harayanvi</a> |
+            <a href="#">Movies in Odia</a> |
+            <a href="#"> Movies in Japenese</a> |
+            <a href="#">Movies in Tulu</a> |
+            <a href="#">Movies in Assamese</a> |
+            <a href="#">Movies in Urdu</a> |
+            <a href="#">Movies in Marathi</a> |
+            <a href="#"> Movies in Gujrati</a> |
+            <a href="#">Movies in Punjabi</a> |
+            <a href="#">Movies in Konkani</a> |
+            <a href="#">Movies in Bengali</a> |
+            <a href="#"> Movies in Portuguese</a> |
+            <a href="#"> Movies in Jharkhandi</a>
+          </span>
+        </div>
+
+        <div class="foot_links">
+          <div class="foot_discription">MOVIES REVIEWS AND TRENDING ARTICLE</div>
+          <span class="foot_tags">
+            <a href="#">Trending Article </a> |
+            <a href="#">Latest News On Movies ,Events,Plays and Sports </a> |
+            <a href="#">Movies Celebrities </a> |
+            <a href="#">Trailers </a>
+          </span>
+        </div>
+
+        <div class="foot_links">
+          <div class="discription">MOVIES UPDATES AND CELEBRITIES</div>
+          <span class="foot_tags">
+            <a href="#">Upcoming Movies </a> |
+            <a href="#">Movies Now Showing </a> |
+            <a href="#">Movies Celebrities </a> |
+            <a href="#">Trailers </a>
+          </span>
+        </div>
+
+        <div class="foot_links">
+          <div class="foot_discription">THINGS TO DO IN RANCHI</div>
+          <span class="foot_tags">
+            <a href="#">Adventure </a> | <a href="#"> Amusement Parks</a> |
+            <a href="#">Festivals </a> |
+            <a href="#">Durga Puja Festivals </a> |
+            <a href="#">Foods And Drinks</a>| <a href="#">Holi Parties</a>|
+            <a href="#">Antique Heritage Museums</a> |
+            <a href="#">Cristmas Celebration</a> |
+            <a href="#">Valentines Day Celebration</a> |
+            <a href="#"> Hilsa Festivals</a>| <a href="#">Gaming</a> |
+            <a href="#">Hospitals</a> |
+            <a href="#">Polia Baisaakh Festival</a> |
+            <a href="#">Parties</a> | <a href="#">Unique Tours</a> |
+            <a href="#">Navratri</a> |
+            <a href="#">Quizzes And Competitions</a> |
+            <a href="#">Shops And Malls</a> |
+            <a href="#">Tourists Attractions</a> | <a href="#">Monuments</a> |
+            <a href="#">Night Life</a>
+          </span>
+        </div>
+
+        <div class="foot_links">
+          <div class="foot_discription">SPORTS EVENTS IN RANCHI</div>
+          <span class="foot_tags">
+            <a href="#">Online Games</a> | <a href="#">E Sports</a> |
+            <a href="#">Athelitcs</a> | <a href="#">Archery</a> |
+            <a href="#">Baseball</a> | <a href="#">Badminton</a> |
+            <a href="#">Chess</a> | <a href="#">Cycling</a> |
+            <a href="#">Golf</a> | <a href="#">Kick Boxing</a> |
+            <a href="#">Boxing</a> | <a href="#">Boat Race</a> |
+            <a href="#">Card Games</a> | <a href="#">Cricket</a> |
+            <a href="#">Derby Horse Race</a> | <a href="#">Football</a> |
+            <a href="#">Kabaddi</a> | <a href="#">Mixed Martial Art</a> |
+            <a href="#">Arts</a> | <a href="#">Online Sports</a> |
+            <a href="#">Muai Thai</a> | <a href="#">Swimming</a> |
+            <a href="#">Pool</a> | <a href="#">Rugby</a> |
+            <a href="#">Hockey</a> | <a href="#">Ice Skating</a> |
+            <a href="#">Motorsports</a> | <a href="#">Walking</a> |
+            <a href="#">Shooting</a> | <a href="#">Running</a> |
+            <a href="#">Tennis</a> | <a href="#">Wrestling</a> |
+            <a href="#">Sailing</a> | <a href="#">Snookers</a> |
+            <a href="#">Basketball</a> | <a href="#">Bowling</a> |
+            <a href="#">Polo</a> | <a href="#">Volleyball</a> |
+            <a href="#">Table Tennis</a> | <a href="#">Weight Lifting</a> |
+            <a href="#"></a>
+          </span>
+        </div>
+
+        <div class="foot_links">
+          <div class="foot_discription">EVENTS IN RANCHI</div>
+          <span class="foot_tags">
+            <a href="#">Workshops</a> | <a href="#">Comedy Shows</a> |
+            <a href="#">Kids</a> | <a href="#">Sprituality</a> |
+            <a href="#">Music Shows</a> | <a href="#">New Year Parties</a> |
+            <a href="#">Beer Festivals</a> | <a href="#">Meetups</a> |
+            <a href="#">Conferences</a> | <a href="#">Exhibitions</a> |
+            <a href="#">Celebrity Wishes</a> | <a href="#">Award Shows</a> |
+            <a href="#">Online Streaming Events</a> |
+            <a href="#">Screening</a> | <a href="#">Vaccination</a> |
+            <a href="#">Talks</a> |
+            <a href="#"></a>
+          </span>
+        </div>
+
+        <div class="foot_links">
+          <div class="foot_discription">CINEMAS IN TOP CITIES</div>
+          <span class="foot_tags">
+            <a href="#">Cinema in Mumbai</a> |
+            <a href="#">Cinema in Delhi NCR</a> |
+            <a href="#">Cinema in Chennai</a> |
+            <a href="#">Cinema in Bengaluru</a> |
+            <a href="#">Cinema in Hyderabad</a> |
+            <a href="#">Cinema in Pune</a> |
+            <a href="#">Cinema in Ahemadabad</a> |
+            <a href="#">Cinema in Kolkata</a> |
+            <a href="#">Cinema in Kotchi</a>
+          </span>
+        </div>
+
+        <div class="foot_links">
+          <div class="foot_discription">EVENTS IN TOP CITIES</div>
+          <span class="foot_tags">
+            <a href="#">Events in Mumbai</a> |
+            <a href="#">Events in Delhi NCR</a> |
+            <a href="#">Events in Chennai</a> |
+            <a href="#">Events in Bengaluru</a> |
+            <a href="#">Events in Hyderabad</a> |
+            <a href="#">Events in Pune</a> |
+            <a href="#">Events in Ahemadabad</a> |
+            <a href="#">Events in Kolkata</a> |
+            <a href="#">Events in Kotchi</a>
+          </span>
+        </div>
+
+        <div class="foot_links">
+          <div class="foot_discription">PLAYS IN TOP CITIES</div>
+          <span class="foot_tags">
+            <a href="#">Plays in Mumbai</a> |
+            <a href="#">Plays in Delhi NCR</a> |
+            <a href="#">Plays in Chennai</a> |
+            <a href="#">Plays in Bengaluru</a> |
+            <a href="#">Plays in Hyderabad</a> |
+            <a href="#">Plays in Pune</a> |
+            <a href="#">Plays in Ahemadabad</a> |
+            <a href="#">Plays in Kolkata</a> |
+            <a href="#">Plays in Kotchi</a>
+          </span>
+        </div>
+
+        <div class="foot_links">
+          <div class="foot_discription">ACTIVITIES IN TOP CITIES</div>
+          <span class="foot_tags">
+            <a href="#">Things To Do in Mumbai</a> |
+            <a href="#">Things To Do in Delhi NCR</a> |
+            <a href="#">Things To Do in Chennai</a> |
+            <a href="#">Things To Do in Bengaluru</a> |
+            <a href="#">Things To Do in Hyderabad</a> |
+            <a href="#">Things To Do in Pune</a> |
+            <a href="#">Things To Do in Ahemadabad</a> |
+            <a href="#">Things To Do in Kolkata</a> |
+            <a href="#">Things To Do in Kotchi</a>
+          </span>
+        </div>
+
+        <div class="foot_links">
+          <span class="foot_tags">
+            <div class="foot_discription">MOVIES IN TOP CITIES</div>
+
+            <a href="#">Movies in Delhi NCR</a> |
+            <a href="#">Movies in Mumbai</a> |
+            <a href="#">Movies in Chennai</a> |
+            <a href="#">Movies in Bengaluru</a> |
+            <a href="#">Movies in Hyderabad</a> |
+            <a href="#">Movies in Pune</a> |
+            <a href="#">Movies in Ahemadabad</a> |
+            <a href="#">Movies in Kolkata</a> |
+            <a href="#">Movies in Kotchi</a>
+          </span>
+        </div>
+
+        <div class="foot_links">
+          <span class="foot_tags">
+            <div class="foot_discription">COUNTRIES</div>
+
+            <a href="#">Indonesia</a> | <a href="#">Singapore</a> |
+            <a href="#">UAE</a> | <a href="#">Sri Lanka</a> |
+            <a href="#">West Indies</a> |
+          </span>
+        </div>
+
+        <div class="foot_links">
+          <span class="foot_tags">
+            <div class="foot_discription">HELPS</div>
+
+            <a href="#">About US</a> | <a href="#">Contact US</a> |
+            <a href="#">Current Openings</a> | <a href="#">Press Release</a> |
+            <a href="#">Sletmaps</a> | <a href="#">FAQs</a> |
+            <a href="#">Terms And Conditions</a> |
+            <a href="#">Privacy Policies</a>
+          </span>
+        </div>
+
+        <div class="foot_links">
+          <span class="foot_tags">
+            <div class="foot_discription">BOOKMYSHOWS EXCLUSIVES</div>
+
+            <a href="#">Lollapalooza India</a> | <a href="#">Superstars</a> |
+            <a href="#">BookASmile</a> | <a href="#">Corporate Voutchers</a> |
+            <a href="#">Gift Cards</a> | <a href="#">List My Shows</a> |
+            <a href="#">Offers</a> | <a href="#">Streams</a> |
+            <a href="#">Buzz</a> |
+            <a href="#">Trailers</a>
+          </span>
+        </div>
+      </div>
+
+      <div class="foot_socialMedia_links">
+        <div class="foot_logo">
+          <img src="./Images/logo.svg" />
+        </div>
+
+        <section class="foot_social_media">
+          <i class="fa-brands fa-facebook" href="https://in.bookmyshow.com/explore/home/ranchi"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-youtube"></i>
+          <i class="fa-brands fa-pinterest"></i>
+          <i class="fa-brands fa-linkedin"></i>
+        </section>
 
 
-        <!-- <script src="index.js"></script> -->
-        <script type="module" src="./JS/navbar.js"></script>
-        <script src="./JS/home.js"></script>
-        <!---------------------------CDN link for Swiper Library which is used for sliding------------------------------>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"> </script>
-        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+      </div>
+
+      <div class="foot_copyright_discription container">
+        <span>Copyright 20222 @ Bigtree Entertainment Pvt.ltd.All Right
+          Reversed</span>
+        <p>
+          The content and the images used in the site sre the copyright
+          protected and copyright vests with the respective owners. The
+          usage of the content and the images on the website is intended to
+          promote the works and no endorsements of the artist shall be
+          applied. Unauthorised used is prohibited and punishible by low.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =============================================footer================================================ -->
+  <script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-auth-compat.js"></script>
+  <script src="JS/otp.js"></script>
+
+  <!-- <script src="index.js"></script> -->
+  <script type="module" src="./JS/navbar.js"></script>
+  <script src="./JS/home.js"></script>
+  <!---------------------------CDN link for Swiper Library which is used for sliding------------------------------>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"> </script>
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 </body>
 
 </html>

@@ -187,7 +187,13 @@ theatrelocation.addEventListener("click", (e) => {
 });
 
 const seatToChoose_button_EL = document.querySelector('.seatToChoose_button');
+seatsToBookEl.addEventListener("click", (e) => {
 
+  let numSeats = e.target.innerText;
+  sessionStorage.setItem('numSeats', numSeats);
+ // window.location.href = `../HTML/seat.html?id=${id}&seats=${numSeats}` ;
+ 
+});
 seatToChoose_button_EL.addEventListener('click', function() {
 
 

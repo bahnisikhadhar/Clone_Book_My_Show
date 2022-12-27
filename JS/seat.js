@@ -18,6 +18,7 @@ let currentrow1, currentrow2, currentrow3;
 
 
 const id = new URLSearchParams(window.location.search).get("id");
+let seats= sessionStorage.getItem('numSeats');
 let Api_key = "api_key=57b428c0e112b579eb26e2f43ff08b0f"
 let Base_Url = "https://api.themoviedb.org/3/"
 
@@ -42,7 +43,7 @@ const renderDetails = async () => {
   </div>
 
   <div class="seat_right_nav_item">
-    <p class="num_of_tickets pointer"><span id="tickt_no"> 2 </span>Tickets </p>
+    <p class="num_of_tickets pointer"><span id="tickt_no">${seats} </span>Tickets </p>
      <a href="../HTML/theatre.html?id=${id}"><div class="seat_close_icon" style="color:white";><span class="fa fa-close pointer"></span></div></a>
   </div>
 </div>

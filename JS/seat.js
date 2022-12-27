@@ -56,6 +56,7 @@ const renderDetails = async () => {
 }
 
 
+//-----FeedBack by Prakash Sir-------------------------need to convert it in function,add common class so that can -----------------------------------------
 
 for (let i = 0; i < seatrow1; i++) {
   platinum.innerHTML = platinum.innerHTML + `<div class='row' id='row1-${i}'><span class="light_grey_text">${String.fromCharCode(65 + i)} &nbsp; &nbsp; </span></div>&nbsp;`;
@@ -83,6 +84,8 @@ for (let i = 0; i < seatrow3; i++) {
 
 
 //With Local storage
+
+//-----FeedBack by Prakash Sir-------------------------need to convert it in function-----------------------------------------
 
 //--------------------------------------FOR PREMIUM-------------------------------------------------------
 
@@ -129,7 +132,7 @@ seats1.forEach(seat => {
 
       console.log(`${ticketCount1} tickets, total cost: ${ticketTotal1}`);
 
-      localStorage.setItem('selectedSeats', JSON.stringify(selectedSeats1));
+      // localStorage.setItem('selectedSeats', JSON.stringify(selectedSeats1));
       amoutShowButton.innerText = ticketTotal1;
 
     }
@@ -184,7 +187,7 @@ seats2.forEach(seat => {
 
       console.log(`${ticketCount2} tickets, total cost: ${ticketTotal2}`);
 
-      localStorage.setItem('selectedSeats2', JSON.stringify(selectedSeats2));
+      // localStorage.setItem('selectedSeats2', JSON.stringify(selectedSeats2));
       amoutShowButton.innerText = ticketTotal2;
     }
   });
@@ -232,8 +235,6 @@ seats3.forEach(seat => {
       ticketTotal3 = ticketCount3 * ticketPrice3;
 
       console.log(`${ticketCount3} tickets, total cost: ${ticketTotal3}`);
-
-      localStorage.setItem('selectedSeats3', JSON.stringify(selectedSeats3));
       amoutShowButton.innerText = ticketTotal3;
 
     }
@@ -242,6 +243,8 @@ seats3.forEach(seat => {
 });
 
 //-----------------------------------------------------------------------------------------------------
+
+//-----FeedBack by Prakash Sir--------------------Change name of the variable and use single classlist to cover all-----------------------------------------
 const seatType1 = document.querySelector(".seat_type1");
 
 seats1.forEach(seat => {
@@ -261,16 +264,14 @@ seats3.forEach(seat => {
 });
 
 
-// payment_btn.addEventListener("click", () => {
-//   //location.reload();
-//   amount_show_anchorEl.setAttribute('href', '../HTML/payment.html?price=' + price)
-   
-// })
-
+////-----FeedBack by Prakash Sir-------------------------camel case-----------------------------------------
 amount_show_anchorEl.addEventListener("click", function(event) {
   event.preventDefault();
   const price = document.querySelector('.seat_total_amount').innerText;
   window.location.href = '../HTML/payment.html?price='+price ;
+  // localStorage.setItem('selectedSeats1', JSON.stringify(selectedSeats1));
+  // localStorage.setItem('selectedSeats2', JSON.stringify(selectedSeats2));
+  localStorage.setItem('selectedSeats3', JSON.stringify(selectedSeats3));
 });
 
 

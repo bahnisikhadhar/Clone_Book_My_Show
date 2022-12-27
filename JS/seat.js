@@ -96,7 +96,7 @@ const ticketPrice1 = document.getElementById('ticket_price1').textContent;
 let selectedSeats1 = [];
 let ticketCount1 = 0;
 let ticketTotal1 = 0;
-let count = 3;
+let count = seats;
 let temp = 0;
 
 if (localStorage.getItem('selectedSeats')) {

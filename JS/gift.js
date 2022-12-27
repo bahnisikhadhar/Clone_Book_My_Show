@@ -5,7 +5,7 @@ const giftVouchers = document.querySelectorAll('.voucher-items');
 const container = document.querySelector('.gift-vouchers')
 
 const fun = async () => {
-    const result = await fetch('../JSON/gift.json');
+    const result = await fetch('https://prakash-dey.github.io/api/gift.json');
     const tweets = await result.json();
     let store = tweets.images;  
     return store;
@@ -21,22 +21,27 @@ let arrayOfResult = fun().then((result) => {
         let text = e.target.innerText;
 
         if (text === 'All') {
+            container.innerHTML = '';
             showAllGift(result);
         }
 
         if (text === 'Generic') {
+            container.innerHTML = '';
             showGenericGift(result) ;
         }
 
         if (text === 'Occasion') {
+            container.innerHTML = '';
             showOccasionGift(result)
         }
 
         if (text === 'Festival') {
+            container.innerHTML = '';
             showFestivalGift(result)
         }
 
         if (text === 'Combos') {
+            container.innerHTML = '';
             showCombosGift(result) ;
         }
 

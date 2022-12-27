@@ -47,7 +47,7 @@ phoneNumber.addEventListener("click",()=>{
 })
 
 phoneNumber.addEventListener("input",(event)=>{
-    if(phoneNumber.value.length==10){
+    if(phoneNumber.value.length==13){
         continueBox.classList.add("background_red");
     }else{
         continueBox.classList.remove("background_red");
@@ -79,50 +79,50 @@ function generateOtp(){
   otpBox.forEach((input,index)=>{
     // console.log(input);
     input.dataset.index=index;
-    input.addEventListener("keyup",handleOtp);
+    //input.addEventListener("keyup",handleOtp);
   });
 
-  function handleOtp(event) {
-    event.preventDefault();
-    // console.log(event.target.value);
-    const input = event.target;
-    let value = input.value;
-    input.value = "";
-    input.value = value ? value[0] : "";
+//   function handleOtp(event) {
+//     event.preventDefault();
+//     // console.log(event.target.value);
+//     const input = event.target;
+//     let value = input.value;
+//     input.value = "";
+//     input.value = value ? value[0] : "";
 
-    let fieldIndex = input.dataset.index;
-    if (value.length > 0 && fieldIndex < otpBox.length - 1) {
-        input.nextElementSibling.focus();
-    }
+//     let fieldIndex = input.dataset.index;
+//     if (value.length > 0 && fieldIndex < otpBox.length - 1) {
+//         input.nextElementSibling.focus();
+//     }
 
-    if (event.key === "Backspace" && fieldIndex > 0) {
-        input.previousElementSibling.focus();
-    }
+//     if (event.key === "Backspace" && fieldIndex > 0) {
+//         input.previousElementSibling.focus();
+//     }
 
-    if(fieldIndex==otpBox.length-1){
-        let enterOtp="";
-        otpBox.forEach((input)=>{
-            enterOtp += input.value;
-        })
-        console.log(enterOtp);
-        console.log(sentOtp);
+//     if(fieldIndex==otpBox.length-1){
+//         let enterOtp="";
+//         otpBox.forEach((input)=>{
+//             enterOtp += input.value;
+//         })
+//         console.log(enterOtp);
+//         console.log(sentOtp);
 
-        if(enterOtp!==sentOtp){
-            invalidMsg.innerText="invalid otp entered.Please try again";
-            otpBox.forEach((input)=>{
-                input.value="";
-            })
-        } else{
-            signPopUpContainer1.classList.remove("display_block");
-            rightNavRest.classList.add("display_none");
-            rightNavRest1.classList.add("display_flex");
+//         if(enterOtp!==sentOtp){
+//             invalidMsg.innerText="invalid otp entered.Please try again";
+//             otpBox.forEach((input)=>{
+//                 input.value="";
+//             })
+//         } else{
+//             signPopUpContainer1.classList.remove("display_block");
+//             rightNavRest.classList.add("display_none");
+//             rightNavRest1.classList.add("display_flex");
 
         
-            localStorage.setItem("isLoggedIn", true);
-        }
-    }
+//             localStorage.setItem("isLoggedIn", true);
+//         }
+//     }
    
-}
+// }
 
 
 //----------------------------------------------------------------------------------------------------------------

@@ -1,21 +1,20 @@
 const id = new URLSearchParams(window.location.search).get("id");
 
 const booking_head_el = document.querySelector(".booking_head");
-const booking_filter_el = document.querySelector(".booking_filter")
-let seatsToBookEl = document.querySelector(".seatstobook")
+const booking_filter_el = document.querySelector(".booking_filter");
+let seatsToBookEl = document.querySelector(".seatstobook");
 
-let Api_key = "api_key=57b428c0e112b579eb26e2f43ff08b0f"
-let Base_Url = "https://api.themoviedb.org/3/"
+let Api_key = "api_key=57b428c0e112b579eb26e2f43ff08b0f";
+let Base_Url = "https://api.themoviedb.org/3/";
 // ========================================FOR FETCHING DATA FROM JSON ==============================================
 
 const bookingCont = document.querySelector(".theatre_location");
 const workshopContainer = document.querySelector(".workshop");
 
-
 const renderDetails = async () => {
   const res = await fetch(`${Base_Url}movie/${id}?${Api_key}`); // Fetching Specific Movie Details using id
-  const movieData = await res.json()
-  console.log(movieData)
+  const movieData = await res.json();
+  console.log(movieData);
   const { original_title, genres, spoken_languages, adult } = movieData;
 
   const template = `
@@ -32,8 +31,8 @@ const renderDetails = async () => {
   
   
   
-  `
-  booking_head_el.innerHTML = template
+  `;
+  booking_head_el.innerHTML = template;
 
   const template2 = `
   
@@ -66,8 +65,8 @@ const renderDetails = async () => {
   
   
   
-  `
-  booking_filter_el.innerHTML = template2
+  `;
+  booking_filter_el.innerHTML = template2;
 
   //   <header class="booking_head">
   //   <div class="booking_title container">
@@ -80,7 +79,7 @@ const renderDetails = async () => {
   //     <span class="genere">THRILLER</span>
   //   </div>
   // </header>
-}
+};
 async function getLiveEvents() {
   let url = "../JSON/theatre.json";
   const res = await fetch(url);
@@ -99,8 +98,7 @@ async function getLiveEvents() {
           </div>
           `;
     });
-    template += 
-    `<div class="booking_location container">
+    template += `<div class="booking_location container">
     <div class="heart"><i class="fa-regular fa-heart"></i></div>
     <div>
       <p class="theatre_name">${ele.theatreName}</p>
@@ -125,12 +123,10 @@ async function getLiveEvents() {
      </div>
       `;
   });
-  
+
   bookingCont.innerHTML += template;
 }
 getLiveEvents();
-
-
 
 // ========================================================FOR FETCHING DATA FROM JSON===================================
 
@@ -143,7 +139,7 @@ const vechile = document.getElementById("vechile");
 let chooseseats = document.querySelector(".chooseseats");
 
 chooseseats.addEventListener("mouseover", (e) => {
-  console.log(e.target)
+  // console.log(e.target)
   if (e.target.innerText == "1") {
     vechile.src = "../Images/bycycle.png";
   } else if (e.target.innerText == "2") {
@@ -157,6 +153,20 @@ chooseseats.addEventListener("mouseover", (e) => {
   } else {
     vechile.src = "../Images/bus.png";
   }
+});
+
+let seatCount = [];
+chooseseats.addEventListener("click", (e) => {
+  if (e.target.classList.contains("seats")) {
+    if (seatCount.length > 0) {
+      let temp = seatCount.shift();
+      temp.classList.remove("backgroundcolorRed");
+    }
+    seatCount.push(e.target);
+  }
+  seatCount.forEach((el) => {
+    el.classList.add("backgroundcolorRed");
+  });
 });
 
 const cut = document.getElementById("cut");
@@ -186,25 +196,19 @@ theatrelocation.addEventListener("click", (e) => {
   }
 });
 
-const seatToChoose_button_EL = document.querySelector('.seatToChoose_button');
+const seatToChoose_button_EL = document.querySelector(".seatToChoose_button");
 seatsToBookEl.addEventListener("click", (e) => {
-
   let numSeats = e.target.innerText;
-  sessionStorage.setItem('numSeats', numSeats);
- // window.location.href = `../HTML/seat.html?id=${id}&seats=${numSeats}` ;
- 
+  sessionStorage.setItem("numSeats", numSeats);
+  // window.location.href = `../HTML/seat.html?id=${id}&seats=${numSeats}` ;
 });
-seatToChoose_button_EL.addEventListener('click', function() {
-
-
- 
+seatToChoose_button_EL.addEventListener("click", function () {
   const url = `../HTML/seat.html?id=${id}`;
 
   // Navigate to the next page
   window.location.href = url;
 });
 // ==================================================FOR DISPLAY MODAL====================================================
-
 
 // async function getLiveEvents() {
 //     let url = "theatre.json"
@@ -232,5 +236,4 @@ seatToChoose_button_EL.addEventListener('click', function() {
 // }
 // getLiveEvents()
 
-
-window.addEventListener("DOMContentLoaded", () => renderDetails())
+window.addEventListener("DOMContentLoaded", () => renderDetails());

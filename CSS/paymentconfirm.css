@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.payment_head{
+    background-color: #1f253a;
+   
+    width: 100vw;
+}
+
+.payment_head img{
+    width: 20%;
+    padding: 0 1em;
+}
+
+.backgroundPageImage img{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+}
+
+.payment_container{
+    font-family: 'Poppins', sans-serif;
+    opacity: 0.91;
+    width: 40%;
+    margin: 2em auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    justify-content:space-around;
+    border:none;
+    border-radius: 8px;
+}
+
+
+
+.confirmyourpayment{
+    color: rgb(234, 48, 48);
+    text-align: center;
+    margin-bottom: 10px;
+    border-bottom: 2px solid red;
+}
+
+.payment_first-row{
+     display: flex;
+}
+
+.payment_owner{
+    width: 100%;
+    margin-right: 40px;
+}
+
+.payment_input-field{
+    border: 2px solid rgb(210, 193, 193);
+    border-radius: 5px;
+}
+
+.payment_input-field input{
+    width: 100%;
+    border:none;
+    outline: none;
+    padding: 10px;
+}
+
+.payment_selection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.payment_selection select{
+    padding: 10px 20px;
+}
+
+.payment_date select{
+    border: 1px solid rgb(210, 193, 193);
+    border-radius: 5px;
+}
+
+.taptoPay{
+    text-align: center;
+   color: #ffff;
+   background-color: rgb(232, 64, 64);
+    text-decoration: none;
+    padding: 8px;
+    font-size: 16px;
+    transition: 0.5s;
+    width:50%;
+    font-weight: bold;
+    border-radius: 8px;
+    margin: 1em auto;
+    
+}
+
+.taptoPay:hover{
+    border :1px solid red ;
+    box-shadow: 0 1px 0 2px rgb(245, 140, 140);
+}
+
+
+.payment_cards img{
+    width: 50px;
+    cursor: pointer;
+}
+
+
+
+.payment_modal{
+    background-color: rgba(0,0,0,0.5);
+    width: 100vw;
+    height: 100vh;
+    position :fixed;
+    
+    display: none;
+    /* top: 20%;
+    left: 32.5%; */
+    /* border-radius: 15px;
+    box-shadow: 0px 0px 0px 3px black; */
+   
+}
+
+.message{
+  width:475px ;
+  height:375px ;
+  background-color: #ffff;
+  margin: 5% auto;
+  opacity: 0.95;
+  border-radius: 12px;
+  
+}
+
+
+@media screen and (max-width: 600px) {
+    .payment_container {
+      width: 100%;
+      height: auto;
+      padding: 20px;
+    }
+    .payment_first-row {
+      flex-direction: column;
+    }
+    .payment_owner, .cvv {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+    .card-number {
+      width: 100%;
+    }
+    .payment_selection .payment_date {
+      flex-direction: column;
+    }
+    .payment_selection .payment_date select {
+      width: 100%;
+    }
+    .payment_cards {
+      flex-direction: column;
+    }
+    .payment_cards img {
+      width: 50px;
+    }
+    .taptoPay{
+      width: 100%;
+      margin-left: 0;
+    }
+  } 

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment Form</title>
+    <link rel="stylesheet" href="../CSS/paymentconfirm.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="payment_head">
+        <img src="../Images/bms.svg">
+    </header>
+
+    <div class="backgroundPageImage">
+        <img src="../Images/Booking-ticket-on-BookMyShow.jpg" class="paymentbackground_image">
+    </div>
+    <div class="payment_container">
+        <h2 class="confirmyourpayment">Confirm Your Payment</h2>
+        <div class="payment_first-row">
+            <div class="payment_owner">
+                <h3>Name</h3>
+                <div class="payment_input-field">
+                    <input type="text">
+                </div>
+            </div>
+            <div class="cvv">
+                <h3>CVV</h3>
+                <div class="payment_input-field">
+                    <input type="password">
+                </div>
+            </div>
+        </div>
+        <div class="payment_second-row">
+            <div class="card-number">
+                <h3>Card Number</h3>
+                <div class="payment_input-field">
+                    <input type="text">
+                </div>
+            </div>
+        </div>
+        <div class="payment_third-row">
+            <h3>Card Expires</h3>
+            <div class="payment_selection">
+                <div class="payment_date">
+                    <select name="months" id="months">
+                        <option value="Jan">Jan</option>
+                        <option value="Feb">Feb</option>
+                        <option value="Mar">Mar</option>
+                        <option value="Apr">Apr</option>
+                        <option value="May">May</option>
+                        <option value="Jun">Jun</option>
+                        <option value="Jul">Jul</option>
+                        <option value="Aug">Aug</option>
+                        <option value="Sep">Sep</option>
+                        <option value="Oct">Oct</option>
+                        <option value="Nov">Nov</option>
+                        <option value="Dec">Dec</option>
+                      </select>
+                      <select name="years" id="years">
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                      </select>
+                </div>
+
+                <div class="payment_cards">
+                    <img src="../Images/aa.png" alt="">
+                    <img src="../Images/paypal.png" alt="">
+                    <img src="../Images/visa.png" alt="">
+                    <img src="../Images/idk.png" alt="">
+                </div>
+                
+            </div>    
+        </div>
+        <a href="" class="taptoPay">Click To Enjoy Movie</a>
+    </div>
+
+    
+        <div class="payment_modal">
+              <div class="message"></div>
+            
+        </div>
+    
+<script src="../JS/paymentconfirm.js"></script>
+</body>
+</html>

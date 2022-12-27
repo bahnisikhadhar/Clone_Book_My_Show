@@ -116,7 +116,7 @@ async function getLiveEvents() {
       <span>INFO</span>
     </span>
  
-       <div class="movie_timing">
+       <div class="movie_timing cursor">
         ${template2}
        </div>
  

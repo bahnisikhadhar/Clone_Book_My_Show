@@ -277,7 +277,8 @@
   }
   
   .booking_timing:hover {
-    border: 1px solid rgb(241, 72, 72);
+    /* border: 1px solid rgb(9, 61, 4); */
+    box-shadow: 0 0 3px #49ba8e;
   }
   
   .booking_flexibility {
@@ -288,6 +289,10 @@
   
   .booking_flexibility i {
     margin-right: 1em;
+  }
+
+  .cursor{
+    cursor: pointer;
   }
   
   

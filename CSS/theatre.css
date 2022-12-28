@@ -24,11 +24,21 @@
     background-color: #333545;
     padding-bottom: 1em;
   }
-  
+
+
+ 
   .movie_title {
     color: #f4f4f4;
     font-size: 40px;
     padding: 20px 0 20px 0;
+    
+  }
+  .movie_back{
+    margin-right: 20px;
+    margin-left: 40px;
+  }
+  .movie_back:hover{
+    color: #fff;
   }
   
   .booking_genere {

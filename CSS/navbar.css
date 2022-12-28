@@ -97,6 +97,7 @@ border-radius: 50%;
     font-size: .9rem;
     font-weight: bold;
     border-radius: 5px;
+    cursor: pointer;
 }
 .right_nav_city{
     font-size: 1rem;

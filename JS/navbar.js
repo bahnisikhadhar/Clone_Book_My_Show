@@ -1,22 +1,22 @@
-const signButton=document.querySelector(".sign_btn");
-const signPopUp=document.querySelector(".sign_pop_up");
-const modalClose=document.querySelector(".modalclose");
-const phoneNumber=document.querySelector(".phone_num");
-const termsCondition=document.querySelector(".terms");
-const continueBox=document.querySelector(".continue");
-const height=document.querySelector(".height");
-const signPopUpVerify=document.querySelector(".sign_pop_up1");
-const continueBox1=document.querySelector(".continue1");
-const phoneNumVerify=document.querySelector(".phonenum_verify");
-const leftChevronIcon=document.querySelector(".leftchevro_icon");
-const firstOtpBox=document.querySelector(".otp_box1");
-const resendOtp=document.querySelector(".resnd_otp");
-const otpBox=document.querySelectorAll(".otp_box");
-const invalidMsg=document.querySelector(".invalid_msg");
-const rightNavRest=document.querySelector(".right_nav_rest");
-const rightNavRest1=document.querySelector(".right_nav_rest1");
-const signPopUpContainer=document.querySelector(".sign_pop_up_container");
-const signPopUpContainer1=document.querySelector(".sign_pop_up_container1");
+const signButton = document.querySelector(".sign_btn");
+const signPopUp = document.querySelector(".sign_pop_up");
+const modalClose = document.querySelector(".modalclose");
+const phoneNumber = document.querySelector(".phone_num");
+const termsCondition = document.querySelector(".terms");
+const continueBox = document.querySelector(".continue");
+const height = document.querySelector(".height");
+const signPopUpVerify = document.querySelector(".sign_pop_up1");
+const continueBox1 = document.querySelector(".continue1");
+const phoneNumVerify = document.querySelector(".phonenum_verify");
+const leftChevronIcon = document.querySelector(".leftchevro_icon");
+const firstOtpBox = document.querySelector(".otp_box1");
+const resendOtp = document.querySelector(".resnd_otp");
+const otpBox = document.querySelectorAll(".otp_box");
+const invalidMsg = document.querySelector(".invalid_msg");
+const rightNavRest = document.querySelector(".right_nav_rest");
+const rightNavRest1 = document.querySelector(".right_nav_rest1");
+const signPopUpContainer = document.querySelector(".sign_pop_up_container");
+const signPopUpContainer1 = document.querySelector(".sign_pop_up_container1");
 
 let sentOtp;
 
@@ -77,16 +77,16 @@ leftChevronIcon.addEventListener("click",()=>{
 })
 
 //-----------------------------------------------------City-pop-up--------------------------------------------------
-const hideCity=document.querySelector(".hide");
-const viewCity=document.querySelector(".view");
-const lowerpartCity=document.querySelector(".lowerpart_city");
-const rightNavCityOption=document.querySelector(".right_nav_city");
-const rightNavCityOptionPhone=document.querySelector(".right_nav_city1");
-const cityPopUp=document.querySelector(".city_pop_up");
-const mainBody=document.querySelector("main");
-const cityName=document.querySelector(".city_name");
-const cityName1=document.querySelector(".city_name1");
-const cityPopUpContainer=document.querySelector(".city_pop_up_container");
+const hideCity = document.querySelector(".hide");
+const viewCity = document.querySelector(".view");
+const lowerpartCity = document.querySelector(".lowerpart_city");
+const rightNavCityOption = document.querySelector(".right_nav_city");
+const rightNavCityOptionPhone = document.querySelector(".right_nav_city1");
+const cityPopUp = document.querySelector(".city_pop_up");
+const mainBody = document.querySelector("main");
+const cityName = document.querySelector(".city_name");
+const cityName1 = document.querySelector(".city_name1");
+const cityPopUpContainer = document.querySelector(".city_pop_up_container");
 
 viewCity.addEventListener("click",(e)=>{
     e.stopPropagation();
@@ -121,12 +121,12 @@ cityPopUp.addEventListener("click",(event)=>{
 })
 
 // -----------------------------------------HUMBERGER---------------------------------------------------------
-const hamburgerLogin=document.querySelector(".hamburger_login");
-const hamburger=document.querySelector(".nav_hamburger");
-const hamIcon=document.querySelector(".ham_icon");
-const hamburger1=document.querySelector(".nav_hamburger1");
-const hamburgerSignOut=document.querySelector(".hamburger_signOut");
-const hamburgerContainer=document.querySelector(".nav_hamburger_container");
+const hamburgerLogin = document.querySelector(".hamburger_login");
+const hamburger = document.querySelector(".nav_hamburger");
+const hamIcon = document.querySelector(".ham_icon");
+const hamburger1 = document.querySelector(".nav_hamburger1");
+const hamburgerSignOut = document.querySelector(".hamburger_signOut");
+const hamburgerContainer = document.querySelector(".nav_hamburger_container");
 
 
 hamIcon.addEventListener("click",()=>{
@@ -166,10 +166,10 @@ rightNavCityOptionPhone.addEventListener("click",()=>{
 
 cityPopUp.addEventListener("click",(event)=>{
     if(event.target.classList.contains("cityTrans")){
-    cityName1.innerText=event.target.innerText;
+    cityName1.innerText = event.target.innerText;
     }
     else if(event.target.classList.contains("cityimg")){
-        cityName1.innerText=event.target.alt;
+        cityName1.innerText = event.target.alt;
         }
 })
 

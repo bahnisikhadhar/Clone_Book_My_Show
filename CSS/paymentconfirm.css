@@ -100,6 +100,7 @@
 .taptoPay:hover{
     border :1px solid red ;
     box-shadow: 0 1px 0 2px rgb(245, 140, 140);
+    cursor: pointer;
 }
 
 
@@ -133,6 +134,78 @@
   border-radius: 12px;
   
 }
+
+.message img{
+  position: relative;
+  left: 36%;
+  top: -15%;
+  background-color: rgb(238, 240, 223);
+  padding: 10px;
+  border-radius: 50%;
+
+  
+  
+  
+
+}
+.enjoy{
+  font-size: 50px;
+  text-align: center;
+  color: rgb(87, 168, 137);
+  font-weight: bold;
+ 
+ 
+}
+
+.enjoy1{
+  font-size: 45px;
+  font-weight: 600;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  color:rgb(231, 99, 99) ;
+  
+ 
+}
+
+.happyMessage{
+  display: flex;
+  flex-direction: column;
+  margin-top: -30px;
+  margin-bottom: 25px;
+
+}
+
+.message p{
+  font-size: 30px;
+  text-align: center;
+  font-weight: 600;
+  color: rgb(128, 112, 112);
+}
+
+.backToHome{
+  text-align: center;
+  color: #ffff;
+  background-color: rgb(232, 64, 64);
+   text-decoration: none;
+   padding: 10px;
+   font-size: 16px;
+   transition: 0.5s;
+   width:50%;
+   font-weight: bold;
+   border-radius: 8px;
+  text-align: center;
+  margin: 30%;
+  
+}
+
+.backToHome:hover{
+  border :1px solid red ;
+  box-shadow: 0 1px 0 2px rgb(245, 140, 140);
+  cursor: pointer;
+}
+
+
 
 
 @media screen and (max-width: 600px) {

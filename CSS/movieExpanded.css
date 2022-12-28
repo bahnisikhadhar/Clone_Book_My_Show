@@ -345,3 +345,20 @@ a{
         width: 100%;
     }
 }
+
+@media screen and (max-width:720px) {
+    .wrapper-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .movie_detail_banner {
+        width: 100%;
+    }
+    .poster_img {
+        margin-bottom: 5%;
+    }
+}
+
+

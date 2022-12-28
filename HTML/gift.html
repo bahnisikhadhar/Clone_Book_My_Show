@@ -63,11 +63,11 @@
         </div>
         <p class="pop_text">OR</p>
         <div class="phone">
-            <span>+91</span> <input type="tel" placeholder="Continue with mobile number" class="phone_num">
+            <input type="tel" placeholder="Continue with mobile number" class="phone_num">
         </div>
         <div class="height"></div>
         <p class="terms">I agree to the <a href="#">Terms & Conditions</a>& <a href="#">Privacy Policy</a></p>
-        <div class="continue">Continue</div>
+        <div class="continue" onClick="phoneAuth()">Continue</div>
     </div>
     </div>
 
@@ -75,7 +75,7 @@
     <div class="sign_pop_up1">
         <div class="leftchevro_icon"><i class="fa-solid fa-chevron-left"></i></div>
         <h3>Verify your Mobile Number </h3>
-        <p>Enter OTP sent to +91<span class="phonenum_verify"></span></p>
+        <p>Enter OTP sent to <span class="phonenum_verify"></span></p>
         <div class="otp_box_container">
             <input type="text" class="otp_box otp_box1" maxlength="1">
             <input type="text" class="otp_box" maxlength="1">
@@ -86,7 +86,7 @@
         </div>
         <div class="invalid_msg"></div>
         <p class="rcv_otp">Didn't receive OTP? <span class="resnd_otp">Resend OTP</span></p>
-        <div class="continue1">Continue</div>
+        <div class="continue1" onClick="codeverify()">Continue</div>
     </div>
 </div>
     <!------------------------------------------CITY-POP-UP---------------------------------------------------->
@@ -1016,8 +1016,10 @@
 
 
 <!-- =======================================================FOOTER================================================ -->
+<!-- <script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-auth-compat.js"></script> -->
+<script src="../JS/otp.js"></script>
     <script src="../JS/gift.js"></script>
-    <script src="../JS/otp.js"></script>
     <script type="module" src="../JS/navbar.js"></script>
 </body>
 

@@ -127,7 +127,7 @@ const hamIcon=document.querySelector(".ham_icon");
 const hamburger1=document.querySelector(".nav_hamburger1");
 const hamburgerSignOut=document.querySelector(".hamburger_signOut");
 const hamburgerContainer=document.querySelector(".nav_hamburger_container");
-// const hamburgerContainer1=document.querySelector(".nav_hamburger_container1");
+
 
 hamIcon.addEventListener("click",()=>{
     hamburger.classList.add("display_block");

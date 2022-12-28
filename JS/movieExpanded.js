@@ -41,6 +41,7 @@ const renderDetails = async () => {
 
     const template = `
     <div class="main_container" style= " background-image: linear-gradient(90deg, rgb(26, 26, 26) 24.97%, rgb(26, 26, 26) 38.3%, rgba(26, 26, 26, 0.04) 97.47%, rgb(26, 26, 26) 100%),url(${img_url}/${backdrop_path});background-repeat:no-repeat;background-size: cover;">
+    <div class="wrapper-box">
     <img src = "${img_url}/${poster_path}" alt="" class="poster_img" width="100%" /> 
     
     <div class="movie_detail_banner">
@@ -61,6 +62,7 @@ const renderDetails = async () => {
             <div class="other_detail"><span>${Math.floor(runtime/60)}hr ${runtime%60}mins</span> <span>. </span> <span>${gens.slice(0,-1)}</span><span>. </span> <span>${adult?"U/A":"U"}</span> <span>. </span> <span>${release_date}</span></div>
             <a href="../HTML/theatre.html?id=${id}"><button class="tickt_btn" style="cursor:pointer"> Book Tickets</button></a>
         </div>
+     </div>
      </div>
       <div class="about_movie">
            <h1>About the movie</h1>

@@ -19,8 +19,9 @@ const renderDetails = async () => {
 
   const template = `
   
-  <div class="booking_title container">
-    <p class="movie_title">${original_title} -${spoken_languages[0].english_name}</p>
+  <div class="booking_title">
+  
+    <p class="movie_title"><a href="../HTML/movieExpanded.html"> <i class="fa-solid fa-less-than movie_back" ></i></a> ${original_title} -${spoken_languages[0].english_name}</p>
   </div>
   <div class="booking_genere container">
     <i class="fa-brands fa-umbraco"></i>
@@ -36,7 +37,7 @@ const renderDetails = async () => {
 
   const template2 = `
   
-  <p class="moviefilter">${spoken_languages[0].english_name}-2D</p>
+  <p class="moviefilter"> ${spoken_languages[0].english_name}-2D</p>
   <select class="movie_filter">
     <option value="">Filter Sub Region</option>
     <option value="">Filter Sub Region</option>
@@ -101,7 +102,8 @@ async function getLiveEvents() {
     template += `<div class="booking_location container">
     <div class="heart"><i class="fa-regular fa-heart"></i></div>
     <div>
-      <p class="theatre_name">${ele.theatreName}</p>
+    
+      <p class="theatre_name"> ${ele.theatreName}</p>
       <div>
         <span class="mTicket" ><i class="fa-solid fa-mobile-retro"></i> M-Ticket</span>
         <span class="foodbevrages"><i class="fa-solid fa-burger"></i>Food And Beverages</span>

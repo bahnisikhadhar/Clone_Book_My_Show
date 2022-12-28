@@ -94,7 +94,38 @@
     font-weight: bold;
     border-radius: 8px;
     margin: 1em auto;
+    display: none;
     
+    
+}
+
+.disabled{
+  text-align: center;
+  color: rgb(123, 119, 119);
+  background-color: rgb(208, 203, 203);
+   text-decoration: none;
+   padding: 8px;
+   font-size: 16px;
+   transition: 0.5s;
+   width:50%;
+   font-weight: bold;
+   border-radius: 8px;
+   margin: 1em auto;
+   
+}
+
+/* .disabled:hover{
+  border :1px solid rgb(237, 228, 228) ;
+  box-shadow: 0 1px 0 2px rgb(94, 92, 92);
+} */
+
+
+.display_block{
+  display: block;
+}
+
+.display_none{
+  display: none;
 }
 
 .taptoPay:hover{
@@ -197,12 +228,14 @@
   text-align: center;
   margin: 30%;
   
+  
 }
 
 .backToHome:hover{
   border :1px solid red ;
   box-shadow: 0 1px 0 2px rgb(245, 140, 140);
   cursor: pointer;
+  
 }
 
 

@@ -64,14 +64,8 @@ function showMovies(movies) {
     //Below code for iterating through each movie and render as a template in webpage
     movies.forEach((movie) => {
         //Destructuring of Object done here so that we can unpack properties from object and can use as independent variables in the below block scope
-
-        //-----FeedBack by Prakash Sir--------------------make an object of key value pair for language,{en:English}-----------------------------------------
-
-        
-        let { title, poster_path, vote_average, overview, popularity, original_language,id, genre_ids } = movie
-       
-
-        original_language = mapMovieLanguage(original_language);
+      let { title, poster_path, vote_average, overview, popularity, original_language,id, genre_ids } = movie
+       original_language = mapMovieLanguage(original_language);
 
         const movieEl = document.createElement("div")
         let genres = ["Action/Mystery","Comedy/Drama/Romance","Action/Thriller","Drama/Mystery"]
@@ -93,10 +87,7 @@ function showMovies(movies) {
         recommendedMovieContainerEl.appendChild(movieEl)
 
     })
-    // <p>Likes-${popularity}</p>
-    // <p>${vote_average}/10</p>
-    //  <p>${genresOfMovie}</p>
-    //In line No.53(this May Vary if you format it😶 )  href is written in such a way that we can  track the id of the movie we clicked..Its Written here because commenting is not possible inside the template literal 😐
+    
 }
 
 //-------------------------------------------------------------------------------------------------------------------------------
@@ -127,24 +118,8 @@ function  showLikedIndianMovies(movies) {
      movies.forEach((movie) => {
        
          let {id, title,release_date,popularity,vote_average,original_language,poster_path } = movie;
-         if(original_language == "en") {
-            original_language = "English"
-         }
-         if(original_language == "hi") {
-            original_language = "Hindi"
-         }
-         if(original_language == "te"){
-            original_language = "Telegu"
-         }
-         if(original_language == "ta") {
-            original_language = "Tamil"
-         }
-         if(original_language == "ml") {
-            original_language = "Malayalam"
-         }
-         if(original_language == "bn") {
-            original_language = "Bengali"
-         }
+         original_language = mapMovieLanguage(original_language);
+
          const indianEl = document.createElement("div")
          let genres = ["Action/Mystery","Comedy/Drama/Romance","Action/Thriller","Drama/Mystery"]
         let rndm = Math.floor(Math.random() *genres.length)
@@ -163,10 +138,6 @@ function  showLikedIndianMovies(movies) {
        `
        indianMoviesContainerEl.appendChild(indianEl)
     })
-    // <p>Likes-${popularity}</p>
-    //               <p>rating-${vote_average}</p>
-    //               <p>releasedate-${release_date}</p>
-    //               <p>Language-${original_language}</p>
     
 }
 
@@ -195,24 +166,7 @@ function showNowPlayingMovies(movies) {
      movies.forEach((movie) => {
        
          let {id, title,release_date,popularity,vote_average,original_language,poster_path } = movie;
-         if(original_language == "en") {
-            original_language = "English"
-         }
-         if(original_language == "hi") {
-            original_language = "Hindi"
-         }
-         if(original_language == "te"){
-            original_language = "Telegu"
-         }
-         if(original_language == "ta") {
-            original_language = "Tamil"
-         }
-         if(original_language == "ml") {
-            original_language = "Malayalam"
-         }
-         if(original_language == "bn") {
-            original_language = "Bengali"
-         }
+         original_language = mapMovieLanguage(original_language);
          const nowPlayingEl = document.createElement("div")
          let genres = ["Action/Mystery","Comedy/Drama/Romance","Action/Thriller","Drama/Mystery"]
          let rndm = Math.floor(Math.random() *genres.length)
@@ -231,10 +185,6 @@ function showNowPlayingMovies(movies) {
        `
        nowPlayingMoviesContainerEl.appendChild(nowPlayingEl)
     })
-    // <p>Likes-${popularity}</p>
-    // <p>rating-${vote_average}</p>
-    // <p>releasedate-${release_date}</p>
-    // <p>Language-${original_language}</p>
     
 }
 
@@ -268,24 +218,8 @@ function showPopularMovies(movies) {
      movies.forEach((movie) => {
        
          let {id, title,release_date,popularity,vote_average,original_language,poster_path } = movie;
-         if(original_language == "en") {
-            original_language = "English"
-         }
-         if(original_language == "hi") {
-            original_language = "Hindi"
-         }
-         if(original_language == "te"){
-            original_language = "Telegu"
-         }
-         if(original_language == "ta") {
-            original_language = "Tamil"
-         }
-         if(original_language == "ml") {
-            original_language = "Malayalam"
-         }
-         if(original_language == "bn") {
-            original_language = "Bengali"
-         }
+         original_language = mapMovieLanguage(original_language);
+
          const popularMoviesEl = document.createElement("div")
          let genres = ["Action/Mystery","Comedy/Drama/Romance","Action/Thriller","Drama/Mystery"]
          let rndm = Math.floor(Math.random() *genres.length)
@@ -304,10 +238,7 @@ function showPopularMovies(movies) {
        `
        popularMoviesContainerEl.appendChild(popularMoviesEl)
     })
-                //   <p>Likes-${popularity}</p>
-                //   <p>rating-${vote_average}</p>
-                //   <p>releasedate-${release_date}</p>
-                //   <p>Language-${original_language}</p>
+               
     
 }
 
@@ -338,24 +269,8 @@ function showTopRatedMovies(movies) {
      movies.forEach((movie) => {
        
          let {id, title,release_date,popularity,vote_average,original_language,poster_path } = movie;
-         if(original_language == "en") {
-            original_language = "English"
-         }
-         if(original_language == "hi") {
-            original_language = "Hindi"
-         }
-         if(original_language == "te"){
-            original_language = "Telegu"
-         }
-         if(original_language == "ta") {
-            original_language = "Tamil"
-         }
-         if(original_language == "ml") {
-            original_language = "Malayalam"
-         }
-         if(original_language == "bn") {
-            original_language = "Bengali"
-         }
+         original_language = mapMovieLanguage(original_language);
+
          const topRatedMoviesEl = document.createElement("div")
          let genres = ["Action/Mystery","Comedy/Drama/Romance","Action/Thriller","Drama/Mystery"]
          let rndm = Math.floor(Math.random() *genres.length)
@@ -374,10 +289,7 @@ function showTopRatedMovies(movies) {
        `
        topRatedMoviesContainerEl.appendChild(topRatedMoviesEl)
     })
-                //   <p>Likes-${popularity}</p>
-                //   <p>rating-${vote_average}</p>
-                //   <p>releasedate-${release_date}</p>
-                //   <p>Language-${original_language}</p>
+               
     
 }
 
@@ -408,24 +320,8 @@ function showLatestMovies(movies) {
      movies.forEach((movie) => {
        
          let {id, title,release_date,popularity,vote_average,original_language,poster_path } = movie;
-         if(original_language == "en") {
-            original_language = "English"
-         }
-         if(original_language == "hi") {
-            original_language = "Hindi"
-         }
-         if(original_language == "te"){
-            original_language = "Telegu"
-         }
-         if(original_language == "ta") {
-            original_language = "Tamil"
-         }
-         if(original_language == "ml") {
-            original_language = "Malayalam"
-         }
-         if(original_language == "bn") {
-            original_language = "Bengali"
-         }
+         original_language = mapMovieLanguage(original_language);
+
          const latestMoviesEl = document.createElement("div")
          let genres = ["Action/Mystery","Comedy/Drama/Romance","Action/Thriller","Drama/Mystery"]
          let rndm = Math.floor(Math.random() *genres.length)
@@ -445,10 +341,6 @@ function showLatestMovies(movies) {
        latestMoviesContainerEl.appendChild(latestMoviesEl)
     })
 
-    // <p>Likes-${popularity}</p>
-    // <p>rating-${vote_average}</p>
-    // <p>releasedate-${release_date}</p>
-    // <p>Language-${original_language}</p>
     
 }
 

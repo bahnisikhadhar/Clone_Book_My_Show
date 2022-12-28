@@ -24,11 +24,11 @@ const renderDetails = async () => {
     //We are getting Genres as an array so have to Iterate Over That..We have to delete The Coma Thats coming at the End of very last genre...Will  Rectify it later😒
     let productions= ""
     production_companies.forEach((p)=>{
-      productions+=p.name+" "+","
+      productions+=p.name+","+" "
     })
     let languages = ""
     spoken_languages.forEach((l)=>{
-      languages+=l.english_name+" "+","
+      languages+=l.english_name+","+" "
     })
       
    
@@ -57,8 +57,8 @@ const renderDetails = async () => {
             </div>
             <button class="rate_btn">Rate now</button>
             </div>
-            <div class="screens">${productions.slice(0,-1)}</div>
-            <div class="languages">${languages.slice(0,-1)}</div>
+            <div class="screens">${productions.slice(0,-2)}</div>
+            <div class="languages">${languages.slice(0,-2)}</div>
             <div class="other_detail"><span>${Math.floor(runtime/60)}hr ${runtime%60}mins</span> <span>. </span> <span>${gens.slice(0,-1)}</span><span>. </span> <span>${adult?"U/A":"U"}</span> <span>. </span> <span>${release_date}</span></div>
             <a href="../HTML/theatre.html?id=${id}"><button class="tickt_btn" style="cursor:pointer"> Book Tickets</button></a>
         </div>

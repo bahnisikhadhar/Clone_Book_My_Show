@@ -11,5 +11,5 @@ taptopay.addEventListener("click", (e) => {
   paymentbackground_image.src = "../Images/Screenshot_20221223_135940.png";
   setInterval(function () {
     paymentModal.style.display = "block";
-  }, 3000);
+  }, 800);
 });

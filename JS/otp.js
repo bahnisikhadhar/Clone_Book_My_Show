@@ -15,16 +15,19 @@ function render() {
   recaptchaVerifier.render();
 }
 
+
+
 // function for send OTP
-function phoneAuth() {
-  let number = document.getElementById('number').value;
+function phoneAuth(phoneNum) {
+
+  let number = phoneNum ?? document.getElementById('number').value;
+
   firebase.auth().signInWithPhoneNumber(number, window.recaptchaVerifier).then(function (confirmationResult) {
     window.confirmationResult = confirmationResult;
     coderesult = confirmationResult;
     console.log(coderesult);
     console.log('OTP Sent');
   }).catch(function (error) {
-    // error in sending OTP
     alert(error.message);
   });
 }
@@ -34,67 +37,59 @@ function phoneAuth() {
 
 
 function codeverify() {
-    let otp_box1 = document.querySelector(".otp_box1").value
-    let otp_box2 = document.querySelector(".otp_box2").value
-    let otp_box3 = document.querySelector(".otp_box3").value
-    let otp_box4 = document.querySelector(".otp_box4").value
-    let otp_box5 = document.querySelector(".otp_box5").value
-    let otp_box6 = document.querySelector(".otp_box6").value
+
+  const signPopUpContainer1 = document.querySelector(".sign_pop_up_container1");
+  const rightNavRest = document.querySelector(".right_nav_rest");
+  const rightNavRest1 = document.querySelector(".right_nav_rest1");
+  const signPopUpContainer = document.querySelector(".sign_pop_up_container");
+  const invalidMsg = document.querySelector(".invalid_msg");
+
+  let otp_box1 = document.querySelector(".otp_box1").value
+  let otp_box2 = document.querySelector(".otp_box2").value
+  let otp_box3 = document.querySelector(".otp_box3").value
+  let otp_box4 = document.querySelector(".otp_box4").value
+  let otp_box5 = document.querySelector(".otp_box5").value
+  let otp_box6 = document.querySelector(".otp_box6").value
   let otp = otp_box1 + otp_box2 + otp_box3 + otp_box4 + otp_box5 + otp_box6;
-  console.log(otp+"otp")
+
+  console.log(otp + " otp")
   coderesult.confirm(otp).then(function () {
-    console.log('OTP Verified');
     verifiedUser = true;
-    console.log(verifiedUser+"user");
+    signPopUpContainer1.classList.remove("display_block");
+    rightNavRest.classList.add("display_none");
+    rightNavRest1.classList.add("display_flex");
+    localStorage.setItem("isLoggedIn", true);
   }).catch(function () {
     console.log('OTP Not correct');
-    console.log(verifiedUser+"user");
-
-    invalidMsg.innerText="invalid otp entered.Please try again";
+    invalidMsg.innerText = "invalid otp entered.Go to Previous Page and Try Again";
   })
 }
 
-codeverify()
 
+//------------------------------To move through the otp boxes automatically---------------------------------------
 
-// function handleOtp(event) {
-//     event.preventDefault();
-//     // console.log(event.target.value);
-//     const input = event.target;
-//     let value = input.value;
-//     input.value = "";
-//     input.value = value ? value[0] : "";
+const otpBox = document.querySelectorAll(".otp_box");
+otpBox.forEach((input, index) => {
+  input.dataset.index = index;
+  input.addEventListener("keyup", handleOtp);
 
-//     let fieldIndex = input.dataset.index;
-//     if (value.length > 0 && fieldIndex < otpBox.length - 1) {
-//         input.nextElementSibling.focus();
-//     }
+});
 
-//     if (event.key === "Backspace" && fieldIndex > 0) {
-//         input.previousElementSibling.focus();
-//     }
+function handleOtp(event) {
+  event.preventDefault();
+  const input = event.target;
+  console.log(event.target.value);
+  let value = input.value;
+  input.value = "";
+  input.value = value ? value[0] : "";
 
-//     if(fieldIndex==otpBox.length-1){
-//         let enterOtp="";
-//         otpBox.forEach((input)=>{
-//             enterOtp += input.value;
-//         })
-//         // console.log(enterOtp);
-//         // console.log(sentOtp);
-//         codeverify()
-//         if(enterOtp!==sentOtp){
-//             invalidMsg.innerText="invalid otp entered.Please try again";
-//             otpBox.forEach((input)=>{
-//                 input.value="";
-//             })
-//         } else{
-//             signPopUpVerify.classList.remove("display_block");
-//             rightNavRest.classList.add("display_none");
-//             rightNavRest1.classList.add("display_flex");
+  let fieldIndex = input.dataset.index;
+  if (value.length > 0 && fieldIndex < otpBox.length - 1) {
+    input.nextElementSibling.focus();
+  }
 
-        
-//             localStorage.setItem("isLoggedIn", true);
-//         }
-//     }
-   
-// }
+  if (event.key === "Backspace" && fieldIndex > 0) {
+    input.previousElementSibling.focus();
+  }
+}
+

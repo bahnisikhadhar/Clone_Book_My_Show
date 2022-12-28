@@ -35,19 +35,19 @@ modalClose.addEventListener("click",()=>{
 })
 
 height.addEventListener("click",()=>{
-    phoneNumber.style.borderBottom="1px solid rgb(156, 154, 154)";
+    phoneNumber.style.borderBottom = "1px solid rgb(156, 154, 154)";
     termsCondition.classList.remove("display_none");
     continueBox.classList.remove("display_block");
 })
 phoneNumber.addEventListener("click",()=>{
-    phoneNumber.style.borderBottom="1px solid red";
+    phoneNumber.style.borderBottom = "1px solid red";
     termsCondition.classList.add("display_none");
     continueBox.classList.add("display_block");
     
 })
 
 phoneNumber.addEventListener("input",(event)=>{
-    if(phoneNumber.value.length==13){
+    if(phoneNumber.value.length == 13){
         continueBox.classList.add("background_red");
     }else{
         continueBox.classList.remove("background_red");
@@ -57,72 +57,14 @@ phoneNumber.addEventListener("input",(event)=>{
 continueBox.addEventListener("click",()=>{
    signPopUpContainer.classList.add("display_none");
    signPopUpContainer1.classList.add("display_block");
-    phoneNumVerify.innerText=phoneNumber.value;
-    setTimeout(()=>generateOtp(),500); //to genarate otp
+    phoneNumVerify.innerText = phoneNumber.value;
+   
 })
 
 //----------------------------------------GENERATE OTP----------------------------------------------------
 
 
-resendOtp.addEventListener("click",generateOtp);
-
-function generateOtp(){
-    let digits="0123456789";
-    sentOtp="";
-
-    for(let i=0;i<6;i++){
-        sentOtp += digits[Math.floor(Math.random()*10)];
-    }
-    alert(`Your OTP is ${sentOtp}`);
-}
-//--------------------------------------------CURSOR MOVING IN OTP BOXES-------------------------------------------
-  otpBox.forEach((input,index)=>{
-    // console.log(input);
-    input.dataset.index=index;
-    //input.addEventListener("keyup",handleOtp);
-  });
-
-//   function handleOtp(event) {
-//     event.preventDefault();
-//     // console.log(event.target.value);
-//     const input = event.target;
-//     let value = input.value;
-//     input.value = "";
-//     input.value = value ? value[0] : "";
-
-//     let fieldIndex = input.dataset.index;
-//     if (value.length > 0 && fieldIndex < otpBox.length - 1) {
-//         input.nextElementSibling.focus();
-//     }
-
-//     if (event.key === "Backspace" && fieldIndex > 0) {
-//         input.previousElementSibling.focus();
-//     }
-
-//     if(fieldIndex==otpBox.length-1){
-//         let enterOtp="";
-//         otpBox.forEach((input)=>{
-//             enterOtp += input.value;
-//         })
-//         console.log(enterOtp);
-//         console.log(sentOtp);
-
-//         if(enterOtp!==sentOtp){
-//             invalidMsg.innerText="invalid otp entered.Please try again";
-//             otpBox.forEach((input)=>{
-//                 input.value="";
-//             })
-//         } else{
-//             signPopUpContainer1.classList.remove("display_block");
-//             rightNavRest.classList.add("display_none");
-//             rightNavRest1.classList.add("display_flex");
-
-        
-//             localStorage.setItem("isLoggedIn", true);
-//         }
-//     }
-   
-// }
+resendOtp.addEventListener("click",phoneAuth(phoneNumber.value));
 
 
 //----------------------------------------------------------------------------------------------------------------

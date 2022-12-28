@@ -186,12 +186,14 @@
     cursor: pointer;
     min-height: 40px;
     max-width: 400px;
+   
 }
 
 .total_cost {
     font-size: 100%;
     font-weight: 400;
     color: #fff;
+    margin: 0 auto;
 }
 
 .cancellation_policy_container{

@@ -21,7 +21,7 @@ const renderDetails = async () => {
   
   <div class="booking_title">
   
-    <p class="movie_title"><a href="../HTML/movieExpanded.html"> <i class="fa-solid fa-less-than movie_back" ></i></a> ${original_title} -${spoken_languages[0].english_name}</p>
+    <p class="movie_title"><a href="../HTML/movieExpanded.html?id=${id}"> <i class="fa-solid fa-less-than movie_back" ></i></a> ${original_title} -${spoken_languages[0].english_name}</p>
   </div>
   <div class="booking_genere container">
     <i class="fa-brands fa-umbraco"></i>

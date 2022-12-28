@@ -56,13 +56,10 @@ check()
 taptopay.addEventListener("click", (e) => {
   e.preventDefault();
   paymentcontainer.style.display = "none";
-paymentbackground_image.src = "../Images/Screenshot_20221223_135940.png";
-setInterval(function () {
-  paymentModal.style.display = "block";
-}, 1000);
-
-
- 
+  paymentbackground_image.src = "../Images/Screenshot_20221223_135940.png";
+  setInterval(function () {
+    paymentModal.style.display = "block";
+  }, 800);
 });
 
 

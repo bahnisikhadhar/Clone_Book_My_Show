@@ -124,7 +124,7 @@ border-radius: 50%;
     padding: 1rem 2rem;
     width: 28%;
     position: absolute;
-    top: 6.3rem;
+    top: 5.7rem;
     left: 37%;
     border-radius: 8px;
     cursor: pointer;
@@ -167,8 +167,14 @@ border-radius: 50%;
     font-size: .8rem;
     color: #535252;
 }
+.sign_pop_up .country_code{
+    font-size: .8rem;
+    color: #f84464;
+    margin-top: .5rem;
+    text-align: center;
+}
 .sign_pop_up .phone_num{
-width: 80%;
+width: 100%;
 border: none;
 outline: none;
 font-size: .9rem;
@@ -185,9 +191,13 @@ border-bottom: 1px solid var(--bg-color1);
 .sign_pop_up .terms a{
     text-decoration: underline;
     color: var(--bg-color1);
+
 }
-.sign_pop_up .height{
-    height: 5rem;
+/* .sign_pop_up .height{
+    height: 2rem;
+} */
+#recaptcha-container{
+    padding-left: 1.1rem;
 }
 .continue{
     width: 100%;
@@ -205,7 +215,6 @@ border-bottom: 1px solid var(--bg-color1);
     width: 100%;
     padding: 1rem;
     background-color:#f84464;
-    opacity: .2;
     color: white;
     border-radius: 5px;
     text-align: center;
@@ -235,7 +244,7 @@ border-bottom: 1px solid var(--bg-color1);
 .sign_pop_up1 .invalid_msg{
     margin-bottom: 14rem;
     color: #f84464;
-    font-size: .7rem;
+    font-size: .9rem;
 }
 .sign_pop_up1 .rcv_otp{
     text-align: center;

@@ -31,7 +31,7 @@ const renderDetails = async () => {
   const res = await fetch(`${Base_Url}movie/${id}?${Api_key}`)
   const movieData = await res.json();
   let date='27/12/2022'
-  const res1 = await fetch(`/shows?date=${date}`);
+  const res1 = await fetch(`https://lackadaisical-salt-radium.glitch.me/shows?date=${date}`);
   const data = await res1.json();
   let theatreDetail = '';
   let theatre = data.data.theatres;

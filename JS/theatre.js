@@ -25,8 +25,9 @@ const renderDetails = async () => {
 
   const template = `
   
-  <div class="booking_title container">
-    <p class="movie_title">${original_title} -${spoken_languages[0].english_name}</p>
+  <div class="booking_title">
+  
+    <p class="movie_title"><a href="../HTML/movieExpanded.html?id=${id}"> <i class="fa-solid fa-less-than movie_back" ></i></a> ${original_title} -${spoken_languages[0].english_name}</p>
   </div>
   <div class="booking_genere container">
     <i class="fa-brands fa-umbraco"></i>
@@ -161,7 +162,7 @@ async function getLiveEvents(date) {
       `;
   });
 
-  bookingCont.innerHTML += template;
+  bookingCont.innerHTML = template;
 }
 getLiveEvents();
 
@@ -211,6 +212,20 @@ chooseseats.addEventListener("mouseover", (e) => {
   } else {
     vechile.src = "../Images/bus.png";
   }
+});
+
+let seatCount = [];
+chooseseats.addEventListener("click", (e) => {
+  if (e.target.classList.contains("seats")) {
+    if (seatCount.length > 0) {
+      let temp = seatCount.shift();
+      temp.classList.remove("backgroundcolorRed");
+    }
+    seatCount.push(e.target);
+  }
+  seatCount.forEach((el) => {
+    el.classList.add("backgroundcolorRed");
+  });
 });
 
 const cut = document.getElementById("cut");

@@ -296,6 +296,7 @@ border-bottom: 1px solid var(--bg-color1);
     top: 4rem;
     left:16%;
     z-index: 1000;
+    display: none;
 }
 .city_pop_search{
     display: flex;
@@ -571,13 +572,17 @@ main{
         display: none;
     }
     .nav_first_head1{
-        padding: 1rem 0rem;
+        padding: 1rem;
         display: block;
+    }
+    .city_pop_up_container{
+        position: relative;
     }
     .city_pop_up{
         width: 100%;
         flex-wrap: wrap;
         left: 0;
+        top: 0rem;
     }
     .below_bar{
         display: flex;

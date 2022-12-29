@@ -1,66 +1,105 @@
 const taptopay = document.querySelector(".taptoPay");
+const disabled = document.querySelector(".disabled");
 const paymentcontainer = document.querySelector(".payment_container");
 const paymentModal = document.querySelector(".payment_modal");
 const paymentbackground_image = document.querySelector(
   ".paymentbackground_image"
 );
 
-const cardName = document.getElementById('card_name')
-const cardcvv = document.getElementById('card_cvv')
-const cardnumber = document.getElementById('card_number')
+const cardName = document.getElementById("card_name");
+const cardcvv = document.getElementById("card_cvv");
+const cardnumber = document.getElementById("card_number");
+
+function conditionCheck() {
+  cardName.addEventListener("input", (e) => {
+    disabled.classList.add("display_block");
+  });
+  cardcvv.addEventListener("input", (e) => {
+    disabled.classList.add("display_block");
+  });
+  cardnumber.addEventListener("input", (e) => {
+    disabled.classList.add("display_block");
+  });
+}
+conditionCheck() 
+
+let cardnumlen = 16
+let cvvlen = 3
+cardnumber.addEventListener('input',()=>{
+      if(cardnumber.value.length != cardnumlen  && cardcvv.value.length != cvvlen){
+        disabled.classList.add("display_block");
+      }else{
+        taptopay.classList.add('display_block') 
+        disabled.classList.add("display_none");
+      }
+    })
+
+cardcvv.addEventListener('input',()=>{
+      if( cardnumber.value.length != cardnumlen && cardcvv.value.length != cvvlen ){
+        disabled.classList.add("display_block");
+      }else{
+        taptopay.classList.add('display_block') 
+        disabled.classList.add("display_none");
+      }
+    })
 
 
-cardName.addEventListener('input',(e)=>{
-taptopay.classList.add('display_block')
-taptopay.classList.add('disabled')
+    taptopay.addEventListener("click", (e) => {
+      e.preventDefault();
+      paymentcontainer.style.display = "none";
+      paymentbackground_image.src = "../Images/Screenshot_20221223_135940.png";
+      setInterval(function () {
+        paymentModal.style.display = "block";
+      }, 1000);
+    });
+    
+    
 
 
-})
-// checkValue()
+
+
+
+
+
+
+
 
 
 // function checkvalue(){
-//   if( cardName.value.length == 0  && cardcvv.value.length == 0 && cardnumber.value.length == 0) {
-//     taptopay.classList.add('disabled');
+//   if(!cardcvv.value.length   && !cardnumber.value.length && !cardName.value.length ){
+//       taptopay.classList.add('display_block')
+    
 //   }
 //   else{
-
+//     disabled.classList.add("display_block");
 //   }
 // }
 
+// checkvalue()
 
 
-function check(){
-  cardcvv.addEventListener('input',()=>{
-    if( cardcvv.value.length !== 3  ){
-      taptopay.classList.add('disabled')
-    }else{
-      taptopay.classList.add('display_block')
-      taptopay.classList.remove('disabled')
-    }
-  })
-  cardnumber.addEventListener('input',()=>{
-    if(cardnumber.value.length !== 16){
-      taptopay.classList.add('disabled')
-    }else{
-      taptopay.classList.add('display_block')
-      taptopay.classList.remove('disabled')
-    }
-  })
-}
+// function check(){
+//   cardnumber.addEventListener('input',()=>{
+//     if(cardnumber.value.length !== 16){
+//       disabled.classList.add("display_block");
+//     }else{
+      
+//       taptopay.classList.add('display_block')
+//       disabled.classList.add("display_none");
+//     }
+//   })
+//   cardcvv.addEventListener('input',()=>{
+//     if( cardcvv.value.length !== 3  ){
+//       disabled.classList.add("display_block");
+//     }else{
+//       taptopay.classList.add('display_block')
+//       disabled.classList.add("display_none");
+     
+//     }
+//   })
+// }
 
-check()
-
-
-
-taptopay.addEventListener("click", (e) => {
-  e.preventDefault();
-  paymentcontainer.style.display = "none";
-  paymentbackground_image.src = "../Images/Screenshot_20221223_135940.png";
-  setInterval(function () {
-    paymentModal.style.display = "block";
-  }, 800);
-});
+// check()
 
 
 // function checkValue(){
@@ -74,7 +113,7 @@ taptopay.addEventListener("click", (e) => {
 //   taptopay.classList.remove('disabled')
 //   // taptopay.classList.add('taptoPay')
 //   // taptopay.classList.add('display_block')
- 
+
 // }
 
 // function checkDetails(){
@@ -84,9 +123,6 @@ taptopay.addEventListener("click", (e) => {
 //   }else if(cardName.value != "" && cardcvv.value != "" || cardnumber != "" ){
 //     taptopay.classList.remove('disabled')
 //     taptopay.classList.add('taptoPay')
-   
+
 //   }
 // }
-
-
-

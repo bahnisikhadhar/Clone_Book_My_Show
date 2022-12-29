@@ -123,9 +123,9 @@ border-radius: 50%;
 }
 .sign_pop_up,.sign_pop_up1{
     padding: 1rem 2rem;
-    width: 28%;
+    width: 26%;
     position: absolute;
-    top: 5.7rem;
+    top: 5rem;
     left: 37%;
     border-radius: 8px;
     cursor: pointer;
@@ -164,6 +164,15 @@ border-radius: 50%;
 .sign_box .fa-apple{
     font-size: 1.3rem;
 }
+.noOtp{
+    font-size: .9rem;
+    font-weight: bold;
+    word-spacing: 1px;
+    color: rgb(54, 53, 53);
+}
+.noOtp:hover{
+    color: green;
+}
 .sign_pop_up .pop_text{
     font-size: .8rem;
     color: #535252;
@@ -186,7 +195,7 @@ border-bottom: 1px solid var(--bg-color1);
 }
 .sign_pop_up .terms{
     font-size: .8rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
     color: var(--bg-color1);
 }
 .sign_pop_up .terms a{
@@ -194,11 +203,9 @@ border-bottom: 1px solid var(--bg-color1);
     color: var(--bg-color1);
 
 }
-/* .sign_pop_up .height{
-    height: 2rem;
-} */
 #recaptcha-container{
     padding-left: 1.1rem;
+    margin-bottom: .5rem;
 }
 .continue{
     width: 100%;

@@ -72,7 +72,7 @@ noOtpLogin.addEventListener("click",()=>{
 //----------------------------------------GENERATE OTP----------------------------------------------------
 
 
-resendOtp.addEventListener("click",phoneAuth(phoneNumber.value));
+// resendOtp.addEventListener("click",phoneAuth(phoneNumber.value));
 
 
 //----------------------------------------------------------------------------------------------------------------

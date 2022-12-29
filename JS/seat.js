@@ -7,17 +7,18 @@ let seatrow2 = Number(gold.getAttribute("seatrow2"));
 let seatcol2 = Number(gold.getAttribute("seatcol2"));
 let seatrow3 = Number(silver.getAttribute("seatrow3"));
 let seatcol3 = Number(silver.getAttribute("seatcol3"));
-const seatTotalAmountEl = document.getElementById("seats_total_amount")
-const dynamicNavEl = document.querySelector(".seat_nav")
-const closePointerEl = document.querySelector(".seat_close_icon")
+const seat_total_amountEl = document.getElementById("seats_total_amount")
+const dynamic_nav_el = document.querySelector(".seat_nav")
+const close_pointer_el = document.querySelector(".seat_close_icon")
 const amoutShowButton = document.querySelector(".seat_total_amount");
-const amountShowAnchorEl = document.querySelector(".amount_show_anchor")
-const paymentBtn = document.querySelector(".seat_type1")
+const amount_show_anchorEl = document.querySelector(".amount_show_anchor")
+const payment_btn = document.querySelector(".seat_type1")
 const backLogoEl = document.querySelector(".seat_cheveron")
 let currentrow1, currentrow2, currentrow3;
 
 
 const id = new URLSearchParams(window.location.search).get("id");
+const theatreName = new URLSearchParams(window.location.search).get("theatreName");
 let seats= sessionStorage.getItem('numSeats');
 let Api_key = "api_key=57b428c0e112b579eb26e2f43ff08b0f"
 let Base_Url = "https://api.themoviedb.org/3/"
@@ -29,6 +30,15 @@ let Base_Url = "https://api.themoviedb.org/3/"
 const renderDetails = async () => {
   const res = await fetch(`${Base_Url}movie/${id}?${Api_key}`)
   const movieData = await res.json();
+  let date='27/12/2022'
+  const res1 = await fetch(`/shows?date=${date}`);
+  const data = await res1.json();
+  let theatreDetail = '';
+  let theatre = data.data.theatres;
+  for(let i =0; i<theatre.length; i++){
+    if(theatre[i].id == theatreName)
+    theatreDetail = theatre[i].theatreName;
+  }
   console.log(movieData);
   const { original_title } = movieData;
   const template = `
@@ -38,7 +48,7 @@ const renderDetails = async () => {
 
     <div class="api_fetched_detail">
       <p class="seat_movie_name">${original_title} <span class="seat_adult">(U/A)</span></p>
-      <p class="seat_theater_name">Theater Name</p>
+      <p class="seat_theater_name">${theatreDetail}</p>
     </div>
   </div>
 
@@ -52,7 +62,7 @@ const renderDetails = async () => {
   
   `
   //
-  dynamicNavEl.innerHTML = template;
+  dynamic_nav_el.innerHTML = template;
 
 }
 
@@ -266,13 +276,14 @@ seats3.forEach(seat => {
 
 
 ////-----FeedBack by Prakash Sir-------------------------camel case-----------------------------------------
-amountShowAnchorEl.addEventListener("click", function(event) {
+amount_show_anchorEl.addEventListener("click", function(event) {
   event.preventDefault();
   const price = document.querySelector('.seat_total_amount').innerText;
   window.location.href = '../HTML/payment.html?price='+price ;
   // localStorage.setItem('selectedSeats1', JSON.stringify(selectedSeats1));
-  // localStorage.setItem('selectedSeats2', JSON.stringify(selectedSeats2));
+  //localStorage.setItem('selectedSeats2', JSON.stringify(selectedSeats2));
   localStorage.setItem('selectedSeats3', JSON.stringify(selectedSeats3));
+
 });
 
 

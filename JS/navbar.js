@@ -69,11 +69,6 @@ noOtpLogin.addEventListener("click",()=>{
     localStorage.setItem("isLoggedIn", true);
 })
 
-//----------------------------------------GENERATE OTP----------------------------------------------------
-
-
-// resendOtp.addEventListener("click",phoneAuth(phoneNumber.value));
-
 
 //----------------------------------------------------------------------------------------------------------------
   
@@ -110,6 +105,7 @@ hideCity.addEventListener("click",(e)=>{
 
 rightNavCityOption.addEventListener("click",()=>{
    cityPopUpContainer.classList.add("display_block");
+   cityPopUp.classList.add("display_block");
 })
 
 
@@ -117,6 +113,7 @@ cityPopUpContainer.addEventListener("click",(e)=>{
     e.stopPropagation();
     if(!e.target.classList.contains("city_pop_up"))
     cityPopUpContainer.classList.remove("display_block");
+    cityPopUp.classList.remove("display_block");
 })
 
 cityPopUp.addEventListener("click",(event)=>{
@@ -169,6 +166,7 @@ hamIcon.addEventListener("click",()=>{
 //--------------------------------------------FOR PHONE VIEW----------------------------------------------------
 
 rightNavCityOptionPhone.addEventListener("click",()=>{
+    cityPopUpContainer.classList.add("display_block");
     cityPopUp.classList.add("display_block");
 })
 

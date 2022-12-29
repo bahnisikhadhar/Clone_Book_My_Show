@@ -7,12 +7,12 @@ let seatrow2 = Number(gold.getAttribute("seatrow2"));
 let seatcol2 = Number(gold.getAttribute("seatcol2"));
 let seatrow3 = Number(silver.getAttribute("seatrow3"));
 let seatcol3 = Number(silver.getAttribute("seatcol3"));
-const seat_total_amountEl = document.getElementById("seats_total_amount")
-const dynamic_nav_el = document.querySelector(".seat_nav")
-const close_pointer_el = document.querySelector(".seat_close_icon")
+const seatTotalAmountEl = document.getElementById("seats_total_amount")
+const dynamicNavEl = document.querySelector(".seat_nav")
+const closePointerEl = document.querySelector(".seat_close_icon")
 const amoutShowButton = document.querySelector(".seat_total_amount");
-const amount_show_anchorEl = document.querySelector(".amount_show_anchor")
-const payment_btn = document.querySelector(".seat_type1")
+const amountShowAnchorEl = document.querySelector(".amount_show_anchor")
+const paymentBtn = document.querySelector(".seat_type1")
 const backLogoEl = document.querySelector(".seat_cheveron")
 let currentrow1, currentrow2, currentrow3;
 
@@ -52,7 +52,7 @@ const renderDetails = async () => {
   
   `
   //
-  dynamic_nav_el.innerHTML = template;
+  dynamicNavEl.innerHTML = template;
 
 }
 
@@ -266,7 +266,7 @@ seats3.forEach(seat => {
 
 
 ////-----FeedBack by Prakash Sir-------------------------camel case-----------------------------------------
-amount_show_anchorEl.addEventListener("click", function(event) {
+amountShowAnchorEl.addEventListener("click", function(event) {
   event.preventDefault();
   const price = document.querySelector('.seat_total_amount').innerText;
   window.location.href = '../HTML/payment.html?price='+price ;

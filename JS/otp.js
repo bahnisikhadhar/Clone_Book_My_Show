@@ -43,6 +43,7 @@ function codeverify() {
   const rightNavRest1 = document.querySelector(".right_nav_rest1");
   const signPopUpContainer = document.querySelector(".sign_pop_up_container");
   const invalidMsg = document.querySelector(".invalid_msg");
+  const leftChevronIcon = document.querySelector(".leftchevro_icon");
 
   let otp_box1 = document.querySelector(".otp_box1").value
   let otp_box2 = document.querySelector(".otp_box2").value
@@ -61,7 +62,20 @@ function codeverify() {
     localStorage.setItem("isLoggedIn", true);
   }).catch(function () {
     console.log('OTP Not correct');
+   
     invalidMsg.innerText = "invalid otp entered.Go to Previous Page and Try Again";
+    setTimeout(()=>{
+      console.log("hi")
+      const invalidMsg = document.querySelector(".invalid_msg");
+      invalidMsg.innerText = "";
+    },2000);
+
+    leftChevronIcon.addEventListener("click",()=>{
+      signPopUpContainer.classList.remove("display_none");
+     signPopUpContainer1.classList.remove("display_block");
+     termsCondition.classList.remove("display_none");
+     continueBox.classList.remove("display_block");
+  })
   })
 }
 

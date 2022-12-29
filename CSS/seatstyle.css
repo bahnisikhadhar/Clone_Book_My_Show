@@ -27,7 +27,7 @@
 
 .seat_left_nav_item,
 .seat_right_nav_item {
-    width: 15%;
+    width: 25%;
     display: flex;
     align-items: center;
     justify-content: space-between;

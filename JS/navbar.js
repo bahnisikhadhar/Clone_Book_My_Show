@@ -17,6 +17,7 @@ const rightNavRest = document.querySelector(".right_nav_rest");
 const rightNavRest1 = document.querySelector(".right_nav_rest1");
 const signPopUpContainer = document.querySelector(".sign_pop_up_container");
 const signPopUpContainer1 = document.querySelector(".sign_pop_up_container1");
+const noOtpLogin=document.querySelector(".noOtp");
 
 let sentOtp;
 
@@ -59,6 +60,13 @@ continueBox.addEventListener("click",()=>{
    signPopUpContainer1.classList.add("display_block");
     phoneNumVerify.innerText = phoneNumber.value;
    
+})
+
+noOtpLogin.addEventListener("click",()=>{
+    signPopUpContainer.classList.remove("display_block");
+    rightNavRest.classList.add("display_none");
+    rightNavRest1.classList.add("display_flex");
+    localStorage.setItem("isLoggedIn", true);
 })
 
 //----------------------------------------GENERATE OTP----------------------------------------------------

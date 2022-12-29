@@ -572,8 +572,18 @@ main{
         display: none;
     }
     .nav_first_head1{
-        padding: 1rem;
+        padding: 1rem 1.5rem;
         display: block;
+    }
+    .nav_first_head1 h2{
+        font-size: 1.3rem;
+    }
+    .right_nav1{
+        width: 25%;
+    }
+    .right_nav1 .app_btn{
+        padding:.8rem 1rem;
+        font-size: .7rem;
     }
     .city_pop_up_container{
         position: relative;
@@ -582,7 +592,7 @@ main{
         width: 100%;
         flex-wrap: wrap;
         left: 0;
-        top: 0rem;
+        top: 0;
     }
     .below_bar{
         display: flex;

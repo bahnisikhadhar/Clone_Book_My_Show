@@ -109,12 +109,17 @@ let ticketTotal1 = 0;
 let count = seats;
 let temp = 0;
 
-if (localStorage.getItem('selectedSeats')) {
-  selectedSeats1 = JSON.parse(localStorage.getItem('selectedSeats'));
+if (localStorage.getItem('selectedSeats1')) {
+  selectedSeats1 = JSON.parse(localStorage.getItem('selectedSeats1'));
   ticketTotal1 = ticketCount1 * ticketPrice1;
 }
 
 seats1.forEach(seat => {
+  if (selectedSeats1.includes(seat.id)) {
+    seat.classList.add('selected');
+    seat.style.backgroundColor = '#eee';
+    seat.style.border = "none";
+  }
 
   seat.addEventListener('click', e => {
 
@@ -280,8 +285,8 @@ amount_show_anchorEl.addEventListener("click", function(event) {
   event.preventDefault();
   const price = document.querySelector('.seat_total_amount').innerText;
   window.location.href = '../HTML/payment.html?price='+price ;
-  // localStorage.setItem('selectedSeats1', JSON.stringify(selectedSeats1));
-  //localStorage.setItem('selectedSeats2', JSON.stringify(selectedSeats2));
+  localStorage.setItem('selectedSeats1', JSON.stringify(selectedSeats1));
+  localStorage.setItem('selectedSeats2', JSON.stringify(selectedSeats2));
   localStorage.setItem('selectedSeats3', JSON.stringify(selectedSeats3));
 
 });

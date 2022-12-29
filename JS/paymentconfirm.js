@@ -23,40 +23,40 @@ function conditionCheck() {
 }
 conditionCheck();
 
-if(cardName.value !== "" && cardcvv.value !== "" && cardnumber.value !== ""){
-       taptopay.classList.add('display_block') 
+// if(cardName.value !== "" && cardcvv.value !== "" && cardnumber.value !== ""){
+//        taptopay.classList.add('display_block') 
+//         disabled.classList.add("display_none");
+// }
+
+let cardnumlen = 16
+let cvvlen = 3
+cardnumber.addEventListener('input',()=>{
+      if(cardnumber.value.length != cardnumlen  && cardcvv.value.length != cvvlen){
+        disabled.classList.add("display_block");
+      }else{
+        taptopay.classList.add('display_block') 
         disabled.classList.add("display_none");
-}
+      }
+    })
 
-// let cardnumlen = 16
-// let cvvlen = 3
-// cardnumber.addEventListener('input',()=>{
-//       if(cardnumber.value.length != cardnumlen  && cardcvv.value.length != cvvlen){
-//         disabled.classList.add("display_block");
-//       }else{
-//         taptopay.classList.add('display_block') 
-//         disabled.classList.add("display_none");
-//       }
-//     })
-
-// cardcvv.addEventListener('input',()=>{
-//       if( cardnumber.value.length != cardnumlen && cardcvv.value.length != cvvlen ){
-//         disabled.classList.add("display_block");
-//       }else{
-//         taptopay.classList.add('display_block') 
-//         disabled.classList.add("display_none");
-//       }
-//     })
+cardcvv.addEventListener('input',()=>{
+      if( cardnumber.value.length != cardnumlen && cardcvv.value.length != cvvlen ){
+        disabled.classList.add("display_block");
+      }else{
+        taptopay.classList.add('display_block') 
+        disabled.classList.add("display_none");
+      }
+    })
 
 
-//     taptopay.addEventListener("click", (e) => {
-//       e.preventDefault();
-//       paymentcontainer.style.display = "none";
-//       paymentbackground_image.src = "../Images/Screenshot_20221223_135940.png";
-//       setInterval(function () {
-//         paymentModal.style.display = "block";
-//       }, 1000);
-//     });
+    taptopay.addEventListener("click", (e) => {
+      e.preventDefault();
+      paymentcontainer.style.display = "none";
+      paymentbackground_image.src = "../Images/Screenshot_20221223_135940.png";
+      setInterval(function () {
+        paymentModal.style.display = "block";
+      }, 1000);
+    });
     
     
 

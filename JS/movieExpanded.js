@@ -90,7 +90,7 @@ const renderDetails = async () => {
 const renderCast = async () => {
     const res = await fetch(`${Base_Url}movie/${id}/credits?${Api_key}&language=en-US`); // End Point That Fetch the Cast
     const cast = await res.json()
-    let casts = cast.cast.slice(1, 7)//We are Getting a Buch Of Casts So We Sliced it Out 🐱‍👤
+    let casts = cast.cast.slice(1, 7)
     
     const castHead=document.createElement("div");
     castHead.innerHTML = `<h1 class="cast_name">Cast</h1>`;

@@ -170,6 +170,11 @@ rightNavCityOptionPhone.addEventListener("click",()=>{
     cityPopUp.classList.add("display_block");
 })
 
+mainBody.addEventListener("click",()=>{
+    cityPopUpContainer.classList.remove("display_block");
+    cityPopUp.classList.remove("display_block");
+})
+
 cityPopUp.addEventListener("click",(event)=>{
     if(event.target.classList.contains("cityTrans")){
     cityName1.innerText = event.target.innerText;

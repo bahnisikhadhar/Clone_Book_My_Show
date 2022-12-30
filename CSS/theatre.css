@@ -65,7 +65,7 @@
 .dates {
   display: flex;
   align-items: center;
-  max-width: 1440px;
+  /* max-width: 1440px; */
 }
 .dates i:hover {
   color: #414040;
@@ -720,25 +720,32 @@
 
 @media only screen and (max-width: 500px) {
   .dates {
-    margin: 0 auto;
+    width: 100%;
+    
   }
-  .booking_date {
-    width: 100vh;
-    margin: 0 auto;
+  
+  .container{
+    padding: 0rem 1rem;
   }
-
   .booking_head {
-    width: 100vh;
-    align-items: center;
-    text-align: center;
+    width: 100%;
+    /* text-align: center; */
+   }
+  
+  .movie_title span{
+    font-size: 1.5rem;
   }
-
   .booking_content {
-    width: 100vh;
+    width: 100%;
+    padding: 0rem;
   }
-
+ .booking_attribute{
+  margin-bottom: 1rem;
+  height: 3rem;
+  
+ }
   footer {
-    width: 100vh;
+    width: 100%;
   }
   .movie_filter {
     display: none;
@@ -749,37 +756,37 @@
   .movie_title {
     font-size: 30px;
   }
-  .booking_genere span {
-    font-size: 20px;
+  .genere {
+    font-size: 1rem;
   }
   .mainfooter_information {
     display: none;
   }
 
   .termsandconditions_body {
-    width: 100vh;
-    height: 100%;
+    width: 100%;
+    /* height:100%; */
   }
   .termsandconditions {
-    width: 60%;
+    width: 90%;
     position: fixed;
-    left: 20%;
+    left: 3%;
   }
   .cross{
     display: none;
   }
   .termsandconditions_head p{
-    text-align: center;
+    padding-left: 0rem;
   }
 
   .chooseseats_body {
-    width: 100vh;
-    height: 100%;
+    width: 100%;
+    /* height: 100%; */
   }
 
 .chooseseats{
   width: 80%;
-  left: 10%;
+  left: 8%;
   top: 20%;
 }
 }

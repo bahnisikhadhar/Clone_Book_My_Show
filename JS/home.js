@@ -17,19 +17,17 @@ const Base_Url = "https://api.themoviedb.org/3/"
 const img_url = "https://image.tmdb.org/t/p/w500"    //------>  This is the Base URL For Images
 
 
-const nowPlayingMoviesUrl = Base_Url + "movie/now_playing?" + Api_key+"&language=en-US&page=1";
-const popularMoviesUrl = Base_Url + "movie/popular?"+ Api_key+"&language=en-US&page=3";
-const topRatedMoviesUrl = Base_Url + "movie/top_rated?" + Api_key+"&language=en-US&page=2";
-const latestMoviesUrl = Base_Url + "movie/now_playing?" + Api_key+"&language=en-US&page=2";
+const nowPlayingMoviesUrl = Base_Url + "movie/now_playing?" + Api_key + "&language=en-US&page=1";
+const popularMoviesUrl = Base_Url + "movie/popular?" + Api_key + "&language=en-US&page=3";
+const topRatedMoviesUrl = Base_Url + "movie/top_rated?" + Api_key + "&language=en-US&page=2";
+const latestMoviesUrl = Base_Url + "movie/now_playing?" + Api_key + "&language=en-US&page=2";
 
-const trendingMovieNamesUrl =  Base_Url + "discover/movie?" + Api_key+"&sort_by=popularity.desc&page=1&primary_release_year=2022&with_original_language=ml|bn|ta";
-const recommendedMoviesUrl = Base_Url + "discover/movie?" + Api_key+"&sort_by=popularity.desc&page=1&primary_release_year=2022&with_original_language=hi";
-const likedIndianMovies = Base_Url + "discover/movie?" + Api_key+"&sort_by=popularity.desc&page=2&primary_release_year=2022&with_origin_country=IN";
-const popularMoviesUrl2= Base_Url + "discover/movie?" + Api_key+"&sort_by=popularity.desc&page=1&primary_release_year=2021&with_original_language=ml|bn|ta";
+const trendingMovieNamesUrl = Base_Url + "discover/movie?" + Api_key + "&sort_by=popularity.desc&page=1&primary_release_year=2022&with_original_language=ml|bn|ta";
+const recommendedMoviesUrl = Base_Url + "discover/movie?" + Api_key + "&sort_by=popularity.desc&page=1&primary_release_year=2022&with_original_language=hi";
+const likedIndianMovies = Base_Url + "discover/movie?" + Api_key + "&sort_by=popularity.desc&page=2&primary_release_year=2022&with_origin_country=IN";
+const popularMoviesUrl2 = Base_Url + "discover/movie?" + Api_key + "&sort_by=popularity.desc&page=1&primary_release_year=2021&with_original_language=ml|bn|ta";
 
-////-----FeedBack by Prakash Sir-------------------------everything shift to function-------------
-//--------------------------------------------------------------------------
-// function to get movies from TMDB API
+
 async function getMovies(url) {
     const fetchedData = await fetch(url, {
         method: "GET",
@@ -39,31 +37,56 @@ async function getMovies(url) {
         }
     })
     const data = await fetchedData.json();
-    showMovies(data.results); //This Function is Invoked inside getMovies Function so that we can Accept the data fetced from getMovies function as the Argument for showMovies function
+    showMovies(data.results); 
 }
 getMovies(recommendedMoviesUrl);
 
 
-function mapMovieLanguage(lang){
+function mapMovieLanguage(lang) {
 
-   let movieLangObj = {
-      "en":"English",
-      "hi": "Hindi",
-      "te": "Telegu",
-      "ta": "Tamil",
-      "ml": "Malayalam",
-      "bn":  "Bengali"
-   }
+    let movieLangObj = {
+        "en": "English",
+        "hi": "Hindi",
+        "te": "Telegu",
+        "ta": "Tamil",
+        "ml": "Malayalam",
+        "bn": "Bengali"
+    }
 
-   return movieLangObj[lang];
+    return movieLangObj[lang];
 
 }
-//-----------------------------------------------------------------
-// This function accept data from getMovies function and help to render it on webpage
+
+function createMovieElement(movie) {
+    let { title, poster_path, vote_average, popularity, original_language, id } = movie;
+    original_language = mapMovieLanguage(original_language);
+
+    const movieEl = document.createElement("div")
+    let genres = ["Action/Mystery", "Comedy/Drama/Romance", "Action/Thriller", "Drama/Mystery"]
+    let rndm = Math.floor(Math.random() * genres.length)
+    let genresOfMovie = genres[rndm]
+    movieEl.classList.add("movies")
+    movieEl.innerHTML = `
+    <div class="parent_movie"> 
+    <a href="./HTML/movieExpanded.html?id=${id}"><img src="${img_url + poster_path}" alt="" /></a>
+    <div class="like_vote">
+    <p><i class="fa-solid fa-thumbs-up"></i> ${Number(popularity / 10).toFixed(1)}k likes</p>
+    <p><i class="fa-solid fa-star"></i> ${vote_average}/10</p>
+    </div>
+  </div>
+    <h2>${title}</h2>
+   <p>${genresOfMovie}</p>
+    `;
+
+    return movieEl;
+}
+
+
+
 function showMovies(movies) {
-    //Below code for iterating through each movie and render as a template in webpage
+  
     movies.forEach((movie) => {
-        //Destructuring of Object done here so that we can unpack properties from object and can use as independent variables in the below block scope
+      
       let { title, poster_path, vote_average, overview, popularity, original_language,id, genre_ids } = movie
        original_language = mapMovieLanguage(original_language);
 
@@ -82,12 +105,12 @@ function showMovies(movies) {
                  </div>
                  <h2 style="color: white;font-weight: 100;">${title}</h2>
                  <p style="color: white;font-weight: 100;">${original_language}</p>
-                
+
       `
         recommendedMovieContainerEl.appendChild(movieEl)
 
     })
-    
+
 }
 
 //-------------------------------------------------------------------------------------------------------------------------------
@@ -95,8 +118,8 @@ function showMovies(movies) {
 //Upcoming Movies
 
 
-const getlikedIndianMovies = async function(url) {
-   
+const getlikedIndianMovies = async function (url) {
+
     const fetchedDataOfLikedIndianMovies = await fetch(url, {
         method: "GET",
         headers: {
@@ -111,43 +134,21 @@ const getlikedIndianMovies = async function(url) {
 
 getlikedIndianMovies(likedIndianMovies)
 
-
-function  showLikedIndianMovies(movies) {
+function showLikedIndianMovies(movies) {
     console.log(movies)
-    
-     movies.forEach((movie) => {
-       
-         let {id, title,release_date,popularity,vote_average,original_language,poster_path } = movie;
-         original_language = mapMovieLanguage(original_language);
 
-         const indianEl = document.createElement("div")
-         let genres = ["Action/Mystery","Comedy/Drama/Romance","Action/Thriller","Drama/Mystery"]
-        let rndm = Math.floor(Math.random() *genres.length)
-        let genresOfMovie = genres[rndm]
-         indianEl.classList.add("indian_movies")
-         indianEl.innerHTML = `
-               <div class="parent_movie"> 
-                 <a href="./HTML/movieExpanded.html?id=${id}"><img src="${poster_path?img_url + poster_path:img_url+"/w896mqGi91LrTp2pUsc8a9QAbyL.jpg"}" alt="" /></a>
-                 <div class="like_vote">
-                  <p><i class="fa-solid fa-thumbs-up"></i> ${Number(popularity/10).toFixed(1)}k likes</p>
-                  <p><i class="fa-solid fa-star"></i> ${vote_average}/10</p>
-                  </div>
-                </div>
-                <h2>${title}</h2>
-                <p>${genresOfMovie}</p>
-       `
-       indianMoviesContainerEl.appendChild(indianEl)
-    })
-    
+    movies.forEach((movie) => {
+        let movieEl = createMovieElement(movie);
+        indianMoviesContainerEl.appendChild(movieEl);
+    });
 }
-
 
 //-------------------------------------------------------------------------------------------------------------
 //Premering Movies 
 
-const getNowPlayingMovies = async function(url) {
-   
-    const fetchedDataOfNowPlayingMovies  = await fetch(url, {
+const getNowPlayingMovies = async function (url) {
+
+    const fetchedDataOfNowPlayingMovies = await fetch(url, {
         method: "GET",
         headers: {
             Accept: "application/json",
@@ -156,38 +157,18 @@ const getNowPlayingMovies = async function(url) {
     })
     const data = await fetchedDataOfNowPlayingMovies.json();
     console.log(data.results)
-    showNowPlayingMovies (data.results)
+    showNowPlayingMovies(data.results)
 }
-getNowPlayingMovies(nowPlayingMoviesUrl) 
+getNowPlayingMovies(nowPlayingMoviesUrl)
 
 function showNowPlayingMovies(movies) {
     console.log(movies)
-    
-     movies.forEach((movie) => {
-       
-         let {id, title,release_date,popularity,vote_average,original_language,poster_path } = movie;
-         original_language = mapMovieLanguage(original_language);
-         const nowPlayingEl = document.createElement("div")
-         let genres = ["Action/Mystery","Comedy/Drama/Romance","Action/Thriller","Drama/Mystery"]
-         let rndm = Math.floor(Math.random() *genres.length)
-         let genresOfMovie = genres[rndm]
-         nowPlayingEl.classList.add("premeire_movies")
-         nowPlayingEl.innerHTML = `
-               <div class="parent_movie"> 
-                  <a href="./HTML/movieExpanded.html?id=${id}"><img src="${img_url + poster_path}" alt="" /></a>
-                  <div class="like_vote">
-                  <p><i class="fa-solid fa-thumbs-up"></i> ${Number(popularity/10).toFixed(1)}k likes</p>
-                  <p><i class="fa-solid fa-star"></i> ${vote_average}/10</p>
-                  </div>
-                </div>
-                  <h2>${title}</h2>
-                 <p>${genresOfMovie}</p>
-       `
-       nowPlayingMoviesContainerEl.appendChild(nowPlayingEl)
-    })
-    
-}
 
+    movies.forEach((movie) => {
+        let movieEl = createMovieElement(movie);
+        nowPlayingMoviesContainerEl.appendChild(movieEl);
+    });
+}
 
 
 //---------------------------------------------------------------------------------------------------------------------------------
@@ -196,9 +177,9 @@ function showNowPlayingMovies(movies) {
 
 
 
-const getPopularMovies = async function(url) {
-   
-    const fetchedDataOfGetPopularMovies  = await fetch(url, {
+const getPopularMovies = async function (url) {
+
+    const fetchedDataOfGetPopularMovies = await fetch(url, {
         method: "GET",
         headers: {
             Accept: "application/json",
@@ -207,49 +188,26 @@ const getPopularMovies = async function(url) {
     })
     const data = await fetchedDataOfGetPopularMovies.json();
     console.log(data.results);
-    showPopularMovies (data.results)
+    showPopularMovies(data.results)
 }
-getPopularMovies(popularMoviesUrl2) 
-
+getPopularMovies(popularMoviesUrl2)
 
 function showPopularMovies(movies) {
     console.log(movies)
-    
-     movies.forEach((movie) => {
-       
-         let {id, title,release_date,popularity,vote_average,original_language,poster_path } = movie;
-         original_language = mapMovieLanguage(original_language);
 
-         const popularMoviesEl = document.createElement("div")
-         let genres = ["Action/Mystery","Comedy/Drama/Romance","Action/Thriller","Drama/Mystery"]
-         let rndm = Math.floor(Math.random() *genres.length)
-         let genresOfMovie = genres[rndm]
-         popularMoviesEl.classList.add("popular_movies")
-         popularMoviesEl.innerHTML = `
-               <div class="parent_movie"> 
-                  <a href="./HTML/movieExpanded.html?id=${id}"><img src="${img_url + poster_path}" alt="" /></a>
-                  <div class="like_vote">
-                  <p><i class="fa-solid fa-thumbs-up"></i> ${Number(popularity/10).toFixed(1)}k likes</p>
-                  <p><i class="fa-solid fa-star"></i> ${vote_average}/10</p>
-                  </div>
-                </div>
-                  <h2>${title}</h2>
-                  <p>${genresOfMovie}</p>
-       `
-       popularMoviesContainerEl.appendChild(popularMoviesEl)
-    })
-               
-    
+    movies.forEach((movie) => {
+        let movieEl = createMovieElement(movie);
+        popularMoviesContainerEl.appendChild(movieEl);
+    });
 }
-
 
 //----------------------------------------------------------------------
 
 //Top Rated
 
-const getTopRatedMovies = async function(url) {
-   
-    const fetchedDataOfTopRatedMovies  = await fetch(url, {
+const getTopRatedMovies = async function (url) {
+
+    const fetchedDataOfTopRatedMovies = await fetch(url, {
         method: "GET",
         headers: {
             Accept: "application/json",
@@ -258,39 +216,17 @@ const getTopRatedMovies = async function(url) {
     })
     const data = await fetchedDataOfTopRatedMovies.json();
     console.log(data.results);
-    showTopRatedMovies (data.results)
+    showTopRatedMovies(data.results)
 }
-getTopRatedMovies(topRatedMoviesUrl) 
-
+getTopRatedMovies(topRatedMoviesUrl)
 
 function showTopRatedMovies(movies) {
     console.log(movies)
-    
-     movies.forEach((movie) => {
-       
-         let {id, title,release_date,popularity,vote_average,original_language,poster_path } = movie;
-         original_language = mapMovieLanguage(original_language);
 
-         const topRatedMoviesEl = document.createElement("div")
-         let genres = ["Action/Mystery","Comedy/Drama/Romance","Action/Thriller","Drama/Mystery"]
-         let rndm = Math.floor(Math.random() *genres.length)
-         let genresOfMovie = genres[rndm]
-         topRatedMoviesEl.classList.add("topRated_movies")
-         topRatedMoviesEl.innerHTML = `
-                <div class="parent_movie"> 
-                  <a href="./HTML/movieExpanded.html?id=${id}"><img src="${img_url + poster_path}" alt="" /></a>
-                  <div class="like_vote">
-                  <p><i class="fa-solid fa-thumbs-up"></i> ${Number(popularity/10).toFixed(1)}k likes</p>
-                  <p><i class="fa-solid fa-star"></i> ${vote_average}/10</p>
-                  </div>
-                </div>
-                  <h2>${title}</h2>
-                  <p>${genresOfMovie}</p>
-       `
-       topRatedMoviesContainerEl.appendChild(topRatedMoviesEl)
-    })
-               
-    
+    movies.forEach((movie) => {
+        let movieEl = createMovieElement(movie);
+        topRatedMoviesContainerEl.appendChild(movieEl);
+    });
 }
 
 //-------------------------------------------------------------------------------------------------------------
@@ -298,9 +234,9 @@ function showTopRatedMovies(movies) {
 //Latest Movies
 
 
-const getLatestMovies = async function(url) {
-   
-    const fetchedDataOfLatestMovies  = await fetch(url, {
+const getLatestMovies = async function (url) {
+
+    const fetchedDataOfLatestMovies = await fetch(url, {
         method: "GET",
         headers: {
             Accept: "application/json",
@@ -312,45 +248,21 @@ const getLatestMovies = async function(url) {
     showLatestMovies(data.results)
 }
 getLatestMovies(latestMoviesUrl);
-
-
 function showLatestMovies(movies) {
     console.log(movies)
-    
-     movies.forEach((movie) => {
-       
-         let {id, title,release_date,popularity,vote_average,original_language,poster_path } = movie;
-         original_language = mapMovieLanguage(original_language);
 
-         const latestMoviesEl = document.createElement("div")
-         let genres = ["Action/Mystery","Comedy/Drama/Romance","Action/Thriller","Drama/Mystery"]
-         let rndm = Math.floor(Math.random() *genres.length)
-         let genresOfMovie = genres[rndm]
-         latestMoviesEl.classList.add("latest_movies")
-         latestMoviesEl.innerHTML = `
-              <div class="parent_movie"> 
-                  <a href="./HTML/movieExpanded.html?id=${id}"><img src="${img_url + poster_path}" alt="" /></a>
-                  <div class="like_vote">
-                  <p><i class="fa-solid fa-thumbs-up"></i> ${Number(popularity/10).toFixed(1)}k likes</p>
-                  <p><i class="fa-solid fa-star"></i> ${vote_average}/10</p>
-                  </div>
-               </div>
-                  <h2>${title}</h2>
-                  <p>${genresOfMovie}</p>
-       `
-       latestMoviesContainerEl.appendChild(latestMoviesEl)
-    })
-
-    
+    movies.forEach((movie) => {
+        let movieEl = createMovieElement(movie);
+        latestMoviesContainerEl.appendChild(movieEl);
+    });
 }
-
 //------------------------------------------------------------------------------------------------------------------------------
 
 //Trending Searches
 
-const getTrendingMovies = async function(url) {
-   
-    const fetchedDataOfTrendingMovies  = await fetch(url, {
+const getTrendingMovies = async function (url) {
+
+    const fetchedDataOfTrendingMovies = await fetch(url, {
         method: "GET",
         headers: {
             Accept: "application/json",
@@ -359,14 +271,14 @@ const getTrendingMovies = async function(url) {
     })
     const data = await fetchedDataOfTrendingMovies.json();
     console.log(data.results);
-    showTrendingMovies(data.results.slice(3,17));
+    showTrendingMovies(data.results.slice(3, 17));
 }
 getTrendingMovies(trendingMovieNamesUrl);
 
 
-function showTrendingMovies(movies){
+function showTrendingMovies(movies) {
     movies.forEach(movie => {
-        let {id, title} = movie;
+        let { id, title } = movie;
         const trendingMoviesEl = document.createElement("div")
         trendingMoviesEl.classList.add("trending_movies")
         trendingMoviesEl.innerHTML = `

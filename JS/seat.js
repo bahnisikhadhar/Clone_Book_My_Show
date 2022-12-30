@@ -11,7 +11,7 @@ const seat_total_amountEl = document.getElementById("seats_total_amount")
 const dynamic_nav_el = document.querySelector(".seat_nav")
 const close_pointer_el = document.querySelector(".seat_close_icon")
 const amoutShowButton = document.querySelector(".seat_total_amount");
-const amount_show_anchorEl = document.querySelector(".amount_show_anchor")
+const amountShowAnchorEl = document.querySelector(".amount_show_anchor")
 const payment_btn = document.querySelector(".seat_type1")
 const backLogoEl = document.querySelector(".seat_cheveron")
 let currentrow1, currentrow2, currentrow3;
@@ -260,28 +260,28 @@ seats3.forEach(seat => {
 
 //-----------------------------------------------------------------------------------------------------
 
-//-----FeedBack by Prakash Sir--------------------Change name of the variable and use single classlist to cover all-----------------------------------------
-const seatType1 = document.querySelector(".seat_type1");
+//-----FeedBack by Prakash Sir-------------------(solved)Change name of the variable and use single classlist to cover all-----------------------------------------
+const amountBtnContainer = document.querySelector(".seat_type1");
 
 seats1.forEach(seat => {
   seat.addEventListener("click", () => {
-    seatType1.classList.add("display_flex");
+    amountBtnContainer.classList.add("display_flex");
   })
 });
 seats2.forEach(seat => {
   seat.addEventListener("click", () => {
-    seatType1.classList.add("display_flex");
+    amountBtnContainer.classList.add("display_flex");
   })
 });
 seats3.forEach(seat => {
   seat.addEventListener("click", () => {
-    seatType1.classList.add("display_flex");
+    amountBtnContainer.classList.add("display_flex");
   })
 });
 
 
-////-----FeedBack by Prakash Sir-------------------------camel case-----------------------------------------
-amount_show_anchorEl.addEventListener("click", function(event) {
+////-----FeedBack by Prakash Sir-------------------------camel case(solved)-----------------------------------------
+amountShowAnchorEl.addEventListener("click", function(event) {
   event.preventDefault();
   const price = document.querySelector('.seat_total_amount').innerText;
   window.location.href = '../HTML/payment.html?price='+price ;

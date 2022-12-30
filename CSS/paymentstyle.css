@@ -11,7 +11,7 @@
     width: 100vw;
     background-image: url('../Images/bms.jpg');
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     opacity: 0.9;
 }
 

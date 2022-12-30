@@ -533,6 +533,9 @@ main{
     display: none;
     
 }
+.below_bar a{
+    color: black;
+}
 .below_bar h1{
     font-size: 1rem;
 }

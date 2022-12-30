@@ -261,3 +261,20 @@
 .display_flex {
     display: flex;
 }
+
+/**************************************************MEDIA QUERY*********************************************/
+
+@media only screen and (max-width: 500px){
+    .seat_content {
+        width: 90%;
+        margin-left: 5%;
+    }
+    
+   
+    .seat_right_nav_item {
+        width: 20%;
+    }
+    .seat_left_nav_item {
+        width: 50%;
+    }
+}

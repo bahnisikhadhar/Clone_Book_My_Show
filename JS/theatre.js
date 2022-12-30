@@ -20,7 +20,7 @@ let currentTheatreName = '';
 const renderDetails = async () => {
   const res = await fetch(`${Base_Url}movie/${id}?${Api_key}`); // Fetching Specific Movie Details using id
   const movieData = await res.json()
-  console.log(movieData)
+  // console.log(movieData)
   const { original_title, genres, spoken_languages, adult } = movieData;
 
   const template = `
@@ -94,7 +94,7 @@ async function getLiveEvents(date) {
   //let date = '23/12/2022'
   const res = await fetch(`https://lackadaisical-salt-radium.glitch.me/shows?date=${date}`);
   const data = await res.json();
-  console.log(data);
+  // console.log(data);
   let theatre = data.data.theatres;
   //let theatreTime = data.theatres.Time;
   let today = new Date();
@@ -171,14 +171,14 @@ const bookingDay = document.querySelector(".booking_date.container");
 
 bookingDay.addEventListener("click", (event) => {
   event.stopPropagation();
-  console.log(event.path)
+  // console.log(event.path)
   event.path.forEach((element) => {
-    console.log("triggered")
+    // console.log("triggered")
     if (element.classList && element.classList.contains("booking_day")) {
       let selectedDate = element.getAttribute("data-date");
       selectedDate = new Date(selectedDate)
       let formattedDate = selectedDate.toLocaleDateString('en-IN', {day: '2-digit', month: '2-digit', year: 'numeric'});
-      console.log(formattedDate)
+      // console.log(formattedDate)
       getLiveEvents(formattedDate);
     }
   })
@@ -198,7 +198,7 @@ const vechile = document.getElementById("vechile");
 let chooseseats = document.querySelector(".chooseseats");
 
 chooseseats.addEventListener("mouseover", (e) => {
-  console.log(e.target)
+  // console.log(e.target)
   if (e.target.innerText == "1") {
     vechile.src = "../Images/bycycle.png";
   } else if (e.target.innerText == "2") {

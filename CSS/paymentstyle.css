@@ -11,7 +11,7 @@
     width: 100vw;
     background-image: url('../Images/bms.jpg');
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     opacity: 0.9;
 }
 
@@ -204,6 +204,8 @@
     text-align: center;
 }
 
+/****************************** Media Query  **********************************************/
+
 @media screen and (max-width : 1200px ){
     .container {
         width : 40% ;
@@ -234,5 +236,29 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+}
+
+/********************************** Tab View  *****************************************/
+
+@media screen and (max-width : 1000px) {
+    .payment-container {
+        position: fixed;
+        top: 20%;
+        margin: auto;
+        left: 27%;
+        width: 49%;
+    }
+}
+
+/************** Phone View *************************************/
+
+@media screen and (max-width : 500px ) {
+    .payment-container {
+        position: fixed;
+        top: 20%;
+        margin: auto;
+        left: 9%;
+        width: 80%;
     }
 }

@@ -33,8 +33,6 @@ cardcvv.addEventListener('input', () => {
   }
 });
 
-
-
 taptopay.addEventListener("click", (e) => {
   e.preventDefault();
   paymentcontainer.style.display = "none";

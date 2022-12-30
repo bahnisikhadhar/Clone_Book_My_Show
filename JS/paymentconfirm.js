@@ -10,43 +10,71 @@ const cardName = document.getElementById("card_name");
 const cardcvv = document.getElementById("card_cvv");
 const cardnumber = document.getElementById("card_number");
 
-function conditionCheck() {
-  cardName.addEventListener("input", (e) => {
-    disabled.classList.add("display_block");
-  });
-  cardcvv.addEventListener("input", (e) => {
-    disabled.classList.add("display_block");
-  });
-  cardnumber.addEventListener("input", (e) => {
-    disabled.classList.add("display_block");
-  });
-}
-conditionCheck();
-
-// if(cardName.value !== "" && cardcvv.value !== "" && cardnumber.value !== ""){
-//        taptopay.classList.add('display_block') 
-//         disabled.classList.add("display_none");
-// }
-
 let cardnumlen = 16
 let cvvlen = 3
-cardnumber.addEventListener('input',()=>{
-      if(cardnumber.value.length != cardnumlen  && cardcvv.value.length != cvvlen){
-        disabled.classList.add("display_block");
-      }else{
-        taptopay.classList.add('display_block') 
-        disabled.classList.add("display_none");
-      }
-    })
 
-cardcvv.addEventListener('input',()=>{
-      if( cardnumber.value.length != cardnumlen && cardcvv.value.length != cvvlen ){
-        disabled.classList.add("display_block");
-      }else{
-        taptopay.classList.add('display_block') 
-        disabled.classList.add("display_none");
-      }
-    })
+// function conditionCheck() {
+//   cardName.addEventListener("input", (e) => {
+//     disabled.classList.add("display_block");
+//   });
+//   cardcvv.addEventListener("input", (e) => {
+//     disabled.classList.add("display_block");
+//   });
+//   cardnumber.addEventListener("input", (e) => {
+//     disabled.classList.add("display_block");
+//   });
+// }
+// conditionCheck();
+
+// // if(cardName.value !== "" && cardcvv.value !== "" && cardnumber.value !== ""){
+// //        taptopay.classList.add('display_block') 
+// //         disabled.classList.add("display_none");
+// // }
+
+
+// cardnumber.addEventListener('input',()=>{
+//       if(cardnumber.value.length != cardnumlen  && cardcvv.value.length != cvvlen){
+//         disabled.classList.add("display_block");
+//       }else{
+//         taptopay.classList.add('display_block') 
+//         disabled.classList.add("display_none");
+//       }
+//     })
+
+// cardcvv.addEventListener('input',()=>{
+//       if( cardnumber.value.length != cardnumlen && cardcvv.value.length != cvvlen ){
+//         disabled.classList.add("display_block");
+//       }else{
+//         taptopay.classList.add('display_block') 
+//         disabled.classList.add("display_none");
+//       }
+//     })
+
+
+
+    
+    
+
+cardnumber.addEventListener('input', () => {
+  if (cardnumber.value.length === cardnumlen && cardcvv.value.length === cvvlen) {
+    taptopay.classList.add('display_block');
+    disabled.classList.add("display_none");
+  } else {
+    taptopay.classList.remove('display_block');
+    disabled.classList.remove("display_none");
+  }
+});
+
+cardcvv.addEventListener('input', () => {
+  if (cardnumber.value.length === cardnumlen && cardcvv.value.length === cvvlen) {
+    taptopay.classList.add('display_block');
+    disabled.classList.add("display_none");
+  } else {
+    taptopay.classList.remove('display_block');
+    disabled.classList.remove("display_none");
+  }
+});
+
 
 
     taptopay.addEventListener("click", (e) => {
@@ -57,14 +85,6 @@ cardcvv.addEventListener('input',()=>{
         paymentModal.style.display = "block";
       }, 1000);
     });
-    
-    
-
-
-
-
-
-
 
 
 

@@ -18,8 +18,12 @@ const rightNavRest1 = document.querySelector(".right_nav_rest1");
 const signPopUpContainer = document.querySelector(".sign_pop_up_container");
 const signPopUpContainer1 = document.querySelector(".sign_pop_up_container1");
 const noOtpLogin=document.querySelector(".noOtp");
+let profileName = document.querySelector(".username")
+
 
 let sentOtp;
+
+profileName.innerHTML = localStorage.getItem("user")??`Hi,<span class="user_name">Guest</span>` ;
 
 const isLoggedIn = localStorage.getItem("isLoggedIn");
 if (isLoggedIn) {
@@ -140,28 +144,29 @@ hamIcon.addEventListener("click",()=>{
  
  mainBody.addEventListener("click",()=>{
      hamburger.classList.remove("display_block");
-     hamburger1.classList.add("display_none");
+     hamburger1.classList.remove("display_block");
  })
  
  hamburgerLogin.addEventListener("click",()=>{
-     hamburger.classList.add("display_none");
+     hamburger.classList.remove("display_block");
      signPopUpContainer.classList.add("display_block");
  
  })
  
  rightNavRest1.addEventListener("click",()=>{
+    console.log("hi")
   hamburger1.classList.add("display_block");
  })
  
  hamburgerSignOut.addEventListener("click",()=>{
      rightNavRest1.classList.remove("display_flex");
      rightNavRest.classList.remove("display_none");
-     hamburger1.classList.add("display_none");
+     hamburger1.classList.remove("display_block");
  
      // localStorage.setItem("isLoggedIn", false);
      localStorage.removeItem("isLoggedIn");
  })
- 
+
  
 //--------------------------------------------FOR PHONE VIEW----------------------------------------------------
 
@@ -189,8 +194,10 @@ cityPopUp.addEventListener("click",(event)=>{
 
 //---------------------------------------Signin with Google-----------------------------------------------------
 // Import the functions you need from the SDKs you need
+
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
-import { GoogleAuthProvider, getAuth, signInWithRedirect, getRedirectResult, signInWithPopup } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
+import { GoogleAuthProvider, getAuth, signInWithRedirect, getRedirectResult, signInWithPopup,signOut } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
+//import {   } from "firebase/auth";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 // Your web app's Firebase configuration
@@ -202,29 +209,43 @@ const firebaseConfig = {
     messagingSenderId: "1026883799189",
     appId: "1:1026883799189:web:f273ec6a236b747eb9339c"
 };
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const provider = new GoogleAuthProvider(app);
 const auth = getAuth(app);
 const googleBtn = document.getElementById("google_btn")
-googleBtn.addEventListener("click", (e) => {
+
+googleBtn.addEventListener("click", async (e) => {
     signInWithRedirect(auth, provider);
-    getRedirectResult(auth)
-        .then((result) => {
+    const result =  await getRedirectResult(auth)
+    console.log(result);
+    //debugger;
+        try{
+            debugger;
+            localStorage.setItem("isLoggedIn", true);
+            localStorage.setItem("user", auth.currentUser.displayName);
             // This gives you a Google Access Token. You can use it to access Google APIs.
             const credential = GoogleAuthProvider.credentialFromResult(result);
             const token = credential.accessToken;
             // The signed-in user info.
             const user = result.user;
-            localStorage.setItem("isLoggedIn", true);
-        }).catch((error) => {
-            // Handle Errors here.
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            // The email of the user's account used.
-            const email = error.customData.email;
-            // The AuthCredential type that was used.
-            const credential = GoogleAuthProvider.credentialFromError(error);
-            // ...
-        });
-})
+            alert(user,"inside try block");
+            // 
+           
+          
+        } catch(error) {
+             // Handle Errors here.
+             const errorCode = error.code;
+             const errorMessage = error.message;
+             // The email of the user's account used.
+             const email = error.customData.email;
+             // The AuthCredential type that was used.
+             const credential = GoogleAuthProvider.credentialFromError(error);
+             alert(error,"inside catch block");
+             // ...
+        
+         };
+ })
+ 
+

@@ -50,10 +50,13 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+
 .right_nav_rest1{
-    width: 50%;
+    width: 65%;
+    font-size: .9rem;
     display: none;
 }
+
 .right_nav_rest1 .user_icon{
 background-color: white;
 padding: .5rem;
